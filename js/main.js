@@ -37,6 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', () => toggleDrawer(false));
     if (overlay) overlay.addEventListener('click', () => toggleDrawer(false));
 
+    // Close drawer when a link is clicked
+    const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => toggleDrawer(false));
+    });
+
     // 3. Newsletter Subscription Feedback
     const footerNewsletter = document.querySelector('.footer-col form');
     if (footerNewsletter) {
