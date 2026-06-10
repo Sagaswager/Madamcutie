@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Madamcutie</title>
+    <meta name="description" content="Get in touch with Madamcutie. We usually reply within 24 hours.">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-bar-content">
+            ✦ Free complimentary shipping on orders over ₹2250 ✦ Use code: MADAM15 for 15% off your first luxury purchase ✦ New Summer Edit now live! ✦
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo-wrapper">
+                <!-- PLACE LOGO HERE: assets/images/logo.jpg -->
+                <img src="/assets/images/logo.jpg" alt="Madamcutie Logo" class="logo-img" style="height: 45px; object-fit: contain;">
+                <a href="index.html" class="logo-text" style="background: linear-gradient(45deg, #d4af37, #f3e5ab, #b8860b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0px 2px 4px rgba(0,0,0,0.1); font-weight: 800; font-family: var(--font-heading); font-size: 2.2rem; letter-spacing: 2px;">Madamcutie</a>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">Our Story</a>
+                <a href="contact.html" class="active" style="border-bottom: 1px solid var(--color-primary);">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="shop.html" class="action-btn" id="search-trigger" title="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></a>
+                <a href="cart.html" class="action-btn" title="Shopping Bag">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="mobile-menu-toggle action-btn" aria-label="Toggle Menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <style>
+        .footer-link { transition: color 0.3s; }
+        .footer-link:hover { color: var(--color-accent) !important; }
+        .social-icon { transition: transform 0.3s, color 0.3s; }
+        .social-icon:hover { transform: translateY(-3px); color: var(--color-accent) !important; }
+        
+        .contact-input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid var(--color-border);
+            border-radius: 2px;
+            margin-bottom: 20px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .contact-input:focus {
+            border-color: var(--color-primary);
+        }
+    </style>
+
+    <!-- Page Header -->
+    <section style="background-color: #f8f8f8; padding: 60px 0; text-align: center; border-bottom: 1px solid var(--color-border);">
+        <div class="container">
+            <h1 style="font-family: var(--font-heading); font-size: 2.8rem; margin-bottom: 10px;">Contact Us</h1>
+            <p style="color: var(--color-text-light); font-size: 1.1rem;">We'd love to hear from you.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2" style="gap: 60px;">
+                <div>
+                    <h2 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 20px;">Get In Touch</h2>
+                    <p style="color: var(--color-text-light); font-size: 1.1rem; margin-bottom: 40px;">
+                        Have a question about an order, styling advice, or feedback? Feel free to drop us a message. We usually reply within 24 hours.
+                    </p>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="font-size: 1.1rem; margin-bottom: 10px;">Phone</h4>
+                        <p style="color: var(--color-text-light); font-size: 1.05rem;">9911852113</p>
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="font-size: 1.1rem; margin-bottom: 10px;">Email</h4>
+                        <p style="color: var(--color-text-light); font-size: 1.05rem;">madamcutie1995@gmail.com</p>
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="font-size: 1.1rem; margin-bottom: 10px;">HQ Location</h4>
+                        <p style="color: var(--color-text-light); font-size: 1.05rem;">Noida, India</p>
+                    </div>
+                </div>
+
+                <div>
+                    <form style="background: #fff; padding: 40px; border: 1px solid var(--color-border); border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 25px;">Send a Message</h3>
+                        
+                        <input type="text" class="contact-input" placeholder="Your Name" required>
+                        <input type="email" class="contact-input" placeholder="Your Email" required>
+                        <input type="tel" class="contact-input" placeholder="Your Phone Number (Optional)">
+                        <textarea class="contact-input" placeholder="Your Message" rows="5" required></textarea>
+                        
+                        <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 20px;">* We usually reply within 24 hours.</p>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 2px;">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="background: var(--color-primary); color: white; padding: 80px 0 30px;">
+        <div class="container">
+            <div class="grid grid-4" style="margin-bottom: 60px;">
+                <div>
+                    <h3 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 20px; letter-spacing: 1px;">Madamcutie</h3>
+                    <p style="color: #aaa; margin-bottom: 20px; line-height: 1.6; font-size: 0.95rem;">Effortless style for everyday queens. Elegant, comfortable, and empowering fashion designed for the modern woman.</p>
+                    <p style="color: #aaa; margin-bottom: 5px; font-size: 0.9rem;"><strong>Phone:</strong> 9911852113</p>
+                    <p style="color: #aaa; margin-bottom: 20px; font-size: 0.9rem;"><strong>Email:</strong> madamcutie1995@gmail.com</p>
+                    <div style="display: flex; gap: 20px;">
+                        <a href="#" class="social-icon" style="color: white; font-size: 1.3rem;">FB</a>
+                        <a href="#" class="social-icon" style="color: white; font-size: 1.3rem;">IG</a>
+                        <a href="#" class="social-icon" style="color: white; font-size: 1.3rem;">PT</a>
+                    </div>
+                </div>
+                <div style="padding-left: 20px;">
+                    <h4 style="margin-bottom: 25px; letter-spacing: 2px; font-size: 0.9rem; text-transform: uppercase;">Shop</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5;">
+                        <li><a href="shop.html" class="footer-link" style="color: #aaa; text-decoration: none;">New Arrivals</a></li>
+                        <li><a href="shop.html?category=dresses" class="footer-link" style="color: #aaa; text-decoration: none;">Dresses</a></li>
+                        <li><a href="shop.html?collection=lookbook" class="footer-link" style="color: #aaa; text-decoration: none;">Lookbook</a></li>
+                        <li><a href="shop.html?collection=all" class="footer-link" style="color: #aaa; text-decoration: none;">Collections</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 25px; letter-spacing: 2px; font-size: 0.9rem; text-transform: uppercase;">About</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5;">
+                        <li><a href="about.html" class="footer-link" style="color: #aaa; text-decoration: none;">Our Story</a></li>
+                        <li><a href="policy.html" class="footer-link" style="color: #aaa; text-decoration: none;">Policies</a></li>
+                        <li><a href="#" class="footer-link" style="color: #aaa; text-decoration: none;">Careers</a></li>
+                        <li><a href="contact.html" class="footer-link" style="color: #aaa; text-decoration: none;">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 25px; letter-spacing: 2px; font-size: 0.9rem; text-transform: uppercase;">Help</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5;">
+                        <li><a href="#" class="footer-link" style="color: #aaa; text-decoration: none;">FAQ</a></li>
+                        <li><a href="policy.html" class="footer-link" style="color: #aaa; text-decoration: none;">Shipping & Returns</a></li>
+                        <li><a href="#" class="footer-link" style="color: #aaa; text-decoration: none;">Size Guide</a></li>
+                        <li><a href="#" class="footer-link" style="color: #aaa; text-decoration: none;">Track Order</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; color: #777; font-size: 0.85rem; flex-wrap: wrap; gap: 20px;">
+                <p>&copy; 2026 Madamcutie. All rights reserved. Crafted by pair programming.</p>
+                <div style="display: flex; gap: 10px;">
+                    <span style="font-size: 1.5rem;">💳</span>
+                    <span style="font-size: 1.5rem;">🏦</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

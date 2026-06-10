@@ -1,0 +1,183 @@
+﻿OCR Results Native
+====================
+
+========================================
+FILE: IMG_8243.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8258.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8260.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8261.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8262.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8263.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8264.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8269.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8270.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8271.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8272.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8273.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8274.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8275.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8276.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8277.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8293.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8294.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8295.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8308.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8310.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8311.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8312.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8313.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_8774.png
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_9396.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_9474.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_9496.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_9498.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_9527.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_9529.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_9594.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_9596.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_9636.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_9639.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
+========================================
+FILE: IMG_9644.PNG
+========================================
+[Error processing: Method invocation failed because [System.__ComObject] does not contain a method named 'GetResults'.]
+
