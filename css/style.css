@@ -101,24 +101,25 @@ h1, h2, h3, h4, h5, h6 {
    LAYOUT UTILITIES
    ========================================================================== */
 .container {
+    width: 100%;
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 20px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .container {
-        padding: 0 20px;
+        padding: 0 40px;
     }
 }
 
 .section {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-lg) 0;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .section {
-        padding: var(--spacing-lg) 0;
+        padding: var(--spacing-xl) 0;
     }
 }
 
@@ -133,17 +134,21 @@ h1, h2, h3, h4, h5, h6 {
     gap: var(--spacing-lg);
 }
 
-.grid-2 { grid-template-columns: repeat(2, 1fr); }
-.grid-3 { grid-template-columns: repeat(3, 1fr); }
-.grid-4 { grid-template-columns: repeat(4, 1fr); }
-
-@media (max-width: 1024px) {
-    .grid-4 { grid-template-columns: repeat(2, 1fr); }
-    .grid-3 { grid-template-columns: repeat(2, 1fr); }
+.grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
 }
-
-@media (max-width: 600px) {
-    .grid-2, .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+@media (min-width: 600px) {
+    .grid-2, .grid-3, .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 .text-center { text-align: center; }
@@ -594,20 +599,18 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 .categories-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     gap: var(--spacing-md);
     margin-top: var(--spacing-lg);
 }
-
-@media (max-width: 1024px) {
+@media (min-width: 600px) {
     .categories-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
-@media (max-width: 600px) {
+@media (min-width: 1024px) {
     .categories-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -2078,5 +2081,18 @@ h1, h2, h3, h4, h5, h6 {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+    }
+}
+
+
+@media (max-width: 768px) {
+    #search-bar-container form {
+        flex-direction: column;
+    }
+    #search-bar-container input {
+        width: 100%;
+    }
+    #search-bar-container button {
+        width: 100%;
     }
 }
