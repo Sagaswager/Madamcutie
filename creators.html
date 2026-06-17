@@ -4,21 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For Creators | Madamcutie</title>
-    <meta name="description" content="Brand collaboration with Madamcutie">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <div class="announcement-bar">
-        <div class="announcement-bar-content">
-            ✦ Free complimentary shipping on orders over ₹2250 ✦ Use code: MADAM15 for 15% off your first luxury purchase ✦ New Summer Edit now live! ✦
-        </div>
-    </div>
-
+    <!-- Header -->
     <header class="header">
         <div class="container nav-container">
             <div class="logo-wrapper">
-                <img src="/assets/images/new_logo.png" alt="Madamcutie Logo" class="logo-img" style="height: 45px; object-fit: contain;">
-                <a href="index.html" class="logo-text" style="background: linear-gradient(45deg, #d4af37, #f3e5ab, #b8860b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0px 2px 4px rgba(0,0,0,0.1); font-weight: 800; font-family: var(--font-heading); font-size: 2.2rem; letter-spacing: 2px;">Madamcutie</a>
+                <img src="/assets/images/logo.jpg" alt="Madamcutie Logo" class="logo-img">
+                <a href="index.html" class="logo-text" style="background: linear-gradient(45deg, #d4af37, #f3e5ab, #b8860b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; font-family: var(--font-heading); font-size: clamp(1.5rem, 4vw, 2.2rem); letter-spacing: 2px;">Madamcutie</a>
             </div>
             
             <nav class="nav-links">
@@ -26,117 +20,79 @@
                 <a href="shop.html">Shop</a>
                 <a href="about.html">Our Story</a>
                 <a href="https://wa.me/919911852113" target="_blank">For Wholesale</a>
-                <a href="creators.html" class="active" style="border-bottom: 1px solid var(--color-primary);">For Creators</a>
+                <a href="creators.html" class="active">For Creators</a>
                 <a href="contact.html">Contact</a>
             </nav>
 
             <div class="header-actions">
-                <a href="shop.html" class="action-btn" id="search-trigger" title="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></a>
-                <button class="mobile-menu-toggle action-btn" aria-label="Toggle Menu">☰</button>
+                <button class="action-btn" id="search-trigger" title="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+                <a href="cart.html" class="action-btn" title="Shopping Bag">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="mobile-menu-toggle action-btn" aria-label="Toggle Menu" onclick="toggleMobileNav()">☰</button>
             </div>
         </div>
     </header>
 
-    <div class="mobile-nav-drawer-overlay" id="mobile-nav-overlay"></div>
-    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
-        <button class="drawer-close-btn">✕</button>
+    <!-- Mobile Nav -->
+    <div class="mobile-nav-drawer" id="mobile-nav">
+        <button class="drawer-close-btn" onclick="toggleMobileNav()">✕</button>
         <nav class="mobile-nav-links">
             <a href="index.html">Home</a>
             <a href="shop.html">Shop</a>
             <a href="about.html">Our Story</a>
             <a href="https://wa.me/919911852113" target="_blank">For Wholesale</a>
-            <a href="creators.html">For Creators</a>
+            <a href="creators.html" class="active">For Creators</a>
             <a href="contact.html">Contact</a>
         </nav>
     </div>
+    <div class="mobile-nav-drawer-overlay" id="mobile-nav-overlay" onclick="toggleMobileNav()"></div>
 
-    <section style="background-color: #f8f8f8; padding: 60px 0; text-align: center; border-bottom: 1px solid var(--color-border);">
+    <!-- Creators Hero -->
+    <section class="section" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/images/madam/party_wear_3.jpg'); background-size: cover; background-position: center; height: 60vh; display: flex; align-items: center; text-align: center; color: #fff;">
         <div class="container">
-            <h1 style="font-family: var(--font-heading); font-size: 2.8rem; margin-bottom: 10px;">Brand Collaboration</h1>
-            <p style="color: var(--color-text-light); font-size: 1.1rem;">Join the Madamcutie creator family.</p>
+            <h1 style="font-family: var(--font-heading); font-size: clamp(2.5rem, 8vw, 5rem); margin-bottom: 20px;">Collaborate With Us</h1>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">Are you a content creator, influencer, or fashion enthusiast? Join the Madamcutie family.</p>
         </div>
     </section>
 
+    <!-- Creator Info -->
     <section class="section">
-        <div class="container" style="max-width: 600px; margin: 0 auto;">
-            <div id="success-message" style="display: none; background: #e8f5e9; color: #2e7d32; padding: 20px; border-radius: 4px; margin-bottom: 20px; text-align: center; font-weight: 600;">
-                Thank you! Our team will review your profile and get back to you for collaboration opportunities.
+        <div class="container">
+            <div class="grid grid-responsive-3-2-1 text-center" style="gap: 40px;">
+                <div style="padding: 30px; border: 1px solid var(--color-border);">
+                    <div style="font-size: 2.5rem; margin-bottom: 20px;">📸</div>
+                    <h3 style="margin-bottom: 15px;">Content Creation</h3>
+                    <p style="color: #666;">Get exclusive access to our latest collections for your content.</p>
+                </div>
+                <div style="padding: 30px; border: 1px solid var(--color-border);">
+                    <div style="font-size: 2.5rem; margin-bottom: 20px;">💎</div>
+                    <h3 style="margin-bottom: 15px;">Exclusive Perks</h3>
+                    <p style="color: #666;">Receive special discounts and commission on every sale you drive.</p>
+                </div>
+                <div style="padding: 30px; border: 1px solid var(--color-border);">
+                    <div style="font-size: 2.5rem; margin-bottom: 20px;">🤝</div>
+                    <h3 style="margin-bottom: 15px;">Grow Together</h3>
+                    <p style="color: #666;">Be featured on our official social media channels and website.</p>
+                </div>
             </div>
             
-            <form id="creator-form" style="background: #fff; padding: 40px; border: 1px solid var(--color-border); border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-                <div style="margin-bottom: 20px;">
-                    <label style="display: block; margin-bottom: 5px; font-weight: 600;">Name *</label>
-                    <input type="text" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 2px;" required>
-                </div>
-                <div style="margin-bottom: 20px;">
-                    <label style="display: block; margin-bottom: 5px; font-weight: 600;">Instagram ID *</label>
-                    <input type="text" placeholder="@yourhandle" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 2px;" required>
-                </div>
-                <div style="margin-bottom: 20px;">
-                    <label style="display: block; margin-bottom: 5px; font-weight: 600;">WhatsApp Number *</label>
-                    <input type="tel" pattern="[0-9+\- ]+" placeholder="+91 1234567890" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 2px;" required>
-                </div>
-                <div style="margin-bottom: 30px;">
-                    <label style="display: block; margin-bottom: 5px; font-weight: 600;">Email *</label>
-                    <input type="email" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 2px;" required>
-                </div>
-                
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Application</button>
-            </form>
+            <div style="margin-top: 80px; text-align: center;">
+                <h2 style="font-family: var(--font-heading); font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 30px;">Apply to Join</h2>
+                <a href="https://wa.me/919911852113?text=I am a creator and I want to collaborate with Madamcutie" target="_blank" class="btn btn-primary" style="padding: 18px 50px;">DM US ON WHATSAPP</a>
+            </div>
         </div>
     </section>
 
-    <footer class="footer" style="background: var(--color-primary); color: white; padding: 80px 0 30px;">
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container text-center">
-            <h3 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 20px; letter-spacing: 1px;">Madamcutie</h3>
-            <p style="color: #aaa; margin-bottom: 20px; font-size: 0.9rem;"><strong>Phone:</strong> +91-9911852113</p>
-            <p style="color: #aaa; margin-bottom: 20px; font-size: 0.9rem;"><strong>Location:</strong> Chandni Chowk, Delhi</p>
+            <p>&copy; 2026 Madamcutie. All rights reserved.</p>
         </div>
     </footer>
 
+    <script src="/js/cart.js"></script>
     <script src="/js/main.js"></script>
-    <script>
-        document.getElementById('creator-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            this.style.display = 'none';
-            document.getElementById('success-message').style.display = 'block';
-        });
-    </script>
-
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/919911852113" target="_blank" class="whatsapp-floating" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" style="display:block; margin:auto;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
-<style>
-.whatsapp-floating {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 60px;
-    height: 60px;
-    background-color: #25D366;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    z-index: 9999;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-.whatsapp-floating:hover {
-    transform: scale(1.1);
-    background-color: #20BA5C;
-    color: white;
-}
-@media (max-width: 768px) {
-    .whatsapp-floating {
-        bottom: 20px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-    }
-}
-</style>
 </body>
 </html>

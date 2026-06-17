@@ -21,7 +21,7 @@
         <div class="container nav-container">
             <div class="logo-wrapper">
                 <img src="/assets/images/logo.jpg" alt="Madamcutie Logo" class="logo-img">
-                <a href="index.html" class="logo-text" style="background: linear-gradient(45deg, #d4af37, #f3e5ab, #b8860b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0px 2px 4px rgba(0,0,0,0.1); font-weight: 800; font-family: var(--font-heading); font-size: 2.2rem; letter-spacing: 2px;">Madamcutie</a>
+                <a href="index.html" class="logo-text" style="background: linear-gradient(45deg, #d4af37, #f3e5ab, #b8860b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0px 2px 4px rgba(0,0,0,0.1); font-weight: 800; font-family: var(--font-heading); font-size: clamp(1.5rem, 4vw, 2.2rem); letter-spacing: 2px;">Madamcutie</a>
             </div>
             
             <nav class="nav-links">
@@ -39,7 +39,7 @@
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
                     <span class="cart-count">0</span>
                 </a>
-                <button class="mobile-menu-toggle action-btn" aria-label="Toggle Menu">☰</button>
+                <button class="mobile-menu-toggle action-btn" aria-label="Toggle Menu" onclick="toggleMobileNav()">☰</button>
             </div>
         </div>
         <div class="search-bar-container" id="search-bar-container" style="display: none; position: absolute; top: 100%; left: 0; width: 100%; background: #fff; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); z-index: 100;">
@@ -50,12 +50,11 @@
         </div>
     </header>
 
-    <!-- Mobile Drawer -->
-    <div class="mobile-nav-drawer-overlay" id="mobile-nav-overlay"></div>
-    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
-        <button class="drawer-close-btn">✕</button>
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav">
+        <button class="drawer-close-btn" onclick="toggleMobileNav()">✕</button>
         <nav class="mobile-nav-links">
-            <a href="index.html">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="shop.html">Shop</a>
             <a href="about.html">Our Story</a>
             <a href="https://wa.me/919911852113" target="_blank">For Wholesale</a>
@@ -63,6 +62,7 @@
             <a href="contact.html">Contact</a>
         </nav>
     </div>
+    <div class="mobile-nav-drawer-overlay" id="mobile-nav-overlay" onclick="toggleMobileNav()"></div>
 
     <style>
         .madam-card:hover {
@@ -100,69 +100,58 @@
     </style>
 
     <!-- Hero Section -->
-    <section class="hero-section" style="position: relative; padding: clamp(40px, 6vw, 80px) 0; display: flex; align-items: center; justify-content: center; overflow: hidden; background-color: #f8f8f8;">
-        <div class="hero-bg" style="position: absolute; top:0; left:0; width: 100%; height: 100%; background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #b8860b 100%); opacity: 0.85;"></div>
-        <div style="position: absolute; top: -10%; left: -5%; width: 40vw; height: 40vw; max-width: 400px; max-height: 400px; min-width: 250px; min-height: 250px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%);"></div>
-        <div style="position: absolute; bottom: -20%; right: -10%; width: 60vw; height: 60vw; max-width: 600px; max-height: 600px; min-width: 300px; min-height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);"></div>
-        <!-- Overlay -->
-        <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.4) 100%);"></div>
-        <div class="container" style="position: relative; z-index: 2; width: 100%; max-width: 1400px; padding: 0 20px;">
-            <div style="position: relative; width: 100%; border-radius: 24px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.25);">
-                <img src="/assets/images/Madamcutie_banner.png" alt="Madamcutie Collection" style="width: 100%; height: auto; display: block; object-fit: cover;">
-                
-                <!-- Overlay on the left side -->
-                <div style="position: absolute; top: 0; left: 0; height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 5%; width: 100%; max-width: 600px;">
-                    <h2 style="font-family: var(--font-heading); font-size: clamp(2.5rem, 5vw, 4.5rem); color: #d4af37; margin-bottom: 20px; line-height: 1.1; text-shadow: 1px 1px 4px rgba(0,0,0,0.3);">New Arrivals</h2>
-                    <a href="shop.html" class="btn" style="background-color: transparent; border: 2px solid #d4af37; color: #d4af37; width: fit-content; padding: 14px 38px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; transition: transform 0.3s, background-color 0.3s, color 0.3s; text-shadow: 1px 1px 4px rgba(0,0,0,0.3);" onmouseover="this.style.transform='translateY(-3px)'; this.style.backgroundColor='#d4af37'; this.style.color='#fff';" onmouseout="this.style.transform='translateY(0)'; this.style.backgroundColor='transparent'; this.style.color='#d4af37';">Shop Now</a>
+    <section class="hero-slider">
+        <div class="hero-slide active">
+            <div class="hero-bg" style="background-image: url('/Madamcutie_banner.png');"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <p class="hero-subtitle">Premium Luxury Fashion</p>
+                    <h1 class="hero-title">Effortless Style for Modern Queens</h1>
+                    <p class="hero-description">Discover our curated collection of luxury apparel designed to empower and inspire. Elegance redefined for the contemporary woman.</p>
+                    <div class="hero-btn-wrap" style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="shop.html" class="btn btn-primary">Shop Collection</a>
+                        <a href="about.html" class="btn btn-secondary" style="background: rgba(255,255,255,0.8);">Our Story</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Highlight Strip -->
-    <div class="highlight-strip" style="background: linear-gradient(90deg, #b8860b 0%, #d4af37 25%, #f3e5ab 50%, #d4af37 75%, #b8860b 100%); color: #111; padding: 25px 0; border-top: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+    <section class="section" style="background: linear-gradient(90deg, #b8860b 0%, #d4af37 25%, #f3e5ab 50%, #d4af37 75%, #b8860b 100%); color: #111; padding: 25px 0; border-top: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
         <div class="container">
-            <div class="grid grid-4 text-center">
-                <div class="highlight-item d-flex align-center justify-center" style="gap: 12px;">
+            <div class="grid grid-responsive-4-2-1 text-center">
+                <div class="highlight-item d-flex align-center justify-center" style="gap: 12px; padding: 10px;">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-                    <h4 style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; font-weight: 700; margin: 0; color: #111;">Premium Fabrics</h4>
+                    <h4 style="text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; font-weight: 700; margin: 0; color: #111;">Premium Fabrics</h4>
                 </div>
-                <div class="highlight-item d-flex align-center justify-center" style="gap: 12px;">
+                <div class="highlight-item d-flex align-center justify-center" style="gap: 12px; padding: 10px;">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
-                    <h4 style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; font-weight: 700; margin: 0; color: #111;">Pan-India Shipping</h4>
+                    <h4 style="text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; font-weight: 700; margin: 0; color: #111;">Pan-India Shipping</h4>
                 </div>
-                <div class="highlight-item d-flex align-center justify-center" style="gap: 12px;">
+                <div class="highlight-item d-flex align-center justify-center" style="gap: 12px; padding: 10px;">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                    <h4 style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; font-weight: 700; margin: 0; color: #111;">Easy 7-Day Returns</h4>
+                    <h4 style="text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; font-weight: 700; margin: 0; color: #111;">Easy Returns</h4>
                 </div>
-                <div class="highlight-item d-flex align-center justify-center" style="gap: 12px;">
+                <div class="highlight-item d-flex align-center justify-center" style="gap: 12px; padding: 10px;">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                    <h4 style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; font-weight: 700; margin: 0; color: #111;">Secure Payments</h4>
+                    <h4 style="text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; font-weight: 700; margin: 0; color: #111;">Secure Payments</h4>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Featured Collection Grid -->
     <section class="section" style="background-color: var(--color-secondary);">
         <div class="container">
             <div class="d-flex justify-between align-center" style="margin-bottom: 40px; flex-wrap: wrap; gap: 20px;">
                 <div>
-                    <h2 style="font-size: 2.5rem; font-family: var(--font-heading); font-weight: 500;">Featured Looks</h2>
+                    <h2 style="font-size: clamp(2rem, 5vw, 3rem); font-family: var(--font-heading); font-weight: 500;">Featured Looks</h2>
                     <p style="color: var(--color-text-light); margin-top: 5px;">Discover our most loved pieces</p>
-                </div>
-                <div class="sort-control d-flex align-center">
-                    <label for="sort-by" style="font-size: 0.85rem; margin-right: 15px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Sort by:</label>
-                    <select id="sort-by" style="padding: 8px 30px 8px 15px; border: 1px solid var(--color-border); background: transparent; font-size: 0.9rem; border-radius: 2px; outline: none; appearance: none; background-image: url('data:image/svg+xml;utf8,<svg fill=%22black%22 height=%2224%22 viewBox=%220 0 24 24%22 width=%2224%22 xmlns=%22http://www.w3.org/2000/svg%22><path d=%22M7 10l5 5 5-5z%22/><path d=%22M0 0h24v24H0z%22 fill=%22none%22/></svg>'); background-repeat: no-repeat; background-position-x: 100%; background-position-y: 50%;">
-                        <option>Featured</option>
-                        <option>Newest</option>
-                        <option>Price (Low to High)</option>
-                        <option>Price (High to Low)</option>
-                    </select>
                 </div>
             </div>
             
-            <div class="grid grid-4" id="madam-grid">
+            <div class="grid grid-responsive-4-2-1" id="madam-grid">
                 <div class="madam-card page-item page-1" style="position: relative; background: #fff; padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s; display: block;">
                     <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
                         <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #fff; padding: 4px 12px; font-size: 0.65rem; font-weight: bold; border-radius: 20px; z-index: 2; letter-spacing: 1px;">SALE</span>
@@ -426,35 +415,35 @@
         </div>
     </section>
 
-    <!-- Curated Lookbook Row -->
-    <section class="section" style="background-color: var(--color-bg-light); padding-top: 20px;">
+    <!-- Style Edits Row -->
+    <section class="section" style="background-color: var(--color-bg-light);">
         <div class="container">
-            <h2 class="text-center" style="font-size: 2.2rem; font-family: var(--font-heading); margin-bottom: 40px;">Style Edits</h2>
-            <div class="grid grid-3">
-                <a href="shop.html?edit=datenight" class="lookbook-tile" style="position: relative; height: 400px; overflow: hidden; border-radius: 2px; display: block;">
+            <h2 class="text-center" style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-family: var(--font-heading); margin-bottom: 40px;">Style Edits</h2>
+            <div class="grid grid-responsive-3-2-1">
+                <a href="shop.html?edit=datenight" class="lookbook-tile" style="position: relative; height: clamp(300px, 50vw, 450px); overflow: hidden; border-radius: 2px; display: block;">
                     <img src="/assets/images/madam/party_wear_1.jpg" alt="Shimmer Party Top" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
-                    <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 100%); display: flex; align-items: flex-end; padding: 30px;">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 100%); display: flex; align-items: flex-end; padding: 20px;">
                         <div>
-                            <p style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px; font-weight: 600;">Curated</p>
-                            <h3 style="color: white; font-size: 1.8rem; font-family: var(--font-heading); letter-spacing: 1px;">Shimmer Party Top</h3>
+                            <p style="color: #d4af37; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px; font-weight: 600;">Curated</p>
+                            <h3 style="color: white; font-size: clamp(1.2rem, 3vw, 1.8rem); font-family: var(--font-heading); letter-spacing: 1px;">Shimmer Party Top</h3>
                         </div>
                     </div>
                 </a>
-                <a href="shop.html?edit=office" class="lookbook-tile" style="position: relative; height: 400px; overflow: hidden; border-radius: 2px; display: block;">
+                <a href="shop.html?edit=office" class="lookbook-tile" style="position: relative; height: clamp(300px, 50vw, 450px); overflow: hidden; border-radius: 2px; display: block;">
                     <img src="/assets/images/madam/party_wear_2.jpg" alt="Black Chevron Sequin Top" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
-                    <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 100%); display: flex; align-items: flex-end; padding: 30px;">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 100%); display: flex; align-items: flex-end; padding: 20px;">
                         <div>
-                            <p style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px; font-weight: 600;">Curated</p>
-                            <h3 style="color: white; font-size: 1.8rem; font-family: var(--font-heading); letter-spacing: 1px;">Black Chevron Sequin Top</h3>
+                            <p style="color: #d4af37; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px; font-weight: 600;">Curated</p>
+                            <h3 style="color: white; font-size: clamp(1.2rem, 3vw, 1.8rem); font-family: var(--font-heading); letter-spacing: 1px;">Black Chevron Sequin Top</h3>
                         </div>
                     </div>
                 </a>
-                <a href="shop.html?edit=weekend" class="lookbook-tile" style="position: relative; height: 400px; overflow: hidden; border-radius: 2px; display: block;">
+                <a href="shop.html?edit=weekend" class="lookbook-tile" style="position: relative; height: clamp(300px, 50vw, 450px); overflow: hidden; border-radius: 2px; display: block;">
                     <img src="/assets/images/madam/party_wear_3.jpg" alt="Glamour Evening Wear" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
-                    <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 100%); display: flex; align-items: flex-end; padding: 30px;">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 100%); display: flex; align-items: flex-end; padding: 20px;">
                         <div>
-                            <p style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px; font-weight: 600;">Curated</p>
-                            <h3 style="color: white; font-size: 1.8rem; font-family: var(--font-heading); letter-spacing: 1px;">Glamour Evening Wear</h3>
+                            <p style="color: #d4af37; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px; font-weight: 600;">Curated</p>
+                            <h3 style="color: white; font-size: clamp(1.2rem, 3vw, 1.8rem); font-family: var(--font-heading); letter-spacing: 1px;">Glamour Evening Wear</h3>
                         </div>
                     </div>
                 </a>
@@ -465,18 +454,18 @@
     <!-- Brand Story Preview -->
     <section class="section">
         <div class="container">
-            <div class="grid grid-2 align-center" style="gap: 60px;">
+            <div class="grid grid-responsive-2-1 align-center" style="gap: clamp(20px, 5vw, 60px);">
                 <div style="position: relative;">
-                    <div style="position: absolute; top: -20px; left: -20px; width: 100%; height: 100%; border: 1px solid #d4af37; z-index: 0;"></div>
-                    <img src="/assets/images/madam/look-18.jpg" alt="Madamcutie Model" style="width: 100%; height: 600px; object-fit: cover; position: relative; z-index: 1; box-shadow: 0 15px 40px rgba(0,0,0,0.1);">
+                    <div class="hide-sm" style="position: absolute; top: -15px; left: -15px; width: 100%; height: 100%; border: 1px solid #d4af37; z-index: 0;"></div>
+                    <img src="/assets/images/madam/look-18.jpg" alt="Madamcutie Model" style="width: 100%; height: auto; max-height: 600px; object-fit: cover; position: relative; z-index: 1; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                 </div>
-                <div style="padding: 20px 0;">
+                <div style="padding: 10px 0;">
                     <p style="color: #d4af37; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 15px;">Our Heritage</p>
-                    <h2 style="font-size: 3rem; font-family: var(--font-heading); margin-bottom: 25px; line-height: 1.2;">Empowering Everyday Queens</h2>
-                    <p style="font-size: 1.1rem; color: var(--color-text-light); margin-bottom: 20px; line-height: 1.8;">
-                        Welcome to MadamCutie – where fashion meets confidence and elegance. Based in the vibrant heart of Chandni Chowk, we bring you thoughtfully curated women's apparel that blends timeless charm with modern trends.<br><br>At MadamCutie, we believe every woman deserves to feel beautiful, confident, and comfortable in what she wears. Our collections are designed to celebrate individuality, offering stylish outfits that suit every occasion—from everyday wear to special moments.<br><br>Inspired by the rich fashion heritage of Chandni Chowk and driven by contemporary style, we focus on quality craftsmanship, attention to detail, and designs that make a lasting impression. Every piece is created with the goal of helping women express their unique personality through fashion.<br><br>Whether you're looking for elegant ethnic wear, trendy outfits, or statement pieces, MadamCutie is your destination for fashion that feels as good as it looks.<br><br>MadamCutie – Crafted for Confidence, Styled for You. ✨👗💕
+                    <h2 style="font-size: clamp(2rem, 5vw, 3rem); font-family: var(--font-heading); margin-bottom: 25px; line-height: 1.2;">Empowering Everyday Queens</h2>
+                    <p style="font-size: clamp(0.95rem, 2vw, 1.1rem); color: var(--color-text-light); margin-bottom: 25px; line-height: 1.8;">
+                        Welcome to MadamCutie – where fashion meets confidence and elegance. Based in the vibrant heart of Chandni Chowk, we bring you thoughtfully curated women's apparel that blends timeless charm with modern trends.<br><br>At MadamCutie, we believe every woman deserves to feel beautiful, confident, and comfortable in what she wears. Our collections are designed to celebrate individuality, offering stylish outfits that suit every occasion.
                     </p>
-                    <a href="about.html" class="btn btn-primary" style="padding: 16px 35px;">Read Our Story</a>
+                    <a href="about.html" class="btn btn-primary">Read Our Story</a>
                 </div>
             </div>
         </div>
@@ -763,6 +752,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function saveChanges() {
+    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    
+    if (!isLocal) {
+        alert('You are currently on the live site (Vercel). Vercel does not allow saving files directly. Please run the website locally on your computer using "python server.py" to make permanent changes to the text.');
+        
+        // Disable admin mode and reload
+        localStorage.setItem('adminMode', 'false');
+        location.reload();
+        return;
+    }
+
     const btn = document.querySelector('#admin-toolbar button');
     btn.textContent = 'Saving...';
     const toolbar = document.getElementById('admin-toolbar');

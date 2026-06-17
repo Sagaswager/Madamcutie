@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Designer Party Wear Dress | Madamcutie</title>
-    <meta name="description" content="Designer Party Wear Dress - Perfect for parties & evening events.">
+    <title>Product Details | Madamcutie</title>
+    <meta name="description" content="View product details at Madamcutie.">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <!-- Announcement Bar -->
     <div class="announcement-bar">
         <div class="announcement-bar-content">
-            ✦ Free complimentary shipping on orders over ₹2250 ✦ Use code: MADAM15 for 15% off your first luxury purchase ✦ New Summer Edit now live! ✦
+            ✦ Free complimentary shipping on orders over ₹2250 ✦ Use code: MADAM15 for 15% off your first luxury purchase ✦
         </div>
     </div>
 
@@ -20,7 +20,7 @@
         <div class="container nav-container">
             <div class="logo-wrapper">
                 <img src="/assets/images/logo.jpg" alt="Madamcutie Logo" class="logo-img">
-                <a href="index.html" class="logo-text" style="background: linear-gradient(45deg, #d4af37, #f3e5ab, #b8860b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0px 2px 4px rgba(0,0,0,0.1); font-weight: 800; font-family: var(--font-heading); font-size: 2.2rem; letter-spacing: 2px;">Madamcutie</a>
+                <a href="index.html" class="logo-text" style="background: linear-gradient(45deg, #d4af37, #f3e5ab, #b8860b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0px 2px 4px rgba(0,0,0,0.1); font-weight: 800; font-family: var(--font-heading); font-size: clamp(1.5rem, 4vw, 2.2rem); letter-spacing: 2px;">Madamcutie</a>
             </div>
             
             <nav class="nav-links">
@@ -33,360 +33,79 @@
             </nav>
 
             <div class="header-actions">
-                <a href="shop.html" class="action-btn" id="search-trigger" title="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></a>
+                <button class="action-btn" id="search-trigger" title="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
                 <a href="cart.html" class="action-btn" title="Shopping Bag">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
                     <span class="cart-count">0</span>
                 </a>
-                <button class="mobile-menu-toggle action-btn" aria-label="Toggle Menu">☰</button>
+                <button class="mobile-menu-toggle action-btn" aria-label="Toggle Menu" onclick="toggleMobileNav()">☰</button>
             </div>
         </div>
     </header>
 
-    <style>
-        .madam-card:hover {
-            transform: translateY(-5px) !important;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
-        }
-        .madam-card:hover img {
-            transform: scale(1.05) !important;
-        }
-        .footer-link { transition: color 0.3s; }
-        .footer-link:hover { color: var(--color-accent) !important; }
-        .social-icon { transition: transform 0.3s, color 0.3s; }
-        .social-icon:hover { transform: translateY(-3px); color: var(--color-accent) !important; }
-        
-        /* Product Details Layout */
-        .product-details-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-        }
-        @media (max-width: 900px) {
-            .product-details-layout { grid-template-columns: 1fr; gap: 40px; }
-        }
-        .thumbnails {
-            display: flex;
-            gap: 15px;
-            margin-top: 15px;
-        }
-        .thumbnail-img {
-            width: 80px;
-            height: 100px;
-            object-fit: cover;
-            cursor: pointer;
-            border: 2px solid transparent;
-            opacity: 0.7;
-            transition: all 0.3s;
-        }
-        .thumbnail-img:hover { opacity: 1; }
-        .thumbnail-img.active {
-            border-color: #d4af37;
-            opacity: 1;
-        }
-        .quantity-stepper {
-            display: flex;
-            align-items: center;
-            border: 1px solid var(--color-border);
-            width: max-content;
-        }
-        .quantity-btn {
-            padding: 10px 15px;
-            background: transparent;
-            cursor: pointer;
-            border: none;
-            font-size: 1.2rem;
-        }
-        .quantity-input {
-            width: 50px;
-            text-align: center;
-            border: none;
-            outline: none;
-            font-size: 1rem;
-        }
-        .accordion-item {
-            border-bottom: 1px solid var(--color-border);
-        }
-        .accordion-header {
-            padding: 18px 0;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-        }
-        .accordion-content {
-            padding-bottom: 20px;
-            display: none;
-            color: var(--color-text-light);
-            line-height: 1.8;
-            font-size: 0.95rem;
-        }
-        .accordion-header.active + .accordion-content {
-            display: block;
-        }
-        .color-swatch {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: inline-block;
-            border: 1px solid #ddd;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-        .color-swatch:hover {
-            transform: scale(1.1);
-        }
-        .size-btn {
-            border: 1px solid var(--color-border);
-            padding: 10px 18px;
-            border-radius: 2px;
-            font-size: 0.9rem;
-            cursor: pointer;
-            background: white;
-            transition: all 0.3s;
-            min-width: 50px;
-        }
-        .size-btn:hover { border-color: var(--color-primary); }
-        .size-btn.active {
-            background: var(--color-primary);
-            color: white;
-            border-color: var(--color-primary);
-        }
-        
-        .review-card {
-            padding: 20px;
-            border: 1px solid var(--color-border);
-            border-radius: 4px;
-            margin-bottom: 15px;
-            background: #fff;
-        }
-    </style>
-
-    <!-- Breadcrumb -->
-    <div style="background: var(--color-bg-light); padding: 20px 0; font-size: 0.85rem; color: var(--color-text-light);">
-        <div class="container">
-            <a href="index.html">Home</a> <span style="margin: 0 10px;">/</span>
-            <a href="shop.html">Shop</a> <span style="margin: 0 10px;">/</span>
-            <span style="color: var(--color-primary);">Designer Party Wear Dress</span>
-        </div>
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav">
+        <button class="drawer-close-btn" onclick="toggleMobileNav()">✕</button>
+        <nav class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">Our Story</a>
+            <a href="https://wa.me/919911852113" target="_blank">For Wholesale</a>
+            <a href="creators.html">For Creators</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </div>
+    <div class="mobile-nav-drawer-overlay" id="mobile-nav-overlay" onclick="toggleMobileNav()"></div>
 
     <!-- Product Detail Section -->
     <section class="section">
-        <div class="container product-details-layout">
-            <!-- Left: Images -->
-            <div>
-                <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; text-align: center; border-radius: 2px;">
-                    <span style="position: absolute; top: 20px; left: 20px; background: #d4af37; color: #fff; padding: 6px 15px; font-size: 0.75rem; font-weight: bold; border-radius: 20px; z-index: 2; letter-spacing: 1px;">SALE</span>
-                    <img src="/assets/images/madam/look-01.jpg" alt="Designer Party Wear Dress Main" style="width: 100%; height: auto; max-height: 750px; object-fit: cover;" id="main-image">
-                </div>
-                <div class="thumbnails">
-                    <img src="/assets/images/madam/look-01.jpg" class="thumbnail-img active" onclick="document.getElementById('main-image').src=this.src; document.querySelectorAll('.thumbnail-img').forEach(el=>el.classList.remove('active')); this.classList.add('active');" alt="Front view">
-                    <img src="/assets/images/madam/look-02.jpg" class="thumbnail-img" onclick="document.getElementById('main-image').src=this.src; document.querySelectorAll('.thumbnail-img').forEach(el=>el.classList.remove('active')); this.classList.add('active');" alt="Back view">
-                    <img src="/assets/images/madam/look-03.jpg" class="thumbnail-img" onclick="document.getElementById('main-image').src=this.src; document.querySelectorAll('.thumbnail-img').forEach(el=>el.classList.remove('active')); this.classList.add('active');" alt="Close-up view">
-                </div>
-            </div>
-
-            <!-- Right: Details -->
-            <div style="padding-top: 10px;">
-                <p style="text-transform: uppercase; letter-spacing: 2px; color: var(--color-text-light); font-size: 0.8rem; margin-bottom: 12px;">Madamcutie</p>
-                <h1 style="font-family: var(--font-heading); font-size: 2.8rem; margin-bottom: 12px; font-weight: 500;">Designer Party Wear Dress</h1>
-                <p style="font-size: 1.15rem; color: #666; margin-bottom: 25px;">Perfect for parties & evening events.</p>
-                
-                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 30px;">
-                    <span style="font-size: 2rem; font-weight: 500;">₹2175</span>
-                    <span style="font-size: 1.2rem; color: #aaa; text-decoration: line-through;">₹2775</span>
-                    <div style="display: flex; align-items: center; gap: 5px; font-size: 0.9rem; margin-left: auto;">
-                        <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                        <span style="color: #888; margin-left: 5px; text-decoration: underline; cursor: pointer;">(231 Reviews)</span>
-                    </div>
-                </div>
-
-                <div style="margin-bottom: 30px;">
-                    <div class="d-flex justify-between align-center" style="margin-bottom: 12px;">
-                        <p style="font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">Size</p>
-                        <a href="#" style="font-size: 0.8rem; color: #777; text-decoration: underline; text-transform: uppercase;">Size Guide</a>
-                    </div>
-                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                        <button class="size-btn">Free Size</button>
-                    </div>
-                </div>
-
-                <div style="margin-bottom: 40px;">
-                    <p style="font-weight: 600; margin-bottom: 12px; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">Quantity</p>
-                    <div class="quantity-stepper">
-                        <button class="quantity-btn" onclick="document.getElementById('qty').value = Math.max(1, parseInt(document.getElementById('qty').value)-1)">-</button>
-                        <input type="number" id="qty" class="quantity-input" value="1" min="1">
-                        <button class="quantity-btn" onclick="document.getElementById('qty').value = parseInt(document.getElementById('qty').value)+1">+</button>
-                    </div>
-                </div>
-
-                <div style="display: flex; gap: 15px; margin-bottom: 40px;">
-                    <button class="btn" style="background-color: #d4af37; color: white; flex: 1; padding: 18px; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; border: none; border-radius: 2px;">Add to Cart</button>
-                    <button class="btn btn-secondary" style="flex: 1; padding: 18px; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; border-radius: 2px;">Buy Now</button>
-                </div>
-
-                <div style="margin-bottom: 40px; background: #fdfbf7; padding: 25px; border-left: 4px solid #d4af37; border-radius: 0 4px 4px 0;">
-                    <ul style="list-style: none; padding: 0; line-height: 2; color: var(--color-text-dark); margin: 0;">
-                        <li style="display: flex; gap: 10px; align-items: flex-start;"><span style="color: #d4af37;">✓</span> Soft breathable rayon blend</li>
-                        <li style="display: flex; gap: 10px; align-items: flex-start;"><span style="color: #d4af37;">✓</span> Designed for Indian summers</li>
-                        <li style="display: flex; gap: 10px; align-items: flex-start;"><span style="color: #d4af37;">✓</span> Model height 5’6” wearing size S</li>
-                        <li style="display: flex; gap: 10px; align-items: flex-start;"><span style="color: #d4af37;">✓</span> Premium couture detailing</li>
-                    </ul>
-                </div>
-
-                <div class="accordion">
-                    <div class="accordion-item">
-                        <div class="accordion-header active" onclick="this.classList.toggle('active')">Description <span style="font-size:1.2rem;">+</span></div>
-                        <div class="accordion-content" style="display: block;">
-                            Elevate your evening wardrobe with Look 01. Featuring an exquisite silhouette and tailored to perfection, this piece seamlessly transitions from formal dinners to late-night parties. Designed with the modern woman in mind, it provides an impeccable fit without compromising on comfort.
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <div class="accordion-header" onclick="this.classList.toggle('active')">Fabric & Care <span style="font-size:1.2rem;">+</span></div>
-                        <div class="accordion-content">
-                            Crafted from 100% premium rayon. Hand wash cold or dry clean. Do not bleach. Tumble dry low or line dry in shade. Warm iron if needed.
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <div class="accordion-header" onclick="this.classList.toggle('active')">Shipping & Returns <span style="font-size:1.2rem;">+</span></div>
-                        <div class="accordion-content">
-                            Free Pan-India shipping on all orders over ₹2250. Easy 7-day returns and exchanges. Please ensure items are unworn with tags attached.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reviews Section -->
-    <section class="section" style="background-color: var(--color-bg-light); border-top: 1px solid var(--color-border);">
         <div class="container">
-            <h2 style="font-family: var(--font-heading); font-size: 2.2rem; text-align: center; margin-bottom: 40px;">Customer Reviews</h2>
-            <div class="grid grid-2">
-                <div class="review-card">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                        <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                        <span style="color: #999; font-size: 0.85rem;">June 2, 2026</span>
+            <div class="grid grid-responsive-2-1" style="gap: clamp(20px, 5vw, 60px); align-items: start;">
+                <!-- Gallery -->
+                <div class="product-gallery">
+                    <div class="product-main-image" style="background: #f8f6f0; border-radius: 4px; overflow: hidden; aspect-ratio: 3/4;">
+                        <img id="main-image" src="" alt="Product Image" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <h4 style="margin-bottom: 10px; font-weight: 600;">Absolutely stunning!</h4>
-                    <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">The quality of the fabric is incredible. It fits perfectly and I got so many compliments at the party. Worth every penny.</p>
-                    <p style="margin-top: 15px; font-size: 0.85rem; font-weight: 600;">- Priya S.</p>
+                    <!-- Thumbnails if any could go here -->
                 </div>
-                <div class="review-card">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                        <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                        <span style="color: #999; font-size: 0.85rem;">May 18, 2026</span>
-                    </div>
-                    <h4 style="margin-bottom: 10px; font-weight: 600;">My new favorite dress</h4>
-                    <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">This is so comfortable and breathable, yet looks incredibly elegant. The shipping was fast and the packaging felt very premium.</p>
-                    <p style="margin-top: 15px; font-size: 0.85rem; font-weight: 600;">- Anita R.</p>
-                </div>
-                <div class="review-card">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                        <span style="color: #d4af37; letter-spacing: 2px;">★★★★☆</span>
-                        <span style="color: #999; font-size: 0.85rem;">May 5, 2026</span>
-                    </div>
-                    <h4 style="margin-bottom: 10px; font-weight: 600;">Great fit, slightly long</h4>
-                    <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">Beautiful design and great material. I am 5'3" so it was a bit long on me, but nothing a quick hem couldn't fix. Love it!</p>
-                    <p style="margin-top: 15px; font-size: 0.85rem; font-weight: 600;">- Meera K.</p>
-                </div>
-                <div class="review-card">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                        <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                        <span style="color: #999; font-size: 0.85rem;">April 22, 2026</span>
-                    </div>
-                    <h4 style="margin-bottom: 10px; font-weight: 600;">Perfect for summer evenings</h4>
-                    <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">I've worn this to two different events already. It's so versatile and chic. Highly recommend Madamcutie.</p>
-                    <p style="margin-top: 15px; font-size: 0.85rem; font-weight: 600;">- Sarah T.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- You May Also Like -->
-    <section class="section">
-        <div class="container">
-            <h2 style="font-family: var(--font-heading); font-size: 2.2rem; text-align: center; margin-bottom: 40px;">You May Also Like</h2>
-            <div class="grid grid-4">
-                <!-- Look 02 -->
-                <div class="madam-card" style="position: relative; background: #fff; padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #fff; padding: 4px 12px; font-size: 0.65rem; font-weight: bold; border-radius: 20px; z-index: 2; letter-spacing: 1px;">SALE</span>
-                        <a href="product.html"><img src="/assets/images/madam/look-02.jpg" alt="2 Piece Co-ords Set Silver Hand Work Blouse" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
+                <!-- Info -->
+                <div class="product-details-content">
+                    <p id="product-brand" style="text-transform: uppercase; letter-spacing: 2px; color: var(--color-accent); font-weight: 700; font-size: 0.8rem; margin-bottom: 10px;">Madamcutie Luxury</p>
+                    <h1 id="product-name" style="font-family: var(--font-heading); font-size: clamp(1.8rem, 4vw, 3rem); margin-bottom: 15px; line-height: 1.2;">Product Name</h1>
+                    
+                    <div class="d-flex align-center" style="gap: 15px; margin-bottom: 25px;">
+                        <span id="product-price" style="font-size: 1.8rem; font-weight: 600; color: var(--color-primary);">₹0</span>
+                        <span style="text-decoration: line-through; color: #888; font-size: 1.1rem;">₹3500</span>
+                        <span style="background: #d4af37; color: white; padding: 2px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">SALE</span>
                     </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;">2 Piece Co-ords Set Silver Hand Work Blouse</a></h3>
-                        <p style="font-size: 0.85rem; color: #777; margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Perfect for parties & evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: #888; margin-left: 5px;">(189)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹1800</span>
+
+                    <p id="product-description" style="color: var(--color-text-light); line-height: 1.7; margin-bottom: 30px; font-size: 1.05rem;">
+                        This exquisite piece from Madamcutie's collection embodies elegance and modern sophistication. Crafted with premium fabrics and meticulous attention to detail.
+                    </p>
+
+                    <div class="product-options" style="margin-bottom: 35px;">
+                        <h4 style="text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 15px; font-weight: 700;">Select Size</h4>
+                        <div class="size-selector d-flex flex-wrap" style="gap: 10px;">
+                            <button class="size-btn active">Free Size</button>
+                            <button class="size-btn" disabled>S</button>
+                            <button class="size-btn" disabled>M</button>
+                            <button class="size-btn" disabled>L</button>
                         </div>
                     </div>
-                </div>
 
-                <!-- Look 03 -->
-                <div class="madam-card" style="position: relative; background: #fff; padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        <a href="product.html"><img src="/assets/images/madam/look-03.jpg" alt="Luxury Evening Party Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
+                    <div class="product-actions" style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <button id="add-to-cart" class="btn btn-primary" style="flex: 2; min-width: 200px; padding: 18px;">Add to Shopping Bag</button>
+                        <button class="btn btn-secondary" style="flex: 1; min-width: 60px; padding: 18px; display: flex; align-items: center; justify-content: center;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
                     </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;">Luxury Evening Party Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: #777; margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Perfect for parties & evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★☆</span>
-                                <span style="color: #888; margin-left: 5px;">(104)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹1425</span>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Look 07 -->
-                <div class="madam-card" style="position: relative; background: #fff; padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #fff; padding: 4px 12px; font-size: 0.65rem; font-weight: bold; border-radius: 20px; z-index: 2; letter-spacing: 1px;">SALE</span>
-                        <a href="product.html"><img src="/assets/images/madam/look-07.jpg" alt="Chic Metallic Co-ords Set" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;">Chic Metallic Co-ords Set</a></h3>
-                        <p style="font-size: 0.85rem; color: #777; margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Perfect for parties & evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: #888; margin-left: 5px;">(412)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹3150</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Look 08 -->
-                <div class="madam-card" style="position: relative; background: #fff; padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        <a href="product.html"><img src="/assets/images/madam/look-08.jpg" alt="Radiant Night Out Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;">Radiant Night Out Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: #777; margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Perfect for parties & evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: #888; margin-left: 5px;">(288)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹1725</span>
+                    <div class="product-meta" style="margin-top: 40px; border-top: 1px solid var(--color-border); padding-top: 25px;">
+                        <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.9rem; color: #555;">
+                            <p><strong>SKU:</strong> MC-2026-001</p>
+                            <p><strong>Category:</strong> <span id="product-category">Collections</span></p>
+                            <p><strong>Availability:</strong> In Stock</p>
                         </div>
                     </div>
                 </div>
@@ -397,213 +116,72 @@
     <!-- Footer -->
     <footer class="footer" style="background: var(--color-primary); color: white; padding: 80px 0 30px;">
         <div class="container">
-            <div class="grid grid-4" style="margin-bottom: 60px;">
+            <div class="grid grid-responsive-4-2-1" style="margin-bottom: 60px;">
                 <div>
                     <h3 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 20px; letter-spacing: 1px;">Madamcutie</h3>
                     <p style="color: #aaa; margin-bottom: 20px; line-height: 1.6; font-size: 0.95rem;">Effortless style for everyday queens. Elegant, comfortable, and empowering fashion designed for the modern woman.</p>
-                    <p style="color: #aaa; margin-bottom: 5px; font-size: 0.9rem;"><strong>Phone:</strong> +91-9911852113</p>
-                    <p style="color: #aaa; margin-bottom: 20px; font-size: 0.9rem;"><strong>Email:</strong> madamcutie1995@gmail.com</p>
-                    <div style="display: flex; gap: 20px;">
-                        <a href="#" class="social-icon" style="color: white;" title="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
-                        <a href="https://www.instagram.com/madamcutie.co?igsh=OGcwdmFxYTBuZGhv&utm_source=qr" target="_blank" class="social-icon" style="color: white;" title="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                        <a href="#" class="social-icon" style="color: white;" title="Pinterest"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.25 2.65 7.9 6.44 9.32-.09-.78-.17-1.98.03-2.83.18-.75 1.16-4.94 1.16-4.94s-.3-.6-.3-1.48c0-1.39.81-2.43 1.82-2.43.85 0 1.26.64 1.26 1.4 0 .86-.54 2.14-.83 3.32-.24.99.5 1.8 1.47 1.8 1.76 0 3.12-1.86 3.12-4.54 0-2.38-1.71-4.04-4.16-4.04-2.84 0-4.5 2.13-4.5 4.32 0 .85.33 1.76.74 2.26.08.1.09.18.06.28-.08.35-.27 1.09-.31 1.25-.05.19-.17.23-.37.14-1.38-.63-2.24-2.61-2.24-4.2 0-3.42 2.49-6.56 7.16-6.56 3.76 0 6.68 2.68 6.68 6.26 0 3.74-2.36 6.75-5.63 6.75-1.1 0-2.13-.57-2.48-1.24l-.68 2.58c-.24.92-.91 2.07-1.35 2.77 1.07.33 2.21.5 3.39.5 5.52 0 10-4.48 10-10S17.52 2 12 2z"></path></svg></a>
-                    </div>
                 </div>
-                <div style="padding-left: 20px;">
+                <div style="padding-left: clamp(0px, 2vw, 20px);">
                     <h4 style="margin-bottom: 25px; letter-spacing: 2px; font-size: 0.9rem; text-transform: uppercase;">Shop</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5;">
-                        <li><a href="shop.html" class="footer-link" style="color: #aaa; text-decoration: none;">New Arrivals</a></li>
-                        <li><a href="shop.html?category=dresses" class="footer-link" style="color: #aaa; text-decoration: none;">Dresses</a></li>
-                        <li><a href="shop.html?collection=lookbook" class="footer-link" style="color: #aaa; text-decoration: none;">Lookbook</a></li>
-                        <li><a href="shop.html?collection=all" class="footer-link" style="color: #aaa; text-decoration: none;">Collections</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 style="margin-bottom: 25px; letter-spacing: 2px; font-size: 0.9rem; text-transform: uppercase;">About</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5;">
-                        <li><a href="about.html" class="footer-link" style="color: #aaa; text-decoration: none;">Our Story</a></li>
-                        <li><a href="policy.html" class="footer-link" style="color: #aaa; text-decoration: none;">Policies</a></li>
-                        <li><a href="#" class="footer-link" style="color: #aaa; text-decoration: none;">Careers</a></li>
-                        <li><a href="https://wa.me/919911852113" target="_blank">For Wholesale</a><a href="creators.html">For Creators</a><a href="contact.html" class="footer-link" style="color: #aaa; text-decoration: none;">Contact Us</a></li>
+                    <ul class="footer-links">
+                        <li><a href="shop.html">New Arrivals</a></li>
+                        <li><a href="shop.html">Dresses</a></li>
+                        <li><a href="shop.html">Collections</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 style="margin-bottom: 25px; letter-spacing: 2px; font-size: 0.9rem; text-transform: uppercase;">Help</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5;">
-                        <li><a href="#" class="footer-link" style="color: #aaa; text-decoration: none;">FAQ</a></li>
-                        <li><a href="policy.html" class="footer-link" style="color: #aaa; text-decoration: none;">Shipping & Returns</a></li>
-                        <li><a href="#" class="footer-link" style="color: #aaa; text-decoration: none;">Size Guide</a></li>
-                        <li><a href="#" class="footer-link" style="color: #aaa; text-decoration: none;">Track Order</a></li>
+                    <ul class="footer-links">
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="policy.html">Policies</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
-            </div>
-            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; color: #777; font-size: 0.85rem; flex-wrap: wrap; gap: 20px;">
-                <p>&copy; 2026 Madamcutie. All rights reserved. Crafted by pair programming.</p>
-                <div style="display: flex; gap: 10px;">
-                    <span style="font-size: 1.5rem;">💳</span>
-                    <span style="font-size: 1.5rem;">🏦</span>
+                <div>
+                    <h4 style="margin-bottom: 25px; letter-spacing: 2px; font-size: 0.9rem; text-transform: uppercase;">Social</h4>
+                    <div style="display: flex; gap: 20px;">
+                        <a href="#" class="social-icon" style="color: white;"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg></a>
+                        <a href="#" class="social-icon" style="color: white;"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+                    </div>
                 </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; text-align: center; color: #777; font-size: 0.85rem;">
+                <p>&copy; 2026 Madamcutie. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/919911852113" target="_blank" class="whatsapp-floating" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" style="display:block; margin:auto;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
-<style>
-.whatsapp-floating {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 60px;
-    height: 60px;
-    background-color: #25D366;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    z-index: 9999;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-.whatsapp-floating:hover {
-    transform: scale(1.1);
-    background-color: #20BA5C;
-    color: white;
-}
-@media (max-width: 768px) {
-    .whatsapp-floating {
-        bottom: 20px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-    }
-}
-</style>
+    <!-- Scripts -->
+    <script src="/js/products.js"></script>
+    <script src="/js/cart.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id') || '1';
+            const product = PRODUCTS.find(p => p.id === productId) || PRODUCTS[0];
 
-
-
-<!-- Admin Mode Script -->
-<script>
-function toggleAdminMode() {
-    const isActive = localStorage.getItem('adminMode') === 'true';
-    localStorage.setItem('adminMode', !isActive);
-    if (!isActive) {
-        window.location.href = 'index.html';
-    } else {
-        location.reload();
-    }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('adminMode') === 'true') {
-        const toolbar = document.createElement('div');
-        toolbar.id = 'admin-toolbar';
-        toolbar.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; background: #111; color: #fff; padding: 15px 20px; z-index: 10000; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 15px rgba(0,0,0,0.5); font-family: sans-serif; border-bottom: 3px solid #d4af37;';
-        toolbar.innerHTML = `
-            <div style="font-weight: bold; font-size: 16px; letter-spacing: 1px; color: #d4af37;">
-                ⚙️ ADMIN MODE ACTIVE - Click directly on any highlighted text below to edit it!
-            </div>
-            <div>
-                <button onclick="saveChanges()" style="background: #d4af37; color: #fff; border: none; padding: 8px 20px; margin-right: 10px; cursor: pointer; font-weight: bold; border-radius: 4px; font-size: 14px;">Save All Changes</button>
-                <button onclick="toggleAdminMode()" style="background: #fff; color: #111; border: none; padding: 8px 20px; cursor: pointer; font-weight: bold; border-radius: 4px; font-size: 14px;">Exit Admin</button>
-            </div>
-        `;
-        document.body.prepend(toolbar);
-        
-        document.body.style.paddingTop = '60px';
-
-        // Prevent all links from working while in admin mode so they can be clicked to edit
-        document.querySelectorAll('a').forEach(a => {
-            if (a.href && !a.onclick) {
-                // Keep the original href but prevent default click
-                a.dataset.originalHref = a.href;
-                a.addEventListener('click', function(e) {
-                    // Only prevent default if it's an editable element or inside one
-                    if (this.isContentEditable || this.closest('[contenteditable="true"]') || this.closest('.madam-card')) {
-                        e.preventDefault();
-                    }
-                });
+            if (product) {
+                document.getElementById('product-name').textContent = product.name;
+                document.getElementById('product-price').textContent = `₹${product.price}`;
+                document.getElementById('product-category').textContent = product.category;
+                document.getElementById('main-image').src = product.image;
+                document.getElementById('main-image').alt = product.name;
+                
+                const addBtn = document.getElementById('add-to-cart');
+                if (addBtn) {
+                    addBtn.addEventListener('click', () => {
+                        addToCart(product.id, product.name, product.price, product.image);
+                        addBtn.textContent = 'Added to Bag!';
+                        addBtn.style.background = '#000';
+                        setTimeout(() => {
+                            addBtn.textContent = 'Add to Shopping Bag';
+                            addBtn.style.background = '';
+                        }, 2000);
+                    });
+                }
             }
         });
-
-        const titles = document.querySelectorAll('.madam-card h3 a');
-        const descriptions = document.querySelectorAll('.madam-card p:nth-of-type(2)');
-        const prices = document.querySelectorAll('.madam-card span:last-child');
-
-        [...titles, ...descriptions, ...prices].forEach(el => {
-            el.contentEditable = "true";
-            el.style.border = "2px dashed #ff0000";
-            el.style.backgroundColor = "rgba(255, 255, 0, 0.2)";
-            el.style.padding = "4px";
-            el.style.borderRadius = "4px";
-            el.style.outline = "none";
-            el.style.cursor = "text";
-            el.style.minHeight = "20px";
-            el.style.display = "inline-block";
-            
-            el.addEventListener('focus', function() {
-                this.style.backgroundColor = 'rgba(255, 255, 0, 0.5)';
-            });
-            el.addEventListener('blur', function() {
-                this.style.backgroundColor = 'rgba(255, 255, 0, 0.2)';
-            });
-        });
-    }
-});
-
-function saveChanges() {
-    const btn = document.querySelector('#admin-toolbar button');
-    btn.textContent = 'Saving...';
-    const toolbar = document.getElementById('admin-toolbar');
-    if (toolbar) toolbar.remove();
-    
-    document.body.style.paddingTop = '';
-    
-    document.querySelectorAll('[contenteditable="true"]').forEach(el => {
-        el.removeAttribute('contenteditable');
-        el.style.border = '';
-        el.style.backgroundColor = '';
-        el.style.padding = '';
-        el.style.borderRadius = '';
-        el.style.outline = '';
-        el.style.cursor = '';
-        el.style.minHeight = '';
-        el.style.display = (el.tagName === 'A' || el.tagName === 'SPAN') ? '' : el.style.display;
-    });
-    
-    document.querySelectorAll('.page-item').forEach(el => {
-        if(el.style.display === 'block' || el.style.display === 'none') {
-            el.style.removeProperty('display');
-        }
-    });
-
-    const currentHtml = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
-    localStorage.setItem('adminMode', 'true');
-    const filename = location.pathname.split('/').pop() || 'index.html';
-    
-    fetch('/save_html', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ file: filename, content: currentHtml })
-    }).then(res => res.json()).then(data => {
-        if(data.status === 'success') {
-            alert('Changes saved successfully!');
-            location.reload();
-        } else {
-            alert('Error saving changes: ' + (data.message || 'Unknown error'));
-            location.reload();
-        }
-    }).catch(err => {
-        alert('Failed to connect to Admin Server. Make sure server.py is running.');
-        location.reload();
-    });
-}
-</script>
-
-
-
+    </script>
 </body>
 </html>

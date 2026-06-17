@@ -1,21 +1,13 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop Collections | Madamcutie</title>
     <meta name="description" content="Shop the latest luxury fashion collections at Madamcutie.">
     <link rel="stylesheet" href="/css/style.css">
-<style>.village-iframe{width:100%;height:100%;border:none;display:block;position:fixed;top:0;left:0;z-index:2147483647;background:#0000003d;color-scheme:light}.village-iframe.village-loading{display:flex;justify-content:center;align-items:center}.village-iframe>.village-spinner{width:1.5rem;height:1.5rem;border:2px solid #000;border-left-color:transparent;border-bottom-color:transparent;border-radius:50%;animation:spin .45s linear infinite}.village-iframe.village-hidden{display:none}@keyframes spin{0%{transform:rotate(0)}to{transform:rotate(360deg)}}.village-hidden{display:none}[village-paths-data=facepiles]{display:flex;align-items:center;padding-right:.5rem}[village-paths-data=facepiles] img{width:1.5rem;height:1.5rem;border-radius:50%;margin-right:-.5rem}[village-paths-data=facepiles] img.village-facepiler-avatar-not-found{filter:blur(7px)}[village-paths-data=facepiles] img:last-child{margin-right:0}[village-paths-data=count]{padding-right:.25rem}[village-paths-availability=error],[village-paths-availability=found],[village-paths-availability=not-found],[village-paths-availability=not-activated]{display:none!important}[village-paths-availability=loading]{display:inline-flex!important}</style><style id="monica-reading-highlight-style">
-        .monica-reading-highlight {
-          animation: fadeInOut 1.5s ease-in-out;
-        }
-
-        @keyframes fadeInOut {
-          0%, 100% { background-color: transparent; }
-          30%, 70% { background-color: rgba(2, 118, 255, 0.20); }
-        }
-      </style><style>.village-iframe{width:100%;height:100%;border:none;display:block;position:fixed;top:0;left:0;z-index:2147483647;background:#0000003d;color-scheme:light}.village-iframe.village-loading{display:flex;justify-content:center;align-items:center}.village-iframe>.village-spinner{width:1.5rem;height:1.5rem;border:2px solid #000;border-left-color:transparent;border-bottom-color:transparent;border-radius:50%;animation:spin .45s linear infinite}.village-iframe.village-hidden{display:none}@keyframes spin{0%{transform:rotate(0)}to{transform:rotate(360deg)}}.village-hidden{display:none}[village-paths-data=facepiles]{display:flex;align-items:center;padding-right:.5rem}[village-paths-data=facepiles] img{width:1.5rem;height:1.5rem;border-radius:50%;margin-right:-.5rem}[village-paths-data=facepiles] img.village-facepiler-avatar-not-found{filter:blur(7px)}[village-paths-data=facepiles] img:last-child{margin-right:0}[village-paths-data=count]{padding-right:.25rem}[village-paths-availability=error],[village-paths-availability=found],[village-paths-availability=not-found],[village-paths-availability=not-activated]{display:none!important}[village-paths-availability=loading]{display:inline-flex!important}</style></head>
-<body style="">
+</head>
+<body>
     <!-- Announcement Bar -->
     <div class="announcement-bar">
         <div class="announcement-bar-content">
@@ -28,1566 +20,145 @@
         <div class="container nav-container">
             <div class="logo-wrapper">
                 <img src="/assets/images/logo.jpg" alt="Madamcutie Logo" class="logo-img">
-                <a href="index.html" class="logo-text" style="background: linear-gradient(45deg, #d4af37, #f3e5ab, #b8860b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0px 2px 4px rgba(0,0,0,0.1); font-weight: 800; font-family: var(--font-heading); font-size: 2.2rem; letter-spacing: 2px;" data-original-href="http://localhost:8000/index.html">Madamcutie</a>
+                <a href="index.html" class="logo-text" style="background: linear-gradient(45deg, #d4af37, #f3e5ab, #b8860b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0px 2px 4px rgba(0,0,0,0.1); font-weight: 800; font-family: var(--font-heading); font-size: clamp(1.5rem, 4vw, 2.2rem); letter-spacing: 2px;">Madamcutie</a>
             </div>
             
             <nav class="nav-links">
-                <a href="index.html" data-original-href="http://localhost:8000/index.html">Home</a>
-                <a href="shop.html" class="active" style="border-bottom: 1px solid var(--color-primary);" data-original-href="http://localhost:8000/shop.html">Shop</a>
-                <a href="about.html" data-original-href="http://localhost:8000/about.html">Our Story</a>
-                <a href="https://wa.me/919911852113" target="_blank" data-original-href="https://wa.me/919911852113">For Wholesale</a>
-                <a href="creators.html" data-original-href="http://localhost:8000/creators.html">For Creators</a>
-                <a href="contact.html" data-original-href="http://localhost:8000/contact.html">Contact</a>
+                <a href="index.html">Home</a>
+                <a href="shop.html" class="active">Shop</a>
+                <a href="about.html">Our Story</a>
+                <a href="https://wa.me/919911852113" target="_blank">For Wholesale</a>
+                <a href="creators.html">For Creators</a>
+                <a href="contact.html">Contact</a>
             </nav>
 
             <div class="header-actions">
-                <a href="shop.html" class="action-btn" id="search-trigger" title="Search" data-original-href="http://localhost:8000/shop.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></a>
-                <a href="cart.html" class="action-btn" title="Shopping Bag" data-original-href="http://localhost:8000/cart.html">
+                <button class="action-btn" id="search-trigger" title="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+                <a href="cart.html" class="action-btn" title="Shopping Bag">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
                     <span class="cart-count">0</span>
                 </a>
-                <button class="mobile-menu-toggle action-btn" aria-label="Toggle Menu">☰</button>
+                <button class="mobile-menu-toggle action-btn" aria-label="Toggle Menu" onclick="toggleMobileNav()">☰</button>
             </div>
+        </div>
+        <div class="search-bar-container" id="search-bar-container" style="display: none; position: absolute; top: 100%; left: 0; width: 100%; background: #fff; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); z-index: 100;">
+            <form action="shop.html" method="GET" style="display: flex; max-width: 800px; margin: 0 auto; gap: 10px;">
+                <input type="text" name="q" placeholder="Search for products, categories..." style="flex: 1; padding: 12px 20px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+                <button type="submit" class="btn btn-primary" style="padding: 12px 24px;">Search</button>
+            </form>
         </div>
     </header>
 
-    <style>
-        .madam-card:hover {
-            transform: translateY(-5px) !important;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
-        }
-        .madam-card:hover img {
-            transform: scale(1.05) !important;
-        }
-        .footer-link { transition: color 0.3s; }
-        .footer-link:hover { color: var(--color-accent) !important; }
-        .social-icon { transition: transform 0.3s, color 0.3s; }
-        .social-icon:hover { transform: translateY(-3px); color: var(--color-accent) !important; }
-        
-        .shop-layout {
-            display: grid;
-            grid-template-columns: 250px 1fr;
-            gap: 40px;
-        }
-        @media (max-width: 900px) {
-            .shop-layout { grid-template-columns: 1fr; }
-        }
-        .filter-group { margin-bottom: 30px; }
-        .filter-title {
-            font-size: 1.1rem;
-            font-family: var(--font-heading);
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid var(--color-border);
-        }
-        .filter-list { list-style: none; padding: 0; margin: 0; }
-        .filter-list li { margin-bottom: 10px; }
-        .filter-list label {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.95rem;
-            cursor: pointer;
-            color: var(--color-text-light);
-        }
-        .filter-list input[type="checkbox"] { accent-color: #d4af37; width: 16px; height: 16px; }
-        .color-swatch {
-            width: 22px;
-            height: 22px;
-            border-radius: 50%;
-            display: inline-block;
-            border: 1px solid #ddd;
-        }
-        .size-btn {
-            border: 1px solid var(--color-border);
-            padding: 6px 12px;
-            border-radius: 2px;
-            font-size: 0.85rem;
-            cursor: pointer;
-            background: white;
-            transition: all 0.3s;
-        }
-        .size-btn:hover { border-color: var(--color-primary); }
-    </style>
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav">
+        <button class="drawer-close-btn" onclick="toggleMobileNav()">✕</button>
+        <nav class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html" class="active">Shop</a>
+            <a href="about.html">Our Story</a>
+            <a href="https://wa.me/919911852113" target="_blank">For Wholesale</a>
+            <a href="creators.html">For Creators</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    <div class="mobile-nav-drawer-overlay" id="mobile-nav-overlay" onclick="toggleMobileNav()"></div>
 
-    <!-- Page Header -->
-    <section style="background-color: #f8f8f8; padding: 60px 0; text-align: center; border-bottom: 1px solid var(--color-border);">
+    <!-- Shop Page Header -->
+    <section class="shop-page-header">
         <div class="container">
-            <h1 style="font-family: var(--font-heading); font-size: 2.8rem; margin-bottom: 10px;">Collections</h1>
-            <p style="color: var(--color-text-light); font-size: 1.1rem;">Explore our curated selection of effortless elegance.</p>
+            <h1 class="shop-page-title">Collections</h1>
+            <nav class="shop-breadcrumbs">
+                <a href="index.html">Home</a> / <span>Shop</span>
+            </nav>
         </div>
     </section>
 
-    <!-- Shop Content -->
+    <!-- Shop Catalog Section -->
     <section class="section">
-        <div class="container shop-layout">
-            <!-- Sidebar Filters -->
-            <aside class="shop-sidebar">
-                <div class="filter-group">
-                    <h3 class="filter-title">Categories</h3>
-                    <ul class="filter-list">
-                        <li><label><input type="checkbox"> Lehenga</label></li>
-                        <li><label><input type="checkbox"> Co-ords Set</label></li>
-                        <li><label><input type="checkbox"> Party Wear</label></li>
-                        <li><label><input type="checkbox"> Party Wear Blouse</label></li>
-                    </ul>
-                </div>
-                
-                <div class="filter-group">
-                    <h3 class="filter-title">Size</h3>
-                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                        <button class="size-btn">Free Size</button>
-                    </div>
-                </div>
-
-            </aside>
-
-            <!-- Main Grid -->
-            <div>
-                <div class="d-flex justify-between align-center" style="margin-bottom: 30px; flex-wrap: wrap; gap: 15px;">
-                    <p style="color: var(--color-text-light); font-size: 0.95rem;">Showing 48 products</p>
-                    <div class="sort-control d-flex align-center">
-                        <label for="sort-by" style="font-size: 0.85rem; margin-right: 15px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Sort by:</label>
-                        <select id="sort-by" style="padding: 8px 30px 8px 15px; border: 1px solid var(--color-border); background: transparent; font-size: 0.9rem; border-radius: 2px; outline: none; appearance: none; background-image: url('data:image/svg+xml;utf8,&lt;svg fill=%22black%22 height=%2224%22 viewBox=%220 0 24 24%22 width=%2224%22 xmlns=%22http://www.w3.org/2000/svg%22&gt;&lt;path d=%22M7 10l5 5 5-5z%22/&gt;&lt;path d=%22M0 0h24v24H0z%22 fill=%22none%22/&gt;&lt;/svg&gt;'); background-repeat: no-repeat; background-position-x: 100%; background-position-y: 50%;">
-                            <option>Featured</option>
-                            <option>Newest</option>
-                            <option>Price (Low to High)</option>
-                            <option>Price (High to Low)</option>
+        <div class="container">
+            <div class="shop-toolbar">
+                <div class="results-count">Showing <span id="product-count">48</span> items</div>
+                <div class="shop-controls-right">
+                    <button class="mobile-filter-trigger" onclick="document.querySelector('.filter-sidebar').classList.toggle('open')">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>
+                        Filters
+                    </button>
+                    <div class="sort-select-wrapper">
+                        <select class="sort-select" id="sort-by-select">
+                            <option value="featured">Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
                         </select>
                     </div>
                 </div>
-                
-                <div class="grid grid-3">
-                <div class="madam-card page-item page-1" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #fff; padding: 4px 12px; font-size: 0.65rem; font-weight: bold; border-radius: 20px; z-index: 2; letter-spacing: 1px;">SALE</span>
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-01.jpg" alt="Designer Party Wear Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Designer Party Wear Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(80)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹1500</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-1" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-02.jpg" alt="2 Piece Co-ords Set Silver Hand Work Blouse" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html" data-listener-added_f854e084="true">2 Piece Co-ords Set Silver Hand Work Blouse</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(103)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹1545</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-1" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-03.jpg" alt="Luxury Evening Party Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html" data-listener-added_f854e084="true" data-listener-added_4bcf2fdb="true"></a><a href="http://localhost:8000/product.html" data-original-href="http://localhost:8000/product.html" data-listener-added_f854e084="true" style="transition: 0.2s;" data-listener-added_4bcf2fdb="true">2 Piece Co-ords Set Red Hand Work Blouse</a><span id="monica-writing-entry-btn-root" style="position: absolute; left: 0px; top: 0px; pointer-events: none;"></span></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(126)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹1590</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-1" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #fff; padding: 4px 12px; font-size: 0.65rem; font-weight: bold; border-radius: 20px; z-index: 2; letter-spacing: 1px;">SALE</span>
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-04.jpg" alt="Glamorous Sequin Cocktail Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Glamorous Sequin Cocktail Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(149)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹1635</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-1" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-05.jpg" alt="Elegant Velvet Evening Gown" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Elegant Velvet Evening Gown</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(172)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹1680</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-1" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-06.jpg" alt="Stunning Embellished Party Wear" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Stunning Embellished Party Wear</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(195)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹1725</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-1" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #fff; padding: 4px 12px; font-size: 0.65rem; font-weight: bold; border-radius: 20px; z-index: 2; letter-spacing: 1px;">SALE</span>
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-07.jpg" alt="Chic Metallic Co-ords Set" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Chic Metallic Co-ords Set</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(218)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹1770</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-1" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-08.jpg" alt="Radiant Night Out Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Radiant Night Out Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(241)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹1815</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-1" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-09.jpg" alt="Classic Midnight Blue Gown" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Classic Midnight Blue Gown</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(264)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹1860</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-1" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #fff; padding: 4px 12px; font-size: 0.65rem; font-weight: bold; border-radius: 20px; z-index: 2; letter-spacing: 1px;">SALE</span>
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-10.jpg" alt="Sparkling Silver Hand Work Set" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Sparkling Silver Hand Work Set</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(287)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹1905</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-1" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-11.jpg" alt="Elegant Silk Party Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Elegant Silk Party Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(310)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹1950</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-1" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-12.jpg" alt="Sleek Cocktail Maxi Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Sleek Cocktail Maxi Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(333)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹1995</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-1" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #fff; padding: 4px 12px; font-size: 0.65rem; font-weight: bold; border-radius: 20px; z-index: 2; letter-spacing: 1px;">SALE</span>
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-13.jpg" alt="Designer Party Wear Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Designer Party Wear Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(356)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹2040</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-1" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-14.jpg" alt="2 Piece Co-ords Set Silver Hand Work Blouse" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">2 Piece Co-ords Set Silver Hand Work Blouse</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(379)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹2085</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-1" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-15.jpg" alt="Luxury Evening Party Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Luxury Evening Party Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(402)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹2130</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-1" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #fff; padding: 4px 12px; font-size: 0.65rem; font-weight: bold; border-radius: 20px; z-index: 2; letter-spacing: 1px;">SALE</span>
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-16.jpg" alt="Glamorous Sequin Cocktail Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Glamorous Sequin Cocktail Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(425)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹2175</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-2" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-17.jpg" alt="Elegant Velvet Evening Gown" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Elegant Velvet Evening Gown</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(448)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹2220</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-2" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-18.jpg" alt="Stunning Embellished Party Wear" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Stunning Embellished Party Wear</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(471)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹2265</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-2" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #fff; padding: 4px 12px; font-size: 0.65rem; font-weight: bold; border-radius: 20px; z-index: 2; letter-spacing: 1px;">SALE</span>
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-19.jpg" alt="Chic Metallic Co-ords Set" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Chic Metallic Co-ords Set</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(94)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹2310</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-2" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-20.jpg" alt="Radiant Night Out Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Radiant Night Out Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(117)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹2355</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-2" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-21.jpg" alt="Classic Midnight Blue Gown" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Classic Midnight Blue Gown</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(140)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹2400</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-2" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #fff; padding: 4px 12px; font-size: 0.65rem; font-weight: bold; border-radius: 20px; z-index: 2; letter-spacing: 1px;">SALE</span>
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-22.jpg" alt="Sparkling Silver Hand Work Set" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Sparkling Silver Hand Work Set</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(163)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹2445</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-2" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-23.jpg" alt="Elegant Silk Party Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Elegant Silk Party Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(186)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹2490</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-2" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-24.jpg" alt="Sleek Cocktail Maxi Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Sleek Cocktail Maxi Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(209)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹2535</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-2" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #fff; padding: 4px 12px; font-size: 0.65rem; font-weight: bold; border-radius: 20px; z-index: 2; letter-spacing: 1px;">SALE</span>
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-25.jpg" alt="Designer Party Wear Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Designer Party Wear Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(232)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹2580</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-2" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-26.jpg" alt="2 Piece Co-ords Set Silver Hand Work Blouse" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">2 Piece Co-ords Set Silver Hand Work Blouse</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(255)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹2625</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-2" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-27.jpg" alt="Luxury Evening Party Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Luxury Evening Party Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(278)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹2670</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-2" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #fff; padding: 4px 12px; font-size: 0.65rem; font-weight: bold; border-radius: 20px; z-index: 2; letter-spacing: 1px;">SALE</span>
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-28.jpg" alt="Glamorous Sequin Cocktail Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Glamorous Sequin Cocktail Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(301)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹2715</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-2" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-29.jpg" alt="Elegant Velvet Evening Gown" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Elegant Velvet Evening Gown</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(324)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹2760</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-2" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-30.jpg" alt="Stunning Embellished Party Wear" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Stunning Embellished Party Wear</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(347)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹2805</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-2" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #fff; padding: 4px 12px; font-size: 0.65rem; font-weight: bold; border-radius: 20px; z-index: 2; letter-spacing: 1px;">SALE</span>
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-31.jpg" alt="Chic Metallic Co-ords Set" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Chic Metallic Co-ords Set</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(370)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹2850</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-2" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-32.jpg" alt="Radiant Night Out Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Radiant Night Out Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(393)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹2895</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-3" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-33.jpg" alt="Classic Midnight Blue Gown" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Classic Midnight Blue Gown</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(416)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹2940</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-3" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #fff; padding: 4px 12px; font-size: 0.65rem; font-weight: bold; border-radius: 20px; z-index: 2; letter-spacing: 1px;">SALE</span>
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-34.jpg" alt="Sparkling Silver Hand Work Set" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Sparkling Silver Hand Work Set</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(439)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹2985</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-3" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-35.jpg" alt="Elegant Silk Party Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Elegant Silk Party Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(462)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹3030</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-3" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-36.jpg" alt="Sleek Cocktail Maxi Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Sleek Cocktail Maxi Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(85)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹3075</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-3" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #fff; padding: 4px 12px; font-size: 0.65rem; font-weight: bold; border-radius: 20px; z-index: 2; letter-spacing: 1px;">SALE</span>
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-37.jpg" alt="Designer Party Wear Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Designer Party Wear Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(108)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹3120</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-3" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-38.jpg" alt="2 Piece Co-ords Set Silver Hand Work Blouse" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">2 Piece Co-ords Set Silver Hand Work Blouse</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(131)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹3165</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-3" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-39.jpg" alt="Luxury Evening Party Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Luxury Evening Party Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(154)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹3210</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-3" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #fff; padding: 4px 12px; font-size: 0.65rem; font-weight: bold; border-radius: 20px; z-index: 2; letter-spacing: 1px;">SALE</span>
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-40.jpg" alt="Glamorous Sequin Cocktail Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Glamorous Sequin Cocktail Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(177)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹3255</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-3" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-41.jpg" alt="Elegant Velvet Evening Gown" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Elegant Velvet Evening Gown</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(200)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹3300</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-3" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-42.jpg" alt="Stunning Embellished Party Wear" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Stunning Embellished Party Wear</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(223)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹3345</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-3" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #fff; padding: 4px 12px; font-size: 0.65rem; font-weight: bold; border-radius: 20px; z-index: 2; letter-spacing: 1px;">SALE</span>
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-43.jpg" alt="Chic Metallic Co-ords Set" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Chic Metallic Co-ords Set</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(246)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹3390</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-3" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-44.jpg" alt="Radiant Night Out Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Radiant Night Out Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(269)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹3435</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-3" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-45.jpg" alt="Classic Midnight Blue Gown" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Classic Midnight Blue Gown</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(292)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹3480</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-3" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #fff; padding: 4px 12px; font-size: 0.65rem; font-weight: bold; border-radius: 20px; z-index: 2; letter-spacing: 1px;">SALE</span>
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-46.jpg" alt="Sparkling Silver Hand Work Set" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Sparkling Silver Hand Work Set</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(315)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹1525</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-3" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-47.jpg" alt="Elegant Silk Party Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Elegant Silk Party Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(338)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹1570</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="madam-card page-item page-3" style="position: relative; background: rgb(255, 255, 255); padding: 15px; border-radius: 2px; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="position: relative; background: linear-gradient(135deg, #f8f6f0 0%, #edeae0 100%); padding: 15px; border-radius: 2px; overflow: hidden; aspect-ratio: 3/4;">
-                        
-                        <button class="add-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px; background: white; border: 1.5px solid #ff007f; color: #ff007f; border-radius: 4px; padding: 4px 15px; font-weight: bold; font-size: 0.85rem; z-index: 3; cursor: pointer;">ADD</button>
-                        <div class="love-icon" style="position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                        </div>
-                        <a href="product.html"><img src="/assets/images/madam/saini-48.jpg" alt="Sleek Cocktail Maxi Dress" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"></a>
-                    </div>
-                    <div style="padding-top: 20px; text-align: left;">
-                        <p style="font-size: 0.7rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">MADAMCUTIE</p>
-                        <h3 style="font-size: 1.2rem; margin-bottom: 6px; font-weight: 500;"><a href="product.html" style="color: inherit; text-decoration: none;" data-original-href="http://localhost:8000/product.html">Sleek Cocktail Maxi Dress</a></h3>
-                        <p style="font-size: 0.85rem; color: rgb(119, 119, 119); margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">Perfect for parties &amp; evening events.</p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 5px; font-size: 0.8rem;">
-                                <span style="color: #d4af37; letter-spacing: 2px;">★★★★★</span>
-                                <span style="color: rgb(136, 136, 136); margin-left: 5px;">(361)</span>
-                            </div>
-                            <span style="font-weight: 600;">₹1615</span>
-                        </div>
-                    </div>
-                </div>
-
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                </div>
-
-                
-                </div>
-
-                
-                </div>
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                    <!-- Look 01 -->
-                    
-                    
-
-                    <!-- Look 02 -->
-                    
-                    
-
-                    <!-- Look 03 -->
-                    
-                    
-
-                    <!-- Look 04 -->
-                    
-                    
-
-                    <!-- Look 05 -->
-                    
-                    
-
-                    <!-- Look 06 -->
-                    
-                    
-
-                    <!-- Look 07 -->
-                    
-                    
-
-                    <!-- Look 08 -->
-                    
-                    
-
-                    <!-- Look 09 (Variation of Look 01) -->
-                    
-                    
-
-                    <!-- Look 10 (Variation of Look 02) -->
-                    
-                    
-
-                    <!-- Look 11 (Variation of Look 03) -->
-                    
-                    
-
-                    <!-- Look 12 (Variation of Look 04) -->
-                    
-                    
-                
-
-                <!-- Pagination -->
-                <div class="d-flex justify-center" style="margin-top: 50px; gap: 10px;">
-                    <a href="#" class="btn btn-secondary" style="padding: 10px 20px; border-color: transparent; background: var(--color-bg-light);" data-original-href="http://localhost:8000/shop.html#">&lt; Prev</a>
-                    <a href="#" class="btn btn-primary" style="padding: 10px 20px; border-radius: 2px;" data-original-href="http://localhost:8000/shop.html#">1</a>
-                    <a href="#" class="btn btn-secondary" style="padding: 10px 20px; border-radius: 2px;" data-original-href="http://localhost:8000/shop.html#">2</a>
-                    <a href="#" class="btn btn-secondary" style="padding: 10px 20px; border-radius: 2px;" data-original-href="http://localhost:8000/shop.html#">3</a>
-                    <a href="#" class="btn btn-secondary" style="padding: 10px 20px; border-color: transparent; background: var(--color-bg-light);" data-original-href="http://localhost:8000/shop.html#">Next &gt;</a>
-                </div>
-            
-            
-            
-            <div class="pagination-container" style="display: flex; justify-content: center; gap: 10px; margin-top: 50px;">
-                <button onclick="changePage(-1, true)" style="padding: 10px 20px; border: none; background: #f8f6f0; font-weight: 600; cursor: pointer; letter-spacing: 1px;">&lt; PREV</button>
-                <button onclick="goToPage(1)" class="page-btn page-btn-1" style="padding: 10px 20px; border: 1px solid #111; background: #111; color: white; font-weight: 600; cursor: pointer;">1</button>
-                <button onclick="goToPage(2)" class="page-btn page-btn-2" style="padding: 10px 20px; border: 1px solid #111; background: #fff; color: #111; font-weight: 600; cursor: pointer;">2</button>
-                <button onclick="goToPage(3)" class="page-btn page-btn-3" style="padding: 10px 20px; border: 1px solid #111; background: #fff; color: #111; font-weight: 600; cursor: pointer;">3</button>
-                <button onclick="changePage(1, true)" style="padding: 10px 20px; border: none; background: #f8f6f0; font-weight: 600; cursor: pointer; letter-spacing: 1px;">NEXT &gt;</button>
             </div>
-            
-            <script>
-                let currentPage = 1;
-                const totalPages = 3;
-                
-                function goToPage(page) {
-                    if (page < 1 || page > totalPages) return;
-                    currentPage = page;
-                    
-                    // Hide all items
-                    document.querySelectorAll('.page-item').forEach(el => el.style.display = 'none');
-                    // Show current page items
-                    document.querySelectorAll('.page-' + page).forEach(el => el.style.display = 'block');
-                    
-                    // Update buttons
-                    document.querySelectorAll('.page-btn').forEach(btn => {
-                        btn.style.background = '#fff';
-                        btn.style.color = '#111';
-                    });
-                    const activeBtn = document.querySelector('.page-btn-' + page);
-                    if (activeBtn) {
-                        activeBtn.style.background = '#111';
-                        activeBtn.style.color = 'white';
-                    }
-                    
-                    window.scrollTo({top: document.querySelector('.grid-3').offsetTop - 100, behavior: 'smooth'});
-                }
-                
-                function changePage(delta, isRelative) {
-                    goToPage(currentPage + delta);
-                }
-            </script>
 
-      </section>
+            <div class="shop-layout">
+                <!-- Sidebar -->
+                <aside class="filter-sidebar">
+                    <div class="filter-widget">
+                        <h4 class="filter-title">Categories</h4>
+                        <ul class="filter-list">
+                            <li class="active" onclick="filterByCategory('all')">All Items</li>
+                            <li onclick="filterByCategory('Lehenga')">Lehenga</li>
+                            <li onclick="filterByCategory('Co-ords Set')">Co-ords Set</li>
+                            <li onclick="filterByCategory('Party Wear')">Party Wear</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="filter-widget">
+                        <h4 class="filter-title">Size</h4>
+                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                            <button class="size-btn active">Free Size</button>
+                        </div>
+                    </div>
+                </aside>
 
-      <!-- Footer -->
+                <!-- Grid -->
+                <div class="grid grid-responsive-3-2-1" id="shop-grid">
+                    <!-- Products will be injected here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer" style="background: var(--color-primary); color: white; padding: 80px 0 30px;">
         <div class="container">
-            <div class="grid grid-4" style="margin-bottom: 60px;">
+            <div class="grid grid-responsive-4-2-1" style="margin-bottom: 60px;">
                 <div>
                     <h3 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 20px; letter-spacing: 1px;">Madamcutie</h3>
                     <p style="color: #aaa; margin-bottom: 20px; line-height: 1.6; font-size: 0.95rem;">Effortless style for everyday queens. Elegant, comfortable, and empowering fashion designed for the modern woman.</p>
                     <p style="color: #aaa; margin-bottom: 5px; font-size: 0.9rem;"><strong>Phone:</strong> +91-9911852113</p>
-                    <p style="color: #aaa; margin-bottom: 20px; font-size: 0.9rem;"><strong>Email:</strong> madamcutie1995@gmail.com</p><br><a href="javascript:toggleAdminMode()" style="color: #666; text-decoration: none; font-size: 0.8rem; margin-top: 10px; display: inline-block;" data-original-href="javascript:toggleAdminMode()">Admin Login</a>
-                    <div style="display: flex; gap: 20px;">
-                        <a href="#" class="social-icon" style="color: white;" title="Facebook" data-original-href="http://localhost:8000/shop.html#"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
-                        <a href="https://www.instagram.com/madamcutie.co?igsh=OGcwdmFxYTBuZGhv&amp;utm_source=qr" target="_blank" class="social-icon" style="color: white;" title="Instagram" data-original-href="https://www.instagram.com/madamcutie.co?igsh=OGcwdmFxYTBuZGhv&amp;utm_source=qr"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                        <a href="#" class="social-icon" style="color: white;" title="Pinterest" data-original-href="http://localhost:8000/shop.html#"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.25 2.65 7.9 6.44 9.32-.09-.78-.17-1.98.03-2.83.18-.75 1.16-4.94 1.16-4.94s-.3-.6-.3-1.48c0-1.39.81-2.43 1.82-2.43.85 0 1.26.64 1.26 1.4 0 .86-.54 2.14-.83 3.32-.24.99.5 1.8 1.47 1.8 1.76 0 3.12-1.86 3.12-4.54 0-2.38-1.71-4.04-4.16-4.04-2.84 0-4.5 2.13-4.5 4.32 0 .85.33 1.76.74 2.26.08.1.09.18.06.28-.08.35-.27 1.09-.31 1.25-.05.19-.17.23-.37.14-1.38-.63-2.24-2.61-2.24-4.2 0-3.42 2.49-6.56 7.16-6.56 3.76 0 6.68 2.68 6.68 6.26 0 3.74-2.36 6.75-5.63 6.75-1.1 0-2.13-.57-2.48-1.24l-.68 2.58c-.24.92-.91 2.07-1.35 2.77 1.07.33 2.21.5 3.39.5 5.52 0 10-4.48 10-10S17.52 2 12 2z"></path></svg></a>
-                    </div>
+                    <p style="color: #aaa; margin-bottom: 20px; font-size: 0.9rem;"><strong>Email:</strong> madamcutie1995@gmail.com</p>
                 </div>
-                <div style="padding-left: 20px;">
+                <div style="padding-left: clamp(0px, 2vw, 20px);">
                     <h4 style="margin-bottom: 25px; letter-spacing: 2px; font-size: 0.9rem; text-transform: uppercase;">Shop</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5;">
-                        <li><a href="shop.html" class="footer-link" style="color: #aaa; text-decoration: none;" data-original-href="http://localhost:8000/shop.html">New Arrivals</a></li>
-                        <li><a href="shop.html?category=dresses" class="footer-link" style="color: #aaa; text-decoration: none;" data-original-href="http://localhost:8000/shop.html?category=dresses">Dresses</a></li>
-                        <li><a href="shop.html?collection=lookbook" class="footer-link" style="color: #aaa; text-decoration: none;" data-original-href="http://localhost:8000/shop.html?collection=lookbook">Lookbook</a></li>
-                        <li><a href="shop.html?collection=all" class="footer-link" style="color: #aaa; text-decoration: none;" data-original-href="http://localhost:8000/shop.html?collection=all">Collections</a></li>
+                    <ul class="footer-links">
+                        <li><a href="shop.html">New Arrivals</a></li>
+                        <li><a href="shop.html?category=dresses">Dresses</a></li>
+                        <li><a href="shop.html?collection=lookbook">Lookbook</a></li>
+                        <li><a href="shop.html?collection=all">Collections</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 style="margin-bottom: 25px; letter-spacing: 2px; font-size: 0.9rem; text-transform: uppercase;">About</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5;">
-                        <li><a href="about.html" class="footer-link" style="color: #aaa; text-decoration: none;" data-original-href="http://localhost:8000/about.html">Our Story</a></li>
-                        <li><a href="policy.html" class="footer-link" style="color: #aaa; text-decoration: none;" data-original-href="http://localhost:8000/policy.html">Policies</a></li>
-                        <li><a href="#" class="footer-link" style="color: #aaa; text-decoration: none;" data-original-href="http://localhost:8000/shop.html#">Careers</a></li>
-                        <li><a href="https://wa.me/919911852113" target="_blank" data-original-href="https://wa.me/919911852113">For Wholesale</a><a href="creators.html" data-original-href="http://localhost:8000/creators.html">For Creators</a><a href="contact.html" class="footer-link" style="color: #aaa; text-decoration: none;" data-original-href="http://localhost:8000/contact.html">Contact Us</a></li>
+                    <ul class="footer-links">
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="policy.html">Policies</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="margin-bottom: 25px; letter-spacing: 2px; font-size: 0.9rem; text-transform: uppercase;">Help</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.5;">
-                        <li><a href="#" class="footer-link" style="color: #aaa; text-decoration: none;" data-original-href="http://localhost:8000/shop.html#">FAQ</a></li>
-                        <li><a href="policy.html" class="footer-link" style="color: #aaa; text-decoration: none;" data-original-href="http://localhost:8000/policy.html">Shipping &amp; Returns</a></li>
-                        <li><a href="#" class="footer-link" style="color: #aaa; text-decoration: none;" data-original-href="http://localhost:8000/shop.html#">Size Guide</a></li>
-                        <li><a href="#" class="footer-link" style="color: #aaa; text-decoration: none;" data-original-href="http://localhost:8000/shop.html#">Track Order</a></li>
-                    </ul>
+                    <h4 style="margin-bottom: 25px; letter-spacing: 2px; font-size: 0.9rem; text-transform: uppercase;">Follow Us</h4>
+                    <div style="display: flex; gap: 20px;">
+                        <a href="https://www.instagram.com/madamcutie.co?igsh=OGcwdmFxYTBuZGhv&utm_source=qr" target="_blank" class="social-icon" style="color: white;" title="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="https://wa.me/919911852113" target="_blank" class="social-icon" style="color: white;" title="WhatsApp"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+                    </div>
                 </div>
             </div>
             <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; color: #777; font-size: 0.85rem; flex-wrap: wrap; gap: 20px;">
-                <p>© 2026 Madamcutie. All rights reserved. Crafted by pair programming.</p>
+                <p>&copy; 2026 Madamcutie. All rights reserved.</p>
                 <div style="display: flex; gap: 10px;">
                     <span style="font-size: 1.5rem;">💳</span>
                     <span style="font-size: 1.5rem;">🏦</span>
@@ -1596,229 +167,71 @@
         </div>
     </footer>
 
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/919911852113" target="_blank" class="whatsapp-floating" aria-label="Chat on WhatsApp" data-original-href="https://wa.me/919911852113">
-    <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" style="display:block; margin:auto;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
-</a>
-<style>
-.whatsapp-floating {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 60px;
-    height: 60px;
-    background-color: #25D366;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    z-index: 9999;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-.whatsapp-floating:hover {
-    transform: scale(1.1);
-    background-color: #20BA5C;
-    color: white;
-}
-@media (max-width: 768px) {
-    .whatsapp-floating {
-        bottom: 20px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-    }
-}
-</style>
-
-
-
-
-<!-- Admin Mode Script -->
-<script>
-function toggleAdminMode() {
-    const isActive = localStorage.getItem('adminMode') === 'true';
-    localStorage.setItem('adminMode', !isActive);
-    if (!isActive) {
-        window.location.href = 'index.html';
-    } else {
-        location.reload();
-    }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('adminMode') === 'true') {
-        const toolbar = document.createElement('div');
-        toolbar.id = 'admin-toolbar';
-        toolbar.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; background: #111; color: #fff; padding: 15px 20px; z-index: 10000; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 15px rgba(0,0,0,0.5); font-family: sans-serif; border-bottom: 3px solid #d4af37;';
-        toolbar.innerHTML = `
-            <div style="font-weight: bold; font-size: 16px; letter-spacing: 1px; color: #d4af37;">
-                ⚙️ ADMIN MODE ACTIVE - Click directly on any highlighted text below to edit it!
-            </div>
-            <div>
-                <button onclick="saveChanges()" style="background: #d4af37; color: #fff; border: none; padding: 8px 20px; margin-right: 10px; cursor: pointer; font-weight: bold; border-radius: 4px; font-size: 14px;">Save All Changes</button>
-                <button onclick="toggleAdminMode()" style="background: #fff; color: #111; border: none; padding: 8px 20px; cursor: pointer; font-weight: bold; border-radius: 4px; font-size: 14px;">Exit Admin</button>
-            </div>
-        `;
-        document.body.prepend(toolbar);
-        
-        document.body.style.paddingTop = '60px';
-
-        // Prevent all links from working while in admin mode so they can be clicked to edit
-        document.querySelectorAll('a').forEach(a => {
-            if (a.href && !a.onclick) {
-                // Keep the original href but prevent default click
-                a.dataset.originalHref = a.href;
-                a.addEventListener('click', function(e) {
-                    // Only prevent default if it's an editable element or inside one
-                    if (this.isContentEditable || this.closest('[contenteditable="true"]') || this.closest('.madam-card')) {
-                        e.preventDefault();
+    <!-- Scripts -->
+    <script src="/js/products.js"></script>
+    <script src="/js/cart.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+        // Custom Shop Page Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts(PRODUCTS);
+            
+            const sortSelect = document.getElementById('sort-by-select');
+            if (sortSelect) {
+                sortSelect.addEventListener('change', (e) => {
+                    let sorted = [...PRODUCTS];
+                    if (e.target.value === 'price-low') {
+                        sorted.sort((a, b) => a.price - b.price);
+                    } else if (e.target.value === 'price-high') {
+                        sorted.sort((a, b) => b.price - a.price);
                     }
+                    renderProducts(sorted);
                 });
             }
         });
 
-        const titles = document.querySelectorAll('.madam-card h3 a');
-        const descriptions = document.querySelectorAll('.madam-card p:nth-of-type(2)');
-        const prices = document.querySelectorAll('.madam-card span:last-child');
+        function renderProducts(list) {
+            const grid = document.getElementById('shop-grid');
+            const count = document.getElementById('product-count');
+            if (!grid) return;
 
-        [...titles, ...descriptions, ...prices].forEach(el => {
-            el.contentEditable = "true";
-            el.style.border = "2px dashed #ff0000";
-            el.style.backgroundColor = "rgba(255, 255, 0, 0.2)";
-            el.style.padding = "4px";
-            el.style.borderRadius = "4px";
-            el.style.outline = "none";
-            el.style.cursor = "text";
-            el.style.minHeight = "20px";
-            el.style.display = "inline-block";
-            
-            el.addEventListener('focus', function() {
-                this.style.backgroundColor = 'rgba(255, 255, 0, 0.5)';
-            });
-            el.addEventListener('blur', function() {
-                this.style.backgroundColor = 'rgba(255, 255, 0, 0.2)';
-            });
-        });
-    }
-});
-
-function saveChanges() {
-    const btn = document.querySelector('#admin-toolbar button');
-    btn.textContent = 'Saving...';
-    const toolbar = document.getElementById('admin-toolbar');
-    if (toolbar) toolbar.remove();
-    
-    document.body.style.paddingTop = '';
-    
-    document.querySelectorAll('[contenteditable="true"]').forEach(el => {
-        el.removeAttribute('contenteditable');
-        el.style.border = '';
-        el.style.backgroundColor = '';
-        el.style.padding = '';
-        el.style.borderRadius = '';
-        el.style.outline = '';
-        el.style.cursor = '';
-        el.style.minHeight = '';
-        el.style.display = (el.tagName === 'A' || el.tagName === 'SPAN') ? '' : el.style.display;
-    });
-    
-    document.querySelectorAll('.page-item').forEach(el => {
-        if(el.style.display === 'block' || el.style.display === 'none') {
-            el.style.removeProperty('display');
+            count.textContent = list.length;
+            grid.innerHTML = list.map(p => `
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        ${p.featured ? '<span class="product-badge">Best Seller</span>' : ''}
+                        <a href="product.html?id=${p.id}">
+                            <img src="${p.image}" alt="${p.name}" class="product-image" loading="lazy">
+                        </a>
+                        <button class="product-quick-add" onclick="event.preventDefault(); addToCart('${p.id}', '${p.name}', ${p.price}, '${p.image}')">Quick Add</button>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">${p.category}</span>
+                        <h3 class="product-title"><a href="product.html?id=${p.id}">${p.name}</a></h3>
+                        <div class="product-rating">
+                            <span>★★★★★</span>
+                            <span class="product-rating-count">(${p.reviews})</span>
+                        </div>
+                        <span class="product-price">₹${p.price}</span>
+                    </div>
+                </div>
+            `).join('');
         }
-    });
 
-    const currentHtml = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
-    localStorage.setItem('adminMode', 'true');
-    const filename = location.pathname.split('/').pop() || 'index.html';
-    
-    fetch('/save_html', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ file: filename, content: currentHtml })
-    }).then(res => res.json()).then(data => {
-        if(data.status === 'success') {
-            alert('Changes saved successfully!');
-            location.reload();
-        } else {
-            alert('Error saving changes: ' + (data.message || 'Unknown error'));
-            location.reload();
-        }
-    }).catch(err => {
-        alert('Failed to connect to Admin Server. Make sure server.py is running.');
-        location.reload();
-    });
-}
-</script>
-
-
-
-
-
-    
-
-<div id="monica-content-root" class="monica-widget" style="pointer-events: auto;"></div><div id="monica-content-root" class="monica-widget" style="pointer-events: auto;"></div>
-            <script id="custom-cart-logic">
-            document.addEventListener('DOMContentLoaded', () => {
-                let cart = JSON.parse(localStorage.getItem('madamCart')) || [];
-                const cartCountEl = document.querySelector('.cart-count');
-                
-                function updateCartCount() {
-                    if(cartCountEl) cartCountEl.textContent = cart.length;
-                }
-                updateCartCount();
-                
-                // Set initial state for buttons based on cart
-                document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
-                    const card = btn.closest('.madam-card');
-                    if(card) {
-                        const titleEl = card.querySelector('h3 a');
-                        const title = titleEl ? titleEl.textContent : 'Dress';
-                        const inCart = cart.some(item => item.title === title);
-                        if(inCart) {
-                            btn.textContent = 'ADDED';
-                            btn.style.background = '#ff007f';
-                            btn.style.color = 'white';
-                        }
-                    }
-                    
-                    btn.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        if (btn.textContent === 'ADDED') return; // already added
-                        
-                        const card = btn.closest('.madam-card');
-                        const titleEl = card.querySelector('h3 a');
-                        const priceEl = card.querySelector('span[style*="font-weight: 600"]');
-                        const imgEl = card.querySelector('img');
-                        
-                        const item = {
-                            title: titleEl ? titleEl.textContent : 'Dress',
-                            price: priceEl ? parseInt(priceEl.textContent.replace(/\D/g,'')) : 0,
-                            img: imgEl ? imgEl.src : ''
-                        };
-                        cart.push(item);
-                        localStorage.setItem('madamCart', JSON.stringify(cart));
-                        updateCartCount();
-                        
-                        btn.textContent = 'ADDED';
-                        btn.style.background = '#ff007f';
-                        btn.style.color = 'white';
-                    });
-                });
-                
-                document.querySelectorAll('.love-icon svg').forEach(svg => {
-                    svg.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        if(svg.getAttribute('fill') === 'none') {
-                            svg.setAttribute('fill', '#ff007f');
-                        } else {
-                            svg.setAttribute('fill', 'none');
-                        }
-                    });
-                });
-            });
-            </script>
+        function filterByCategory(cat) {
+            let filtered = PRODUCTS;
+            if (cat !== 'all') {
+                filtered = PRODUCTS.filter(p => p.category.includes(cat));
+            }
+            renderProducts(filtered);
             
-</body></html>
+            // Update active state in sidebar
+            document.querySelectorAll('.filter-list li').forEach(el => el.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Close mobile sidebar if open
+            document.querySelector('.filter-sidebar').classList.remove('open');
+        }
+    </script>
+</body>
+</html>

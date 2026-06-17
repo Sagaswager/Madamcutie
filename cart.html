@@ -3,129 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Bag | Madamcutie</title>
+    <title>Shopping Bag | Madamcutie</title>
+    <meta name="description" content="View your shopping bag at Madamcutie.">
     <link rel="stylesheet" href="/css/style.css">
-    <style>
-        .cart-container { max-width: 800px; margin: 40px auto; padding: 20px; }
-        .cart-item { display: flex; align-items: center; border-bottom: 1px solid #eee; padding: 15px 0; gap: 15px; }
-        .cart-item img { width: 80px; height: 100px; object-fit: cover; border-radius: 4px; }
-        .cart-item-details { flex-grow: 1; }
-        .cart-item-title { font-weight: bold; font-size: 1.1rem; margin-bottom: 5px; }
-        .cart-item-price { color: #d4af37; font-weight: bold; }
-        .cart-remove { color: #ff007f; cursor: pointer; font-size: 0.9rem; text-decoration: underline; margin-top: 5px; display: inline-block; }
-        .cart-summary { margin-top: 30px; padding: 20px; background: #f9f9f9; border-radius: 8px; text-align: right; }
-        .cart-total { font-size: 1.5rem; font-weight: bold; margin-bottom: 20px; }
-        .buy-now-btn { background: #ff007f; color: white; border: none; padding: 12px 30px; font-size: 1.1rem; font-weight: bold; border-radius: 25px; cursor: pointer; text-transform: uppercase; transition: opacity 0.3s; text-decoration: none; display: inline-block; }
-        .buy-now-btn:hover { opacity: 0.8; }
-        .empty-cart { text-align: center; padding: 50px 20px; }
-        .empty-cart p { margin-bottom: 20px; color: #666; }
-    </style>
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container nav-container">
             <div class="logo-wrapper">
-                <a href="index.html" class="logo-text" style="background: linear-gradient(45deg, #d4af37, #f3e5ab, #b8860b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0px 2px 4px rgba(0,0,0,0.1); font-weight: 800; font-family: var(--font-heading); font-size: 2.2rem; letter-spacing: 2px;">Madamcutie</a>
+                <img src="/assets/images/logo.jpg" alt="Madamcutie Logo" class="logo-img">
+                <a href="index.html" class="logo-text" style="background: linear-gradient(45deg, #d4af37, #f3e5ab, #b8860b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0px 2px 4px rgba(0,0,0,0.1); font-weight: 800; font-family: var(--font-heading); font-size: clamp(1.5rem, 4vw, 2.2rem); letter-spacing: 2px;">Madamcutie</a>
             </div>
             
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="shop.html">Shop</a>
                 <a href="about.html">Our Story</a>
+                <a href="https://wa.me/919911852113" target="_blank">For Wholesale</a>
+                <a href="creators.html">For Creators</a>
+                <a href="contact.html">Contact</a>
             </nav>
 
             <div class="header-actions">
+                <button class="action-btn" id="search-trigger" title="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
                 <a href="cart.html" class="action-btn active" title="Shopping Bag">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
                     <span class="cart-count">0</span>
                 </a>
+                <button class="mobile-menu-toggle action-btn" aria-label="Toggle Menu" onclick="toggleMobileNav()">☰</button>
             </div>
         </div>
     </header>
 
-    <div class="cart-container">
-        <h1 style="font-family: var(--font-heading); margin-bottom: 20px;">Your Bag</h1>
-        
-        <div id="cart-items">
-            <!-- Items will be loaded here -->
-        </div>
-        
-        <div class="cart-summary" id="cart-summary" style="display: none;">
-            <div class="cart-total">Total: ₹<span id="total-price">0</span></div>
-            <a href="#" id="buy-now-btn" class="buy-now-btn">Buy Now</a>
-        </div>
-        
-        <div class="empty-cart" id="empty-cart" style="display: none;">
-            <p>Your bag is currently empty.</p>
-            <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
-        </div>
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav">
+        <button class="drawer-close-btn" onclick="toggleMobileNav()">✕</button>
+        <nav class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">Our Story</a>
+            <a href="https://wa.me/919911852113" target="_blank">For Wholesale</a>
+            <a href="creators.html">For Creators</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </div>
+    <div class="mobile-nav-drawer-overlay" id="mobile-nav-overlay" onclick="toggleMobileNav()"></div>
 
+    <!-- Cart Page Content -->
+    <section class="section">
+        <div class="container">
+            <h1 style="font-family: var(--font-heading); font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 40px;">Shopping Bag</h1>
+
+            <div id="cart-empty" style="display: none; text-align: center; padding: 60px 0;">
+                <p style="font-size: 1.2rem; color: #666; margin-bottom: 30px;">Your shopping bag is currently empty.</p>
+                <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
+            </div>
+
+            <div id="cart-content" class="grid grid-responsive-2-1" style="gap: 40px; align-items: start;">
+                <!-- Cart Items -->
+                <div id="cart-items-list" style="display: flex; flex-direction: column; gap: 20px;">
+                    <!-- Item template -->
+                </div>
+
+                <!-- Order Summary -->
+                <aside class="cart-summary" style="background: #fcfcfc; padding: 30px; border: 1px solid var(--color-border); border-radius: 4px;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 25px; border-bottom: 1px solid var(--color-border); padding-bottom: 15px;">Order Summary</h3>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 15px; margin-bottom: 25px; font-size: 1rem;">
+                        <div class="d-flex justify-between">
+                            <span>Subtotal</span>
+                            <span id="subtotal">₹0</span>
+                        </div>
+                        <div class="d-flex justify-between">
+                            <span>Shipping</span>
+                            <span style="color: #28a745; font-weight: 600;">FREE</span>
+                        </div>
+                        <div class="d-flex justify-between" style="border-top: 1px solid var(--color-border); padding-top: 15px; font-weight: 700; font-size: 1.2rem;">
+                            <span>Total</span>
+                            <span id="total">₹0</span>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" style="width: 100%; padding: 18px; font-size: 1rem; letter-spacing: 1px;" onclick="window.location.href='https://wa.me/919911852113?text=I would like to order items from my cart'">PROCEED TO CHECKOUT</button>
+                    
+                    <div style="margin-top: 25px; text-align: center;">
+                        <img src="https://help.zazzle.com/hc/article_attachments/360010513393/Logos-01.png" alt="Payment Methods" style="max-width: 100%; height: auto; opacity: 0.7;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="background: var(--color-primary); color: white; padding: 80px 0 30px;">
+        <div class="container">
+            <div style="text-align: center; color: #777; font-size: 0.85rem;">
+                <p>&copy; 2026 Madamcutie. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/products.js"></script>
+    <script src="/js/cart.js"></script>
+    <script src="/js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            let cart = JSON.parse(localStorage.getItem('madamCart')) || [];
-            const cartItemsContainer = document.getElementById('cart-items');
-            const cartSummary = document.getElementById('cart-summary');
-            const emptyCart = document.getElementById('empty-cart');
-            const totalPriceEl = document.getElementById('total-price');
-            const buyNowBtn = document.getElementById('buy-now-btn');
-            const cartCountEl = document.querySelector('.cart-count');
-            
+            const cartList = document.getElementById('cart-items-list');
+            const cartContent = document.getElementById('cart-content');
+            const cartEmpty = document.getElementById('cart-empty');
+            const subtotalEl = document.getElementById('subtotal');
+            const totalEl = document.getElementById('total');
+
             function renderCart() {
-                if(cartCountEl) cartCountEl.textContent = cart.length;
+                const cart = JSON.parse(localStorage.getItem('madamCart')) || [];
                 
                 if (cart.length === 0) {
-                    cartItemsContainer.innerHTML = '';
-                    cartSummary.style.display = 'none';
-                    emptyCart.style.display = 'block';
+                    cartContent.style.display = 'none';
+                    cartEmpty.style.display = 'block';
                     return;
                 }
-                
-                emptyCart.style.display = 'none';
-                cartSummary.style.display = 'block';
-                
-                let html = '';
-                let total = 0;
-                
-                cart.forEach((item, index) => {
-                    total += item.price;
-                    html += `
-                        <div class="cart-item">
-                            <img src="${item.img || '/assets/images/placeholder.jpg'}" alt="${item.title}">
-                            <div class="cart-item-details">
-                                <div class="cart-item-title">${item.title}</div>
-                                <div class="cart-item-price">₹${item.price}</div>
-                                <div class="cart-remove" data-index="${index}">Remove</div>
+
+                cartContent.style.display = 'grid';
+                cartEmpty.style.display = 'none';
+
+                let subtotal = 0;
+                cartList.innerHTML = cart.map((item, index) => {
+                    subtotal += item.price;
+                    return `
+                        <div class="cart-item" style="display: flex; gap: 20px; padding: 20px; background: #fff; border: 1px solid #eee; border-radius: 4px; align-items: center; flex-wrap: wrap;">
+                            <div style="width: 100px; height: 130px; background: #f8f6f0; border-radius: 4px; overflow: hidden; flex-shrink: 0;">
+                                <img src="${item.img}" alt="${item.title}" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div style="flex: 1; min-width: 200px;">
+                                <h4 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 5px;">${item.title}</h4>
+                                <p style="color: #888; font-size: 0.9rem; margin-bottom: 10px;">Size: Free Size</p>
+                                <div class="d-flex align-center justify-between" style="flex-wrap: wrap; gap: 15px;">
+                                    <span style="font-weight: 600; font-size: 1.1rem;">₹${item.price}</span>
+                                    <button onclick="removeFromCart(${index})" style="background: none; border: none; color: #ff007f; cursor: pointer; font-size: 0.9rem; font-weight: 600; text-decoration: underline;">Remove</button>
+                                </div>
                             </div>
                         </div>
                     `;
-                });
-                
-                cartItemsContainer.innerHTML = html;
-                totalPriceEl.textContent = total;
-                
-                // Add remove listeners
-                document.querySelectorAll('.cart-remove').forEach(btn => {
-                    btn.addEventListener('click', (e) => {
-                        const index = parseInt(e.target.getAttribute('data-index'));
-                        cart.splice(index, 1);
-                        localStorage.setItem('madamCart', JSON.stringify(cart));
-                        renderCart();
-                    });
-                });
-                
-                // WhatsApp URL
-                let waText = "Hello, I would like to order the following items from Madamcutie:\\n\\n";
-                cart.forEach((item, idx) => {
-                    waText += `${idx+1}. ${item.title} - ₹${item.price}\\n`;
-                });
-                waText += `\\nTotal: ₹${total}`;
-                
-                const waUrl = `https://wa.me/919911852113?text=${encodeURIComponent(waText)}`;
-                buyNowBtn.href = waUrl;
+                }).join('');
+
+                subtotalEl.textContent = `₹${subtotal}`;
+                totalEl.textContent = `₹${subtotal}`;
             }
-            
+
+            window.removeFromCart = (index) => {
+                let cart = JSON.parse(localStorage.getItem('madamCart')) || [];
+                cart.splice(index, 1);
+                localStorage.setItem('madamCart', JSON.stringify(cart));
+                renderCart();
+                // Update global count
+                const countEl = document.querySelector('.cart-count');
+                if (countEl) countEl.textContent = cart.length;
+            };
+
             renderCart();
         });
     </script>
