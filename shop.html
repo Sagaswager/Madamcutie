@@ -168,18 +168,273 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/products.js"></script>
+    <script src="/js/products.js?v=1.1"></script>
     <script src="/js/cart.js"></script>
     <script src="/js/main.js"></script>
+    <style>
+        /* Enhanced Product Card Styles */
+        .product-card {
+            position: relative;
+            background: #fff;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid transparent;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            border-color: #f0f0f0;
+        }
+
+        .product-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            background: #f9f9f9;
+        }
+
+        .product-image-alt {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.8s ease;
+        }
+
+        .product-card:hover .product-image-alt {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .wishlist-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            color: #ccc;
+        }
+
+        .wishlist-btn:hover {
+            background: #fff;
+            transform: scale(1.1);
+            color: #ff4757;
+        }
+
+        .wishlist-btn.active {
+            color: #ff4757;
+            background: #fff;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #d4af37;
+            color: #fff;
+            padding: 5px 12px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 2px;
+            z-index: 5;
+        }
+
+        .product-info {
+            padding: 20px 15px;
+            text-align: center;
+        }
+
+        .product-cat {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #999;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .product-title {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .product-price {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #111;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .btn-add-cart {
+            width: 100%;
+            background: #d4af37;
+            color: #fff;
+            padding: 12px;
+            border-radius: 2px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            border: 1px solid #d4af37;
+        }
+
+        .btn-add-cart:hover {
+            background: #b8860b;
+            border-color: #b8860b;
+            color: #fff;
+        }
+
+        /* Improved Sidebar Styles */
+        .filter-widget {
+            margin-bottom: 40px;
+        }
+
+        .filter-title {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            color: #111;
+        }
+
+        .filter-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .filter-list li {
+            padding: 10px 0;
+            font-size: 0.9rem;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+        }
+
+        .filter-list li::before {
+            content: '';
+            width: 0;
+            height: 1px;
+            background: #d4af37;
+            transition: width 0.3s;
+        }
+
+        .filter-list li:hover {
+            color: #d4af37;
+            padding-left: 5px;
+        }
+
+        .filter-list li.active {
+            color: #d4af37;
+            font-weight: 700;
+        }
+
+        .filter-list li.active::before {
+            width: 15px;
+        }
+
+        /* Image Alignment & Grid Consistency */
+        .product-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            background: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        /* Shop Layout Alignment */
+        .shop-layout {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .filter-sidebar {
+            width: 250px;
+            flex-shrink: 0;
+            position: sticky;
+            top: 100px;
+        }
+
+        #shop-grid {
+            flex-grow: 1;
+        }
+
+        @media (max-width: 1024px) {
+            .shop-layout {
+                flex-direction: column;
+            }
+            .filter-sidebar {
+                width: 100%;
+                position: static;
+            }
+        }
+
+        .btn-add-cart.added {
+            background: #2e8b57;
+        }
+    </style>
     <script>
-        // Custom Shop Page Logic
+        // Wishlist functionality
+        let wishlist = JSON.parse(localStorage.getItem('madamWishlist')) || [];
+
+        function toggleWishlist(id, event) {
+            if (event) event.preventDefault();
+            const index = wishlist.indexOf(id);
+            if (index > -1) {
+                wishlist.splice(index, 1);
+            } else {
+                wishlist.push(id);
+            }
+            localStorage.setItem('madamWishlist', JSON.stringify(wishlist));
+            renderProducts(currentList || PRODUCTS);
+        }
+
+        let currentList = null;
+
         document.addEventListener('DOMContentLoaded', () => {
+            currentList = PRODUCTS;
             renderProducts(PRODUCTS);
             
             const sortSelect = document.getElementById('sort-by-select');
             if (sortSelect) {
                 sortSelect.addEventListener('change', (e) => {
-                    let sorted = [...PRODUCTS];
+                    let sorted = [...(currentList || PRODUCTS)];
                     if (e.target.value === 'price-low') {
                         sorted.sort((a, b) => a.price - b.price);
                     } else if (e.target.value === 'price-high') {
@@ -196,41 +451,72 @@
             if (!grid) return;
 
             count.textContent = list.length;
-            grid.innerHTML = list.map(p => `
+            grid.innerHTML = list.map(p => {
+                const isWishlisted = wishlist.includes(p.id);
+                // Use next image as hover effect
+                const nextIdx = (PRODUCTS.indexOf(PRODUCTS.find(x => x.id === p.id)) + 1) % PRODUCTS.length;
+                const hoverImage = PRODUCTS[nextIdx].image;
+
+                return `
                 <div class="product-card">
                     <div class="product-image-wrapper">
                         ${p.featured ? '<span class="product-badge">Best Seller</span>' : ''}
+                        <button class="wishlist-btn ${isWishlisted ? 'active' : ''}" onclick="toggleWishlist('${p.id}', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="${isWishlisted ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
                         <a href="product.html?id=${p.id}">
                             <img src="${p.image}" alt="${p.name}" class="product-image" loading="lazy">
+                            <img src="${hoverImage}" alt="${p.name} view" class="product-image-alt" loading="lazy">
                         </a>
-                        <button class="product-quick-add" onclick="event.preventDefault(); addToCart('${p.id}', '${p.name}', ${p.price}, '${p.image}')">Quick Add</button>
                     </div>
                     <div class="product-info">
                         <span class="product-cat">${p.category}</span>
                         <h3 class="product-title"><a href="product.html?id=${p.id}">${p.name}</a></h3>
-                        <div class="product-rating">
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
                             <span>★★★★★</span>
-                            <span class="product-rating-count">(${p.reviews})</span>
+                            <span style="color: #999; margin-left: 5px;">(${p.reviews})</span>
                         </div>
                         <span class="product-price">₹${p.price}</span>
+                        <button class="btn-add-cart" id="btn-add-${p.id}" onclick="handleAddToCart('${p.id}', '${p.name}', ${p.price}, '${p.image}')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
                     </div>
                 </div>
-            `).join('');
+            `;}).join('');
+        }
+
+        function handleAddToCart(id, name, price, img) {
+            addToCart(id, name, price, img);
+            const btn = document.getElementById(`btn-add-${id}`);
+            if (btn) {
+                btn.innerHTML = '✓ Added to Bag';
+                btn.classList.add('added');
+                setTimeout(() => {
+                    btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg> Add to Bag';
+                    btn.classList.remove('added');
+                }, 2000);
+            }
         }
 
         function filterByCategory(cat) {
-            let filtered = PRODUCTS;
-            if (cat !== 'all') {
-                filtered = PRODUCTS.filter(p => p.category.includes(cat));
+            if (cat === 'all') {
+                currentList = PRODUCTS;
+            } else {
+                currentList = PRODUCTS.filter(p => p.category.includes(cat));
             }
-            renderProducts(filtered);
+            renderProducts(currentList);
             
             // Update active state in sidebar
             document.querySelectorAll('.filter-list li').forEach(el => el.classList.remove('active'));
-            event.target.classList.add('active');
+            // Find the clicked element if event exists
+            if (window.event) {
+                window.event.target.classList.add('active');
+            }
             
             // Close mobile sidebar if open
-            document.querySelector('.filter-sidebar').classList.remove('open');
+            const sidebar = document.querySelector('.filter-sidebar');
+            if (sidebar) sidebar.classList.remove('open');
         }
     </script>
 </body>
