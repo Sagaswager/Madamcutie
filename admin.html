@@ -1724,10 +1724,12 @@
         }
 
         async function savePageContent() {
+            const btn = document.getElementById('save-page-btn');
+            if (btn.disabled) return;
+
             const page = document.getElementById('page-select').value;
             if (!page) return;
             
-            const btn = document.getElementById('save-page-btn');
             const originalText = btn.innerHTML;
             btn.disabled = true;
             btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Saving...';
