@@ -1461,37 +1461,38 @@
             btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Publishing...';
             
             try {
-                // 1. Save to js/products.json
-                const responseJson = await fetch('/api/save-content', {
+                const saveJson = fetch('/api/save-content', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         filePath: 'js/products.json',
                         content: JSON.stringify(products, null, 4)
                     })
+                }).then(async res => {
+                    const data = await res.json();
+                    if (!(data.success === true || data.status === 'success')) {
+                        throw new Error(data.error || 'Failed to save products.json');
+                    }
+                    return data;
                 });
-                
-                const dataJson = await responseJson.json();
-                if (!(dataJson.success === true || dataJson.status === 'success')) {
-                    throw new Error(dataJson.error || 'Failed to save products.json');
-                }
-                
-                // 2. Save to js/products.js
-                const responseJs = await fetch('/api/save-content', {
+
+                const saveJs = fetch('/api/save-content', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         filePath: 'js/products.js',
                         content: 'const PRODUCTS = ' + JSON.stringify(products, null, 4) + ';'
                     })
+                }).then(async res => {
+                    const data = await res.json();
+                    if (!(data.success === true || data.status === 'success')) {
+                        throw new Error(data.error || 'Failed to save products.js');
+                    }
+                    return data;
                 });
-                
-                const dataJs = await responseJs.json();
-                if (dataJs.success === true || dataJs.status === 'success') {
-                    alert('Products updated! Site will refresh in 60 seconds.');
-                } else {
-                    alert('Error: ' + (dataJs.error || 'Failed to save products.js'));
-                }
+
+                await Promise.all([saveJson, saveJs]);
+                alert('Products updated! Site will refresh in 60 seconds.');
             } catch (err) {
                 alert('Error: ' + err.message);
             } finally {
