@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop Collections | Madamcutie</title>
@@ -16,7 +15,7 @@
     </div>
 
     <!-- Header -->
-    <header class="header">
+    <header class="header scrolled">
         <div class="container nav-container">
             <div class="logo-wrapper">
                 <img src="/assets/images/logo.jpg" alt="Madamcutie Logo" class="logo-img">
@@ -36,7 +35,7 @@
                 <button class="action-btn" id="search-trigger" title="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
                 <a href="cart.html" class="action-btn" title="Shopping Bag">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                    <span class="cart-count">0</span>
+                    <span class="cart-count" style="display: none;">0</span>
                 </a>
                 <button class="mobile-menu-toggle action-btn" aria-label="Toggle Menu" onclick="toggleMobileNav()">☰</button>
             </div>
@@ -77,7 +76,7 @@
     <section class="section">
         <div class="container">
             <div class="shop-toolbar">
-                <div class="results-count">Showing <span id="product-count">48</span> items</div>
+                <div class="results-count">Showing <span id="product-count">36</span> items</div>
                 <div class="shop-controls-right">
                     <button class="mobile-filter-trigger" onclick="document.querySelector('.filter-sidebar').classList.toggle('open')">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>
@@ -116,8 +115,942 @@
 
                 <!-- Grid -->
                 <div class="grid grid-responsive-3-2-1" id="shop-grid">
-                    <!-- Products will be injected here -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <span class="product-badge">Best Seller</span>
+                        <button class="wishlist-btn " onclick="toggleWishlist('p1', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p1">
+                            <img src="/assets/images/madam/saini-01.jpg" alt="Elegant Floral Dress 100" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-02.jpg" alt="Elegant Floral Dress 100 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Dresses</span>
+                        <h3 class="product-title"><a href="product.html?id=p1">Elegant Floral Dress 100</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(75)</span>
+                        </div>
+                        <span class="product-price">₹1449</span>
+                        <button class="btn-add-cart" id="btn-add-p1" onclick="handleAddToCart('p1', 'Elegant Floral Dress 100', 1449, '/assets/images/madam/saini-01.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
                 </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p2', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p2">
+                            <img src="/assets/images/madam/saini-02.jpg" alt="Classic Silk Blouse 201" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-03.jpg" alt="Classic Silk Blouse 201 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Tops &amp; Shirts</span>
+                        <h3 class="product-title"><a href="product.html?id=p2">Classic Silk Blouse 201</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(19)</span>
+                        </div>
+                        <span class="product-price">₹1524</span>
+                        <button class="btn-add-cart" id="btn-add-p2" onclick="handleAddToCart('p2', 'Classic Silk Blouse 201', 1524, '/assets/images/madam/saini-02.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p3', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p3">
+                            <img src="/assets/images/madam/saini-03.jpg" alt="Premium Trench Coat 302" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-04.jpg" alt="Premium Trench Coat 302 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Outerwear</span>
+                        <h3 class="product-title"><a href="product.html?id=p3">Premium Trench Coat 302</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(26)</span>
+                        </div>
+                        <span class="product-price">₹1599</span>
+                        <button class="btn-add-cart" id="btn-add-p3" onclick="handleAddToCart('p3', 'Premium Trench Coat 302', 1599, '/assets/images/madam/saini-03.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p4', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p4">
+                            <img src="/assets/images/madam/saini-04.jpg" alt="Tailored Slim-Fit Trousers 403" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-05.jpg" alt="Tailored Slim-Fit Trousers 403 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Bottoms</span>
+                        <h3 class="product-title"><a href="product.html?id=p4">Tailored Slim-Fit Trousers 403</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(33)</span>
+                        </div>
+                        <span class="product-price">₹1674</span>
+                        <button class="btn-add-cart" id="btn-add-p4" onclick="handleAddToCart('p4', 'Tailored Slim-Fit Trousers 403', 1674, '/assets/images/madam/saini-04.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p5', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p5">
+                            <img src="/assets/images/madam/saini-05.jpg" alt="Luxury Leather Handbag 504" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-06.jpg" alt="Luxury Leather Handbag 504 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Accessories</span>
+                        <h3 class="product-title"><a href="product.html?id=p5">Luxury Leather Handbag 504</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(40)</span>
+                        </div>
+                        <span class="product-price">₹1749</span>
+                        <button class="btn-add-cart" id="btn-add-p5" onclick="handleAddToCart('p5', 'Luxury Leather Handbag 504', 1749, '/assets/images/madam/saini-05.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p6', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p6">
+                            <img src="/assets/images/madam/saini-06.jpg" alt="Elegant Floral Dress 105" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-07.jpg" alt="Elegant Floral Dress 105 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Dresses</span>
+                        <h3 class="product-title"><a href="product.html?id=p6">Elegant Floral Dress 105</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(47)</span>
+                        </div>
+                        <span class="product-price">₹1824</span>
+                        <button class="btn-add-cart" id="btn-add-p6" onclick="handleAddToCart('p6', 'Elegant Floral Dress 105', 1824, '/assets/images/madam/saini-06.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <span class="product-badge">Best Seller</span>
+                        <button class="wishlist-btn " onclick="toggleWishlist('p7', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p7">
+                            <img src="/assets/images/madam/saini-07.jpg" alt="Classic Silk Blouse 206" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-08.jpg" alt="Classic Silk Blouse 206 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Tops &amp; Shirts</span>
+                        <h3 class="product-title"><a href="product.html?id=p7">Classic Silk Blouse 206</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(54)</span>
+                        </div>
+                        <span class="product-price">₹1899</span>
+                        <button class="btn-add-cart" id="btn-add-p7" onclick="handleAddToCart('p7', 'Classic Silk Blouse 206', 1899, '/assets/images/madam/saini-07.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p8', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p8">
+                            <img src="/assets/images/madam/saini-08.jpg" alt="Premium Trench Coat 307" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-09.jpg" alt="Premium Trench Coat 307 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Outerwear</span>
+                        <h3 class="product-title"><a href="product.html?id=p8">Premium Trench Coat 307</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(61)</span>
+                        </div>
+                        <span class="product-price">₹1974</span>
+                        <button class="btn-add-cart" id="btn-add-p8" onclick="handleAddToCart('p8', 'Premium Trench Coat 307', 1974, '/assets/images/madam/saini-08.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p9', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p9">
+                            <img src="/assets/images/madam/saini-09.jpg" alt="Tailored Slim-Fit Trousers 408" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-10.jpg" alt="Tailored Slim-Fit Trousers 408 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Bottoms</span>
+                        <h3 class="product-title"><a href="product.html?id=p9">Tailored Slim-Fit Trousers 408</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(68)</span>
+                        </div>
+                        <span class="product-price">₹1049</span>
+                        <button class="btn-add-cart" id="btn-add-p9" onclick="handleAddToCart('p9', 'Tailored Slim-Fit Trousers 408', 1049, '/assets/images/madam/saini-09.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p10', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p10">
+                            <img src="/assets/images/madam/saini-10.jpg" alt="Luxury Leather Handbag 509" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-11.jpg" alt="Luxury Leather Handbag 509 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Accessories</span>
+                        <h3 class="product-title"><a href="product.html?id=p10">Luxury Leather Handbag 509</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(75)</span>
+                        </div>
+                        <span class="product-price">₹1124</span>
+                        <button class="btn-add-cart" id="btn-add-p10" onclick="handleAddToCart('p10', 'Luxury Leather Handbag 509', 1124, '/assets/images/madam/saini-10.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p11', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p11">
+                            <img src="/assets/images/madam/saini-11.jpg" alt="Elegant Floral Dress 110" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-12.jpg" alt="Elegant Floral Dress 110 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Dresses</span>
+                        <h3 class="product-title"><a href="product.html?id=p11">Elegant Floral Dress 110</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(82)</span>
+                        </div>
+                        <span class="product-price">₹1199</span>
+                        <button class="btn-add-cart" id="btn-add-p11" onclick="handleAddToCart('p11', 'Elegant Floral Dress 110', 1199, '/assets/images/madam/saini-11.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p12', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p12">
+                            <img src="/assets/images/madam/saini-12.jpg" alt="Classic Silk Blouse 211" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-13.jpg" alt="Classic Silk Blouse 211 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Tops &amp; Shirts</span>
+                        <h3 class="product-title"><a href="product.html?id=p12">Classic Silk Blouse 211</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(89)</span>
+                        </div>
+                        <span class="product-price">₹1274</span>
+                        <button class="btn-add-cart" id="btn-add-p12" onclick="handleAddToCart('p12', 'Classic Silk Blouse 211', 1274, '/assets/images/madam/saini-12.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <span class="product-badge">Best Seller</span>
+                        <button class="wishlist-btn " onclick="toggleWishlist('p13', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p13">
+                            <img src="/assets/images/madam/saini-13.jpg" alt="Premium Trench Coat 312" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-14.jpg" alt="Premium Trench Coat 312 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Outerwear</span>
+                        <h3 class="product-title"><a href="product.html?id=p13">Premium Trench Coat 312</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(96)</span>
+                        </div>
+                        <span class="product-price">₹1349</span>
+                        <button class="btn-add-cart" id="btn-add-p13" onclick="handleAddToCart('p13', 'Premium Trench Coat 312', 1349, '/assets/images/madam/saini-13.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p14', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p14">
+                            <img src="/assets/images/madam/saini-14.jpg" alt="Tailored Slim-Fit Trousers 413" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-15.jpg" alt="Tailored Slim-Fit Trousers 413 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Bottoms</span>
+                        <h3 class="product-title"><a href="product.html?id=p14">Tailored Slim-Fit Trousers 413</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(103)</span>
+                        </div>
+                        <span class="product-price">₹1424</span>
+                        <button class="btn-add-cart" id="btn-add-p14" onclick="handleAddToCart('p14', 'Tailored Slim-Fit Trousers 413', 1424, '/assets/images/madam/saini-14.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p15', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p15">
+                            <img src="/assets/images/madam/saini-15.jpg" alt="Luxury Leather Handbag 514" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-16.jpg" alt="Luxury Leather Handbag 514 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Accessories</span>
+                        <h3 class="product-title"><a href="product.html?id=p15">Luxury Leather Handbag 514</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(110)</span>
+                        </div>
+                        <span class="product-price">₹1499</span>
+                        <button class="btn-add-cart" id="btn-add-p15" onclick="handleAddToCart('p15', 'Luxury Leather Handbag 514', 1499, '/assets/images/madam/saini-15.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p16', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p16">
+                            <img src="/assets/images/madam/saini-16.jpg" alt="Elegant Floral Dress 115" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-17.jpg" alt="Elegant Floral Dress 115 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Dresses</span>
+                        <h3 class="product-title"><a href="product.html?id=p16">Elegant Floral Dress 115</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(117)</span>
+                        </div>
+                        <span class="product-price">₹1574</span>
+                        <button class="btn-add-cart" id="btn-add-p16" onclick="handleAddToCart('p16', 'Elegant Floral Dress 115', 1574, '/assets/images/madam/saini-16.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p17', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p17">
+                            <img src="/assets/images/madam/saini-17.jpg" alt="Classic Silk Blouse 216" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-18.jpg" alt="Classic Silk Blouse 216 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Tops &amp; Shirts</span>
+                        <h3 class="product-title"><a href="product.html?id=p17">Classic Silk Blouse 216</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(124)</span>
+                        </div>
+                        <span class="product-price">₹1649</span>
+                        <button class="btn-add-cart" id="btn-add-p17" onclick="handleAddToCart('p17', 'Classic Silk Blouse 216', 1649, '/assets/images/madam/saini-17.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p18', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p18">
+                            <img src="/assets/images/madam/saini-18.jpg" alt="Premium Trench Coat 317" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-19.jpg" alt="Premium Trench Coat 317 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Outerwear</span>
+                        <h3 class="product-title"><a href="product.html?id=p18">Premium Trench Coat 317</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(131)</span>
+                        </div>
+                        <span class="product-price">₹1724</span>
+                        <button class="btn-add-cart" id="btn-add-p18" onclick="handleAddToCart('p18', 'Premium Trench Coat 317', 1724, '/assets/images/madam/saini-18.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <span class="product-badge">Best Seller</span>
+                        <button class="wishlist-btn " onclick="toggleWishlist('p19', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p19">
+                            <img src="/assets/images/madam/saini-19.jpg" alt="Tailored Slim-Fit Trousers 418" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-20.jpg" alt="Tailored Slim-Fit Trousers 418 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Bottoms</span>
+                        <h3 class="product-title"><a href="product.html?id=p19">Tailored Slim-Fit Trousers 418</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(138)</span>
+                        </div>
+                        <span class="product-price">₹1799</span>
+                        <button class="btn-add-cart" id="btn-add-p19" onclick="handleAddToCart('p19', 'Tailored Slim-Fit Trousers 418', 1799, '/assets/images/madam/saini-19.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p20', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p20">
+                            <img src="/assets/images/madam/saini-20.jpg" alt="Luxury Leather Handbag 519" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-21.jpg" alt="Luxury Leather Handbag 519 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Accessories</span>
+                        <h3 class="product-title"><a href="product.html?id=p20">Luxury Leather Handbag 519</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(145)</span>
+                        </div>
+                        <span class="product-price">₹1874</span>
+                        <button class="btn-add-cart" id="btn-add-p20" onclick="handleAddToCart('p20', 'Luxury Leather Handbag 519', 1874, '/assets/images/madam/saini-20.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p21', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p21">
+                            <img src="/assets/images/madam/saini-21.jpg" alt="Elegant Floral Dress 120" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-22.jpg" alt="Elegant Floral Dress 120 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Dresses</span>
+                        <h3 class="product-title"><a href="product.html?id=p21">Elegant Floral Dress 120</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(12)</span>
+                        </div>
+                        <span class="product-price">₹1949</span>
+                        <button class="btn-add-cart" id="btn-add-p21" onclick="handleAddToCart('p21', 'Elegant Floral Dress 120', 1949, '/assets/images/madam/saini-21.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p22', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p22">
+                            <img src="/assets/images/madam/saini-22.jpg" alt="Classic Silk Blouse 221" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-23.jpg" alt="Classic Silk Blouse 221 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Tops &amp; Shirts</span>
+                        <h3 class="product-title"><a href="product.html?id=p22">Classic Silk Blouse 221</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(19)</span>
+                        </div>
+                        <span class="product-price">₹2024</span>
+                        <button class="btn-add-cart" id="btn-add-p22" onclick="handleAddToCart('p22', 'Classic Silk Blouse 221', 2024, '/assets/images/madam/saini-22.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p23', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p23">
+                            <img src="/assets/images/madam/saini-23.jpg" alt="Premium Trench Coat 322" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-24.jpg" alt="Premium Trench Coat 322 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Outerwear</span>
+                        <h3 class="product-title"><a href="product.html?id=p23">Premium Trench Coat 322</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(26)</span>
+                        </div>
+                        <span class="product-price">₹2099</span>
+                        <button class="btn-add-cart" id="btn-add-p23" onclick="handleAddToCart('p23', 'Premium Trench Coat 322', 2099, '/assets/images/madam/saini-23.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p24', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p24">
+                            <img src="/assets/images/madam/saini-24.jpg" alt="Tailored Slim-Fit Trousers 423" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-25.jpg" alt="Tailored Slim-Fit Trousers 423 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Bottoms</span>
+                        <h3 class="product-title"><a href="product.html?id=p24">Tailored Slim-Fit Trousers 423</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(33)</span>
+                        </div>
+                        <span class="product-price">₹2174</span>
+                        <button class="btn-add-cart" id="btn-add-p24" onclick="handleAddToCart('p24', 'Tailored Slim-Fit Trousers 423', 2174, '/assets/images/madam/saini-24.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <span class="product-badge">Best Seller</span>
+                        <button class="wishlist-btn " onclick="toggleWishlist('p25', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p25">
+                            <img src="/assets/images/madam/saini-25.jpg" alt="Luxury Leather Handbag 524" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-26.jpg" alt="Luxury Leather Handbag 524 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Accessories</span>
+                        <h3 class="product-title"><a href="product.html?id=p25">Luxury Leather Handbag 524</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(40)</span>
+                        </div>
+                        <span class="product-price">₹1449</span>
+                        <button class="btn-add-cart" id="btn-add-p25" onclick="handleAddToCart('p25', 'Luxury Leather Handbag 524', 1449, '/assets/images/madam/saini-25.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p26', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p26">
+                            <img src="/assets/images/madam/saini-26.jpg" alt="Elegant Floral Dress 125" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-27.jpg" alt="Elegant Floral Dress 125 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Dresses</span>
+                        <h3 class="product-title"><a href="product.html?id=p26">Elegant Floral Dress 125</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(47)</span>
+                        </div>
+                        <span class="product-price">₹1524</span>
+                        <button class="btn-add-cart" id="btn-add-p26" onclick="handleAddToCart('p26', 'Elegant Floral Dress 125', 1524, '/assets/images/madam/saini-26.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p27', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p27">
+                            <img src="/assets/images/madam/saini-27.jpg" alt="Classic Silk Blouse 226" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-28.jpg" alt="Classic Silk Blouse 226 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Tops &amp; Shirts</span>
+                        <h3 class="product-title"><a href="product.html?id=p27">Classic Silk Blouse 226</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(54)</span>
+                        </div>
+                        <span class="product-price">₹1599</span>
+                        <button class="btn-add-cart" id="btn-add-p27" onclick="handleAddToCart('p27', 'Classic Silk Blouse 226', 1599, '/assets/images/madam/saini-27.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p28', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p28">
+                            <img src="/assets/images/madam/saini-28.jpg" alt="Premium Trench Coat 327" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-29.jpg" alt="Premium Trench Coat 327 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Outerwear</span>
+                        <h3 class="product-title"><a href="product.html?id=p28">Premium Trench Coat 327</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(61)</span>
+                        </div>
+                        <span class="product-price">₹1674</span>
+                        <button class="btn-add-cart" id="btn-add-p28" onclick="handleAddToCart('p28', 'Premium Trench Coat 327', 1674, '/assets/images/madam/saini-28.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p29', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p29">
+                            <img src="/assets/images/madam/saini-29.jpg" alt="Tailored Slim-Fit Trousers 428" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-30.jpg" alt="Tailored Slim-Fit Trousers 428 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Bottoms</span>
+                        <h3 class="product-title"><a href="product.html?id=p29">Tailored Slim-Fit Trousers 428</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(68)</span>
+                        </div>
+                        <span class="product-price">₹1749</span>
+                        <button class="btn-add-cart" id="btn-add-p29" onclick="handleAddToCart('p29', 'Tailored Slim-Fit Trousers 428', 1749, '/assets/images/madam/saini-29.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p30', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p30">
+                            <img src="/assets/images/madam/saini-30.jpg" alt="Luxury Leather Handbag 529" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-31.jpg" alt="Luxury Leather Handbag 529 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Accessories</span>
+                        <h3 class="product-title"><a href="product.html?id=p30">Luxury Leather Handbag 529</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(75)</span>
+                        </div>
+                        <span class="product-price">₹1824</span>
+                        <button class="btn-add-cart" id="btn-add-p30" onclick="handleAddToCart('p30', 'Luxury Leather Handbag 529', 1824, '/assets/images/madam/saini-30.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <span class="product-badge">Best Seller</span>
+                        <button class="wishlist-btn " onclick="toggleWishlist('p31', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p31">
+                            <img src="/assets/images/madam/saini-31.jpg" alt="Elegant Floral Dress 130" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-32.jpg" alt="Elegant Floral Dress 130 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Dresses</span>
+                        <h3 class="product-title"><a href="product.html?id=p31">Elegant Floral Dress 130</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(82)</span>
+                        </div>
+                        <span class="product-price">₹1899</span>
+                        <button class="btn-add-cart" id="btn-add-p31" onclick="handleAddToCart('p31', 'Elegant Floral Dress 130', 1899, '/assets/images/madam/saini-31.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p32', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p32">
+                            <img src="/assets/images/madam/saini-32.jpg" alt="Classic Silk Blouse 231" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-33.jpg" alt="Classic Silk Blouse 231 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Tops &amp; Shirts</span>
+                        <h3 class="product-title"><a href="product.html?id=p32">Classic Silk Blouse 231</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(89)</span>
+                        </div>
+                        <span class="product-price">₹1974</span>
+                        <button class="btn-add-cart" id="btn-add-p32" onclick="handleAddToCart('p32', 'Classic Silk Blouse 231', 1974, '/assets/images/madam/saini-32.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p33', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p33">
+                            <img src="/assets/images/madam/saini-33.jpg" alt="Premium Trench Coat 332" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-34.jpg" alt="Premium Trench Coat 332 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Outerwear</span>
+                        <h3 class="product-title"><a href="product.html?id=p33">Premium Trench Coat 332</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(96)</span>
+                        </div>
+                        <span class="product-price">₹1049</span>
+                        <button class="btn-add-cart" id="btn-add-p33" onclick="handleAddToCart('p33', 'Premium Trench Coat 332', 1049, '/assets/images/madam/saini-33.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p34', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p34">
+                            <img src="/assets/images/madam/saini-34.jpg" alt="Tailored Slim-Fit Trousers 433" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-35.jpg" alt="Tailored Slim-Fit Trousers 433 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Bottoms</span>
+                        <h3 class="product-title"><a href="product.html?id=p34">Tailored Slim-Fit Trousers 433</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(103)</span>
+                        </div>
+                        <span class="product-price">₹1124</span>
+                        <button class="btn-add-cart" id="btn-add-p34" onclick="handleAddToCart('p34', 'Tailored Slim-Fit Trousers 433', 1124, '/assets/images/madam/saini-34.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p35', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p35">
+                            <img src="/assets/images/madam/saini-35.jpg" alt="Luxury Leather Handbag 534" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-36.jpg" alt="Luxury Leather Handbag 534 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Accessories</span>
+                        <h3 class="product-title"><a href="product.html?id=p35">Luxury Leather Handbag 534</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(110)</span>
+                        </div>
+                        <span class="product-price">₹1199</span>
+                        <button class="btn-add-cart" id="btn-add-p35" onclick="handleAddToCart('p35', 'Luxury Leather Handbag 534', 1199, '/assets/images/madam/saini-35.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        
+                        <button class="wishlist-btn " onclick="toggleWishlist('p36', event)" title="Add to Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <a href="product.html?id=p36">
+                            <img src="/assets/images/madam/saini-36.jpg" alt="Elegant Floral Dress 135" class="product-image" loading="lazy">
+                            <img src="/assets/images/madam/saini-01.jpg" alt="Elegant Floral Dress 135 view" class="product-image-alt" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Dresses</span>
+                        <h3 class="product-title"><a href="product.html?id=p36">Elegant Floral Dress 135</a></h3>
+                        <div class="product-rating" style="margin-bottom: 10px; color: #d4af37; font-size: 0.8rem;">
+                            <span>★★★★★</span>
+                            <span style="color: #999; margin-left: 5px;">(117)</span>
+                        </div>
+                        <span class="product-price">₹1274</span>
+                        <button class="btn-add-cart" id="btn-add-p36" onclick="handleAddToCart('p36', 'Elegant Floral Dress 135', 1274, '/assets/images/madam/saini-36.jpg')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
     </section>
@@ -152,13 +1085,13 @@
                 <div>
                     <h4 style="margin-bottom: 25px; letter-spacing: 2px; font-size: 0.9rem; text-transform: uppercase;">Follow Us</h4>
                     <div style="display: flex; gap: 20px;">
-                        <a href="https://www.instagram.com/madamcutie.co?igsh=OGcwdmFxYTBuZGhv&utm_source=qr" target="_blank" class="social-icon" style="color: white;" title="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                        <a href="https://wa.me/919911852113" target="_blank" class="social-icon" style="color: white;" title="WhatsApp"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+                        <a href="https://www.instagram.com/madamcutie.co?igsh=OGcwdmFxYTBuZGhv&amp;utm_source=qr" target="_blank" class="social-icon" style="color: white;" title="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="https://wa.me/919911852113" target="_blank" class="social-icon" style="color: white;" title="WhatsApp"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></a>
                     </div>
                 </div>
             </div>
             <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; color: #777; font-size: 0.85rem; flex-wrap: wrap; gap: 20px;">
-                <p>&copy; 2026 Madamcutie. All rights reserved.</p>
+                <p>© 2026 Madamcutie. All rights reserved.</p>
                 <div style="display: flex; gap: 10px;">
                     <span style="font-size: 1.5rem;">💳</span>
                     <span style="font-size: 1.5rem;">🏦</span>
@@ -519,5 +1452,6 @@
             if (sidebar) sidebar.classList.remove('open');
         }
     </script>
-</body>
-</html>
+
+
+</body></html>
