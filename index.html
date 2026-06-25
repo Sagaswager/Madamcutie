@@ -762,14 +762,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function saveChanges() {
     const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
     
-    if (!isLocal) {
-        alert('You are currently on the live site (Vercel). Vercel does not allow saving files directly. Please run the website locally on your computer using "python server.py" to make permanent changes to the text.');
-        
-        // Disable admin mode and reload
-        localStorage.setItem('adminMode', 'false');
-        location.reload();
-        return;
-    }
+    const saveEndpoint = isLocal ? '/save_html' : '/api/save-content';
 
     const btn = document.querySelector('#admin-toolbar button');
     btn.textContent = 'Saving...';
@@ -800,10 +793,10 @@ function saveChanges() {
     localStorage.setItem('adminMode', 'true');
     const filename = location.pathname.split('/').pop() || 'index.html';
     
-    fetch('/save_html', {
+    fetch(saveEndpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ file: filename, content: currentHtml })
+        body: JSON.stringify({ filePath: filename, content: currentHtml })
     }).then(res => res.json()).then(data => {
         if(data.status === 'success') {
             alert('Changes saved successfully!');

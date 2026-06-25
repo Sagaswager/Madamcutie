@@ -8,5 +8,10 @@
     { "source": "/contact", "destination": "/contact.html" },
     { "source": "/policy", "destination": "/policy.html" },
     { "source": "/product", "destination": "/product.html" }
-  ]
+  ],
+  "functions": {
+    "api/save-content.js": {
+      "runtime": "edge"
+    }
+  }
 }
