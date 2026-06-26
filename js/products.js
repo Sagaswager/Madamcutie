@@ -25,9 +25,9 @@ const PRODUCTS = [
     },
     {
         "id": "p3",
-        "name": "Premium Trench Coat 302",
+        "name": "0.1565+02",
         "category": "Outerwear",
-        "price": 1599,
+        "price": 15121299,
         "rating": 4.3,
         "reviews": 26,
         "description": "All-season premium trench coat designed for comfort and style. Water-resistant outer shell with elegant pocket designs.",
