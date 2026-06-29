@@ -538,20 +538,5 @@ const PRODUCTS = [
         "sale": false,
         "bestseller": false,
         "original_price": null
-    },
-    {
-        "id": "p37",
-        "name": "car",
-        "category": "Accessories",
-        "price": 455,
-        "rating": 5,
-        "reviews": 0,
-        "description": "hello this is for testing",
-        "image": "/assets/images/madam/2026-Maserati-MCPura-Cielo-Tributo-1926-004-1080.jpg",
-        "in_stock": true,
-        "featured": false,
-        "sale": true,
-        "bestseller": true,
-        "original_price": 500000
     }
 ];
