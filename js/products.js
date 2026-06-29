@@ -1,7 +1,7 @@
 const PRODUCTS = [
     {
         "id": "p1",
-        "name": "vipin",
+        "name": "Classic",
         "category": "Dresses",
         "price": 1400,
         "rating": 4,
