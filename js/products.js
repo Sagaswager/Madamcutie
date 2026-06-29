@@ -10,9 +10,9 @@ const PRODUCTS = [
         "image": "/assets/images/madam/saini-01.jpg",
         "in_stock": true,
         "featured": false,
-        "sale": false,
-        "bestseller": false,
-        "original_price": null
+        "sale": true,
+        "bestseller": true,
+        "original_price": 3000
     },
     {
         "id": "p2",
@@ -31,9 +31,9 @@ const PRODUCTS = [
     },
     {
         "id": "p3",
-        "name": "saini",
+        "name": "saurav",
         "category": "Outerwear",
-        "price": 25000,
+        "price": 202,
         "rating": 4.3,
         "reviews": 26,
         "description": "All-season premium trench coat designed for comfort and style. Water-resistant outer shell with elegant pocket designs.",
