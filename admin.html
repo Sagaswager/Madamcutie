@@ -1261,54 +1261,52 @@
 
         // Edit Product Page in Preview Iframe
         function editProductPage(productId) {
-            // Switch to Page Content Editor tab/section
-            // Load product.html?id=productId in the iframe editor
-            const pageEditor = document.getElementById('page-content-editor-section');
             const iframe = document.getElementById('page-preview-iframe');
+            
+            // Scroll to Page Content Editor
+            const editorSection = document.querySelector('.page-content-editor') || document.getElementById('page-content-editor-section');
+            if (editorSection) editorSection.scrollIntoView({ behavior: 'smooth' });
+
+            currentEditingPage = `product.html?id=${productId}`;
+            currentEditingFilePath = 'product.html';
             const pageSelect = document.getElementById('page-select-dropdown');
+            if (pageSelect) pageSelect.value = 'product.html';
             
-            if (pageSelect) {
-                pageSelect.value = 'product.html';
-            }
+            iframe.src = `/product.html?id=${productId}`;
             
-            if (pageEditor) pageEditor.scrollIntoView({ behavior: 'smooth' });
-            
-            const saveBtn = document.getElementById('save-page-btn');
-            if (saveBtn) {
-                saveBtn.disabled = true;
-                saveBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Loading...';
-            }
-            
-            // Load product page in iframe
-            const productUrl = `/product.html?id=${productId}`;
-            fetch(productUrl)
-                .then(r => r.text())
-                .then(html => {
-                    currentEditingPage = `product.html?id=${productId}`;
-                    currentEditingFilePath = `product.html`;
-                    const doc = iframe.contentDocument || iframe.contentWindow.document;
-                    doc.open();
-                    doc.write(html);
-                    doc.close();
-                    
-                    const initEditor = () => {
+            iframe.onload = function() {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                
+                // Wait for dynamic content to render
+                let attempts = 0;
+                const waitForContent = setInterval(() => {
+                    attempts++;
+                    const title = doc.querySelector('h1, .product-name, .product-title, [class*="product-title"]');
+                    if (title || attempts > 10) {
+                        clearInterval(waitForContent);
                         makePageEditable(doc);
+                        // Show edit mode banner
+                        injectEditBanner(doc);
+                        
+                        const saveBtn = document.getElementById('save-page-btn');
                         if (saveBtn) {
                             saveBtn.disabled = false;
                             saveBtn.innerHTML = '<i class="fa-solid fa-floppy-disk"></i> Save Page';
                         }
-                    };
-                    
-                    iframe.onload = initEditor;
-                    setTimeout(initEditor, 500);
-                })
-                .catch(err => {
-                    alert('Error loading page: ' + err.message);
-                    if (saveBtn) {
-                        saveBtn.disabled = true;
-                        saveBtn.innerHTML = '<i class="fa-solid fa-floppy-disk"></i> Save Page';
                     }
-                });
+                }, 300);
+            };
+        }
+
+        function injectEditBanner(doc) {
+            const existing = doc.getElementById('admin-edit-banner');
+            if (existing) return;
+            const banner = doc.createElement('div');
+            banner.id = 'admin-edit-banner';
+            banner.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#c9a84c;color:#000;text-align:center;padding:8px;font-size:12px;font-weight:700;letter-spacing:2px;';
+            banner.textContent = '✏️ EDIT MODE — Click yellow text to edit, then Save Page';
+            doc.body.prepend(banner);
+            doc.body.style.paddingTop = '35px'; // So content isn't hidden
         }
 
         // Load product details into Form editor
@@ -1785,31 +1783,7 @@
             doc.head.appendChild(style);
             
             // Inject edit mode banner at the top of the body
-            const oldBanner = doc.getElementById('admin-edit-mode-banner');
-            if (oldBanner) oldBanner.remove();
-            
-            const banner = doc.createElement('div');
-            banner.id = 'admin-edit-mode-banner';
-            banner.innerHTML = '<i class="fa-solid fa-pen-to-square"></i> EDIT MODE - Click yellow elements to edit';
-            banner.style.cssText = `
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                background: #c9a84c;
-                color: #000;
-                text-align: center;
-                padding: 10px;
-                font-family: 'Plus Jakarta Sans', sans-serif;
-                font-size: 13px;
-                font-weight: 700;
-                letter-spacing: 1px;
-                text-transform: uppercase;
-                z-index: 999999;
-                box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            `;
-            doc.body.style.paddingTop = '40px'; // Shift body down so content isn't hidden behind banner
-            doc.body.prepend(banner);
+            injectEditBanner(doc);
             
             // Add "Edit Product" overlay buttons to each product card inside #shop-grid
             doc.querySelectorAll('#shop-grid .product-card').forEach(card => {
@@ -1879,8 +1853,9 @@
                     if (
                         el.closest('#shop-grid') || 
                         el.closest('#featured-products-container') || 
-                        el.closest('.product-details-content') ||
-                        el.closest('.product-gallery')
+                        el.closest('.product-gallery') ||
+                        el.tagName === 'SCRIPT' ||
+                        el.tagName === 'STYLE'
                     ) {
                         return;
                     }
