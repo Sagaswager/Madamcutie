@@ -9,7 +9,7 @@ const PRODUCTS = [
         "description": "A stunning elegant floral dress designed for special occasions, featuring premium light breathable fabric, detailed neckline, and a flattering",
         "image": "/assets/images/madam/saini-01.jpg",
         "in_stock": true,
-        "featured": false,
+        "featured": true,
         "sale": true,
         "bestseller": true,
         "original_price": 3000
@@ -24,7 +24,7 @@ const PRODUCTS = [
         "description": "Sophisticated silk blouse perfect for corporate wear or casual outings. Soft texture with custom stitching and button details.",
         "image": "/assets/images/madam/saini-02.jpg",
         "in_stock": true,
-        "featured": false,
+        "featured": true,
         "sale": false,
         "bestseller": false,
         "original_price": null
