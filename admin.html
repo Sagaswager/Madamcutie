@@ -874,7 +874,7 @@
                             <div class="card-header-flex">
                                 <h2 class="card-title">Page Content Editor</h2>
                                 <div style="display: flex; gap: 10px; align-items: center;">
-                                    <select id="page-select" class="filter-select" onchange="loadPageForEditing()">
+                                    <select id="page-select-dropdown" class="filter-select" onchange="loadPageForEditing()">
                                         <option value="">-- Select Page --</option>
                                         <option value="index.html">Home</option>
                                         <option value="shop.html">Shop</option>
@@ -892,7 +892,7 @@
                                 <br><strong style="color: var(--color-accent);"><i class="fa-solid fa-circle-info"></i> Note:</strong> Dynamic elements like products in the shop catalog or product details are populated dynamically and cannot be edited here. To modify products, use the <strong>Details Editor / Products Inventory</strong> panel on the right.
                             </p>
                             <div style="border: 1px solid var(--color-border); border-radius: 8px; background: #fff; height: 600px; overflow: hidden; position: relative;">
-                                <iframe id="page-editor-iframe" style="width: 100%; height: 100%; border: none; background: #fff;"></iframe>
+                                <iframe id="page-preview-iframe" style="width: 100%; height: 100%; border: none; background: #fff;"></iframe>
                             </div>
                         </div>
                     </div>
@@ -1023,6 +1023,8 @@
         let selectedFileName = null;
         let currentPage = 1;
         const productsPerPage = 10;
+        let currentEditingPage = '';
+        let currentEditingFilePath = '';
 
         // Password protection check
         function checkPassword() {
@@ -1259,17 +1261,17 @@
 
         // Edit Product Page in Preview Iframe
         function editProductPage(productId) {
+            // Switch to Page Content Editor tab/section
+            // Load product.html?id=productId in the iframe editor
             const pageEditor = document.getElementById('page-content-editor-section');
-            const iframe = document.getElementById('page-editor-iframe');
-            const pageSelect = document.getElementById('page-select');
+            const iframe = document.getElementById('page-preview-iframe');
+            const pageSelect = document.getElementById('page-select-dropdown');
             
             if (pageSelect) {
                 pageSelect.value = 'product.html';
             }
             
-            if (pageEditor) {
-                pageEditor.scrollIntoView({ behavior: 'smooth' });
-            }
+            if (pageEditor) pageEditor.scrollIntoView({ behavior: 'smooth' });
             
             const saveBtn = document.getElementById('save-page-btn');
             if (saveBtn) {
@@ -1277,13 +1279,13 @@
                 saveBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Loading...';
             }
             
+            // Load product page in iframe
             const productUrl = `/product.html?id=${productId}`;
             fetch(productUrl)
-                .then(r => {
-                    if (!r.ok) throw new Error('Could not load product page');
-                    return r.text();
-                })
+                .then(r => r.text())
                 .then(html => {
+                    currentEditingPage = `product.html?id=${productId}`;
+                    currentEditingFilePath = `product.html`;
                     const doc = iframe.contentDocument || iframe.contentWindow.document;
                     doc.open();
                     doc.write(html);
@@ -1712,8 +1714,8 @@
 
         // --- Page Content Editor Functionality ---
         async function loadPageForEditing() {
-            const page = document.getElementById('page-select').value;
-            const iframe = document.getElementById('page-editor-iframe');
+            const page = document.getElementById('page-select-dropdown').value;
+            const iframe = document.getElementById('page-preview-iframe');
             const saveBtn = document.getElementById('save-page-btn');
             
             if (!page) {
@@ -1727,9 +1729,14 @@
             
             try {
                 let fetchUrl = '/' + page;
+                currentEditingPage = page;
+                currentEditingFilePath = page;
+                
                 if (page === 'product.html') {
                     const defaultId = (products && products.length > 0) ? products[0].id : 'p1';
                     fetchUrl = `/product.html?id=${defaultId}`;
+                    currentEditingPage = `product.html?id=${defaultId}`;
+                    currentEditingFilePath = `product.html`;
                 }
                 const res = await fetch(fetchUrl);
                 if (!res.ok) throw new Error('Could not load page ' + page);
@@ -1831,7 +1838,7 @@
             const btn = document.getElementById('save-page-btn');
             if (btn.disabled) return;
 
-            const page = document.getElementById('page-select').value;
+            const page = document.getElementById('page-select-dropdown').value;
             if (!page) return;
             
             const originalText = btn.innerHTML;
@@ -1839,7 +1846,7 @@
             btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Saving...';
             
             try {
-                const iframe = document.getElementById('page-editor-iframe');
+                const iframe = document.getElementById('page-preview-iframe');
                 const doc = iframe.contentDocument || iframe.contentWindow.document;
                 
                 // Clone root node to purge editor artifacts before saving HTML
