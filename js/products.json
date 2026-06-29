@@ -1,9 +1,9 @@
 [
     {
         "id": "p1",
-        "name": "Elegant Floral Dress 100",
+        "name": "Classics",
         "category": "Dresses",
-        "price": 1440,
+        "price": 1400,
         "rating": 4,
         "reviews": 12,
         "description": "A stunning elegant floral dress designed for special occasions, featuring premium light breathable fabric, detailed neckline, and a flattering",
@@ -27,7 +27,7 @@
         "id": "p3",
         "name": "saurav",
         "category": "Outerwear",
-        "price": 202020202,
+        "price": 202,
         "rating": 4.3,
         "reviews": 26,
         "description": "All-season premium trench coat designed for comfort and style. Water-resistant outer shell with elegant pocket designs.",
