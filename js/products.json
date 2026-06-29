@@ -9,7 +9,10 @@
         "description": "A stunning elegant floral dress designed for special occasions, featuring premium light breathable fabric, detailed neckline, and a flattering",
         "image": "/assets/images/madam/saini-01.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p2",
@@ -21,7 +24,10 @@
         "description": "Sophisticated silk blouse perfect for corporate wear or casual outings. Soft texture with custom stitching and button details.",
         "image": "/assets/images/madam/saini-02.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p3",
@@ -33,7 +39,10 @@
         "description": "All-season premium trench coat designed for comfort and style. Water-resistant outer shell with elegant pocket designs.",
         "image": "/assets/images/madam/saini-03.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p4",
@@ -45,7 +54,10 @@
         "description": "Perfectly tailored trousers with side pockets and a high rise. Made of high-quality stretchable fabric for maximum comfort.",
         "image": "/assets/images/madam/saini-04.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p5",
@@ -57,7 +69,10 @@
         "description": "Premium genuine leather bag with spacious compartments and a modern design. Adjustable strap and durable hardware.",
         "image": "/assets/images/madam/saini-05.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p6",
@@ -69,7 +84,10 @@
         "description": "A stunning elegant floral dress designed for special occasions, featuring premium light breathable fabric, detailed neckline, and a flattering waistline.",
         "image": "/assets/images/madam/saini-06.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p7",
@@ -81,7 +99,10 @@
         "description": "Sophisticated silk blouse perfect for corporate wear or casual outings. Soft texture with custom stitching and button details.",
         "image": "/assets/images/madam/saini-07.jpg",
         "in_stock": true,
-        "featured": true
+        "featured": true,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p8",
@@ -93,7 +114,10 @@
         "description": "All-season premium trench coat designed for comfort and style. Water-resistant outer shell with elegant pocket designs.",
         "image": "/assets/images/madam/saini-08.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p9",
@@ -105,7 +129,10 @@
         "description": "Perfectly tailored trousers with side pockets and a high rise. Made of high-quality stretchable fabric for maximum comfort.",
         "image": "/assets/images/madam/saini-09.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p10",
@@ -117,7 +144,10 @@
         "description": "Premium genuine leather bag with spacious compartments and a modern design. Adjustable strap and durable hardware.",
         "image": "/assets/images/madam/saini-10.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p11",
@@ -129,7 +159,10 @@
         "description": "A stunning elegant floral dress designed for special occasions, featuring premium light breathable fabric, detailed neckline, and a flattering waistline.",
         "image": "/assets/images/madam/saini-11.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p12",
@@ -141,7 +174,10 @@
         "description": "Sophisticated silk blouse perfect for corporate wear or casual outings. Soft texture with custom stitching and button details.",
         "image": "/assets/images/madam/saini-12.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p13",
@@ -153,7 +189,10 @@
         "description": "All-season premium trench coat designed for comfort and style. Water-resistant outer shell with elegant pocket designs.",
         "image": "/assets/images/madam/saini-13.jpg",
         "in_stock": true,
-        "featured": true
+        "featured": true,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p14",
@@ -165,7 +204,10 @@
         "description": "Perfectly tailored trousers with side pockets and a high rise. Made of high-quality stretchable fabric for maximum comfort.",
         "image": "/assets/images/madam/saini-14.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p15",
@@ -177,7 +219,10 @@
         "description": "Premium genuine leather bag with spacious compartments and a modern design. Adjustable strap and durable hardware.",
         "image": "/assets/images/madam/saini-15.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p16",
@@ -189,7 +234,10 @@
         "description": "A stunning elegant floral dress designed for special occasions, featuring premium light breathable fabric, detailed neckline, and a flattering waistline.",
         "image": "/assets/images/madam/saini-16.jpg",
         "in_stock": true,
-        "featured": true
+        "featured": true,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p17",
@@ -201,7 +249,10 @@
         "description": "Sophisticated silk blouse perfect for corporate wear or casual outings. Soft texture with custom stitching and button details.",
         "image": "/assets/images/madam/saini-17.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p18",
@@ -213,7 +264,10 @@
         "description": "All-season premium trench coat designed for comfort and style. Water-resistant outer shell with elegant pocket designs.",
         "image": "/assets/images/madam/saini-18.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p19",
@@ -225,7 +279,10 @@
         "description": "Perfectly tailored trousers with side pockets and a high rise. Made of high-quality stretchable fabric for maximum comfort.",
         "image": "/assets/images/madam/saini-19.jpg",
         "in_stock": true,
-        "featured": true
+        "featured": true,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p20",
@@ -237,7 +294,10 @@
         "description": "Premium genuine leather bag with spacious compartments and a modern design. Adjustable strap and durable hardware.",
         "image": "/assets/images/madam/saini-20.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p21",
@@ -249,7 +309,10 @@
         "description": "A stunning elegant floral dress designed for special occasions, featuring premium light breathable fabric, detailed neckline, and a flattering waistline.",
         "image": "/assets/images/madam/saini-21.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p22",
@@ -261,7 +324,10 @@
         "description": "Sophisticated silk blouse perfect for corporate wear or casual outings. Soft texture with custom stitching and button details.",
         "image": "/assets/images/madam/saini-22.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p23",
@@ -273,7 +339,10 @@
         "description": "All-season premium trench coat designed for comfort and style. Water-resistant outer shell with elegant pocket designs.",
         "image": "/assets/images/madam/saini-23.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p24",
@@ -285,7 +354,10 @@
         "description": "Perfectly tailored trousers with side pockets and a high rise. Made of high-quality stretchable fabric for maximum comfort.",
         "image": "/assets/images/madam/saini-24.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p25",
@@ -297,7 +369,10 @@
         "description": "Premium genuine leather bag with spacious compartments and a modern design. Adjustable strap and durable hardware.",
         "image": "/assets/images/madam/saini-25.jpg",
         "in_stock": true,
-        "featured": true
+        "featured": true,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p26",
@@ -309,7 +384,10 @@
         "description": "A stunning elegant floral dress designed for special occasions, featuring premium light breathable fabric, detailed neckline, and a flattering waistline.",
         "image": "/assets/images/madam/saini-26.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p27",
@@ -321,7 +399,10 @@
         "description": "Sophisticated silk blouse perfect for corporate wear or casual outings. Soft texture with custom stitching and button details.",
         "image": "/assets/images/madam/saini-27.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p28",
@@ -333,7 +414,10 @@
         "description": "All-season premium trench coat designed for comfort and style. Water-resistant outer shell with elegant pocket designs.",
         "image": "/assets/images/madam/saini-28.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p29",
@@ -345,7 +429,10 @@
         "description": "Perfectly tailored trousers with side pockets and a high rise. Made of high-quality stretchable fabric for maximum comfort.",
         "image": "/assets/images/madam/saini-29.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p30",
@@ -357,7 +444,10 @@
         "description": "Premium genuine leather bag with spacious compartments and a modern design. Adjustable strap and durable hardware.",
         "image": "/assets/images/madam/saini-30.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p31",
@@ -369,7 +459,10 @@
         "description": "A stunning elegant floral dress designed for special occasions, featuring premium light breathable fabric, detailed neckline, and a flattering waistline.",
         "image": "/assets/images/madam/saini-31.jpg",
         "in_stock": true,
-        "featured": true
+        "featured": true,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p32",
@@ -381,7 +474,10 @@
         "description": "Sophisticated silk blouse perfect for corporate wear or casual outings. Soft texture with custom stitching and button details.",
         "image": "/assets/images/madam/saini-32.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p33",
@@ -393,7 +489,10 @@
         "description": "All-season premium trench coat designed for comfort and style. Water-resistant outer shell with elegant pocket designs.",
         "image": "/assets/images/madam/saini-33.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p34",
@@ -405,7 +504,10 @@
         "description": "Perfectly tailored trousers with side pockets and a high rise. Made of high-quality stretchable fabric for maximum comfort.",
         "image": "/assets/images/madam/saini-34.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p35",
@@ -417,7 +519,10 @@
         "description": "Premium genuine leather bag with spacious compartments and a modern design. Adjustable strap and durable hardware.",
         "image": "/assets/images/madam/saini-35.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     },
     {
         "id": "p36",
@@ -429,6 +534,9 @@
         "description": "A stunning elegant floral dress designed for special occasions, featuring premium light breathable fabric, detailed neckline, and a flattering waistline.",
         "image": "/assets/images/madam/saini-36.jpg",
         "in_stock": true,
-        "featured": false
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     }
 ]
