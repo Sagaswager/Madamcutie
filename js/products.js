@@ -18,7 +18,7 @@ const PRODUCTS = [
         "id": "p2",
         "name": "Classic Silk Blouse 201",
         "category": "Tops & Shirts",
-        "price": 1524,
+        "price": 1520,
         "rating": 4.2,
         "reviews": 19,
         "description": "Sophisticated silk blouse perfect for corporate wear or casual outings. Soft texture with custom stitching and button details.",
