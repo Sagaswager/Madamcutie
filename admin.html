@@ -874,7 +874,7 @@
                             <div class="card-header-flex">
                                 <h2 class="card-title">Page Content Editor</h2>
                                 <div style="display: flex; gap: 10px; align-items: center;">
-                                    <select id="page-select" class="filter-select" onchange="loadPageForEditing()">
+                                    <select id="page-select-dropdown" class="filter-select" onchange="loadPageForEditing()">
                                         <option value="">-- Select Page --</option>
                                         <option value="index.html">Home</option>
                                         <option value="shop.html">Shop</option>
@@ -892,7 +892,7 @@
                                 <br><strong style="color: var(--color-accent);"><i class="fa-solid fa-circle-info"></i> Note:</strong> Dynamic elements like products in the shop catalog or product details are populated dynamically and cannot be edited here. To modify products, use the <strong>Details Editor / Products Inventory</strong> panel on the right.
                             </p>
                             <div style="border: 1px solid var(--color-border); border-radius: 8px; background: #fff; height: 600px; overflow: hidden; position: relative;">
-                                <iframe id="page-editor-iframe" style="width: 100%; height: 100%; border: none; background: #fff;"></iframe>
+                                <iframe id="page-preview-iframe" style="width: 100%; height: 100%; border: none; background: #fff;"></iframe>
                             </div>
                         </div>
                     </div>
@@ -1023,6 +1023,8 @@
         let selectedFileName = null;
         let currentPage = 1;
         const productsPerPage = 10;
+        let currentEditingPage = '';
+        let currentEditingFilePath = '';
 
         // Password protection check
         function checkPassword() {
@@ -1259,54 +1261,52 @@
 
         // Edit Product Page in Preview Iframe
         function editProductPage(productId) {
-            const pageEditor = document.getElementById('page-content-editor-section');
-            const iframe = document.getElementById('page-editor-iframe');
-            const pageSelect = document.getElementById('page-select');
+            const iframe = document.getElementById('page-preview-iframe');
             
-            if (pageSelect) {
-                pageSelect.value = 'product.html';
-            }
+            // Scroll to Page Content Editor
+            const editorSection = document.querySelector('.page-content-editor') || document.getElementById('page-content-editor-section');
+            if (editorSection) editorSection.scrollIntoView({ behavior: 'smooth' });
+
+            currentEditingPage = `product.html?id=${productId}`;
+            currentEditingFilePath = 'product.html';
+            const pageSelect = document.getElementById('page-select-dropdown');
+            if (pageSelect) pageSelect.value = 'product.html';
             
-            if (pageEditor) {
-                pageEditor.scrollIntoView({ behavior: 'smooth' });
-            }
+            iframe.src = `/product.html?id=${productId}`;
             
-            const saveBtn = document.getElementById('save-page-btn');
-            if (saveBtn) {
-                saveBtn.disabled = true;
-                saveBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Loading...';
-            }
-            
-            const productUrl = `/product.html?id=${productId}`;
-            fetch(productUrl)
-                .then(r => {
-                    if (!r.ok) throw new Error('Could not load product page');
-                    return r.text();
-                })
-                .then(html => {
-                    const doc = iframe.contentDocument || iframe.contentWindow.document;
-                    doc.open();
-                    doc.write(html);
-                    doc.close();
-                    
-                    const initEditor = () => {
+            iframe.onload = function() {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                
+                // Wait for dynamic content to render
+                let attempts = 0;
+                const waitForContent = setInterval(() => {
+                    attempts++;
+                    const title = doc.querySelector('h1, .product-name, .product-title, [class*="product-title"]');
+                    if (title || attempts > 10) {
+                        clearInterval(waitForContent);
                         makePageEditable(doc);
+                        // Show edit mode banner
+                        injectEditBanner(doc);
+                        
+                        const saveBtn = document.getElementById('save-page-btn');
                         if (saveBtn) {
                             saveBtn.disabled = false;
                             saveBtn.innerHTML = '<i class="fa-solid fa-floppy-disk"></i> Save Page';
                         }
-                    };
-                    
-                    iframe.onload = initEditor;
-                    setTimeout(initEditor, 500);
-                })
-                .catch(err => {
-                    alert('Error loading page: ' + err.message);
-                    if (saveBtn) {
-                        saveBtn.disabled = true;
-                        saveBtn.innerHTML = '<i class="fa-solid fa-floppy-disk"></i> Save Page';
                     }
-                });
+                }, 300);
+            };
+        }
+
+        function injectEditBanner(doc) {
+            const existing = doc.getElementById('admin-edit-banner');
+            if (existing) return;
+            const banner = doc.createElement('div');
+            banner.id = 'admin-edit-banner';
+            banner.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#c9a84c;color:#000;text-align:center;padding:8px;font-size:12px;font-weight:700;letter-spacing:2px;';
+            banner.textContent = '✏️ EDIT MODE — Click yellow text to edit, then Save Page';
+            doc.body.prepend(banner);
+            doc.body.style.paddingTop = '35px'; // So content isn't hidden
         }
 
         // Load product details into Form editor
@@ -1712,8 +1712,8 @@
 
         // --- Page Content Editor Functionality ---
         async function loadPageForEditing() {
-            const page = document.getElementById('page-select').value;
-            const iframe = document.getElementById('page-editor-iframe');
+            const page = document.getElementById('page-select-dropdown').value;
+            const iframe = document.getElementById('page-preview-iframe');
             const saveBtn = document.getElementById('save-page-btn');
             
             if (!page) {
@@ -1725,37 +1725,33 @@
             saveBtn.disabled = true;
             saveBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Loading...';
             
-            try {
-                let fetchUrl = '/' + page;
-                if (page === 'product.html') {
-                    const defaultId = (products && products.length > 0) ? products[0].id : 'p1';
-                    fetchUrl = `/product.html?id=${defaultId}`;
-                }
-                const res = await fetch(fetchUrl);
-                if (!res.ok) throw new Error('Could not load page ' + page);
-                const htmlContent = await res.text();
-                
-                const doc = iframe.contentDocument || iframe.contentWindow.document;
-                doc.open();
-                doc.write(htmlContent);
-                doc.close();
-                
-                // Helper to initialize editability
-                const initEditor = () => {
-                    makePageEditable(doc);
+            let fetchUrl = '/' + page;
+            currentEditingPage = page;
+            currentEditingFilePath = page;
+            
+            if (page === 'product.html') {
+                const defaultId = (products && products.length > 0) ? products[0].id : 'p1';
+                fetchUrl = `/product.html?id=${defaultId}`;
+                currentEditingPage = `product.html?id=${defaultId}`;
+                currentEditingFilePath = `product.html`;
+            }
+            
+            iframe.src = fetchUrl;
+            
+            iframe.onload = function() {
+                try {
+                    const doc = iframe.contentDocument || iframe.contentWindow.document;
+                    setTimeout(() => {
+                        makePageEditable(doc);
+                        saveBtn.disabled = false;
+                        saveBtn.innerHTML = '<i class="fa-solid fa-floppy-disk"></i> Save Page';
+                    }, 800);
+                } catch (e) {
+                    console.error('Error in iframe onload:', e);
                     saveBtn.disabled = false;
                     saveBtn.innerHTML = '<i class="fa-solid fa-floppy-disk"></i> Save Page';
-                };
-                
-                iframe.onload = initEditor;
-                // Executing immediately just in case load event already fired
-                setTimeout(initEditor, 200);
-                
-            } catch (err) {
-                alert('Error loading page: ' + err.message);
-                saveBtn.disabled = true;
-                saveBtn.innerHTML = '<i class="fa-solid fa-floppy-disk"></i> Save Page';
-            }
+                }
+            };
         }
 
         function makePageEditable(doc) {
@@ -1786,6 +1782,67 @@
             `;
             doc.head.appendChild(style);
             
+            // Inject edit mode banner at the top of the body
+            injectEditBanner(doc);
+            
+            // Add "Edit Product" overlay buttons to each product card inside #shop-grid
+            doc.querySelectorAll('#shop-grid .product-card').forEach(card => {
+                if (card.querySelector('.admin-product-edit-overlay-btn')) return;
+
+                let productId = '';
+                const addCartBtn = card.querySelector('.btn-add-cart');
+                if (addCartBtn && addCartBtn.id) {
+                    productId = addCartBtn.id.replace('btn-add-', '');
+                } else {
+                    const wishlistBtn = card.querySelector('.wishlist-btn');
+                    if (wishlistBtn) {
+                        const onclickText = wishlistBtn.getAttribute('onclick') || '';
+                        const match = onclickText.match(/toggleWishlist\('([^']+)'/);
+                        if (match) productId = match[1];
+                    }
+                }
+
+                if (!productId) return;
+
+                const imgWrapper = card.querySelector('.product-image-wrapper');
+                if (imgWrapper) {
+                    imgWrapper.style.position = 'relative';
+                    const editBtn = doc.createElement('button');
+                    editBtn.className = 'admin-product-edit-overlay-btn';
+                    editBtn.innerHTML = '<i class="fa-solid fa-pen-to-square"></i> Edit Product';
+                    editBtn.style.cssText = `
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background: #c9a84c;
+                        color: #000;
+                        border: none;
+                        padding: 8px 16px;
+                        border-radius: 4px;
+                        font-size: 11px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        cursor: pointer;
+                        z-index: 100;
+                        box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+                        display: none;
+                        transition: all 0.3s;
+                    `;
+                    imgWrapper.appendChild(editBtn);
+
+                    imgWrapper.addEventListener('mouseenter', () => { editBtn.style.display = 'block'; });
+                    imgWrapper.addEventListener('mouseleave', () => { editBtn.style.display = 'none'; });
+
+                    editBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        window.parent.editProductPage(productId);
+                    });
+                }
+            });
+            
             // Select and apply editability to target text tags
             const tags = ['h1', 'h2', 'h3', 'p', 'span'];
             tags.forEach(tag => {
@@ -1796,8 +1853,9 @@
                     if (
                         el.closest('#shop-grid') || 
                         el.closest('#featured-products-container') || 
-                        el.closest('.product-details-content') ||
-                        el.closest('.product-gallery')
+                        el.closest('.product-gallery') ||
+                        el.tagName === 'SCRIPT' ||
+                        el.tagName === 'STYLE'
                     ) {
                         return;
                     }
@@ -1831,7 +1889,7 @@
             const btn = document.getElementById('save-page-btn');
             if (btn.disabled) return;
 
-            const page = document.getElementById('page-select').value;
+            const page = document.getElementById('page-select-dropdown').value;
             if (!page) return;
             
             const originalText = btn.innerHTML;
@@ -1839,7 +1897,7 @@
             btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Saving...';
             
             try {
-                const iframe = document.getElementById('page-editor-iframe');
+                const iframe = document.getElementById('page-preview-iframe');
                 const doc = iframe.contentDocument || iframe.contentWindow.document;
                 
                 // Clone root node to purge editor artifacts before saving HTML
@@ -1848,6 +1906,19 @@
                 // Purge custom stylesheet
                 const styleEl = clone.querySelector('#admin-editor-styles');
                 if (styleEl) styleEl.remove();
+                
+                // Purge edit mode banner
+                const bannerEl = clone.querySelector('#admin-edit-mode-banner');
+                if (bannerEl) bannerEl.remove();
+                
+                // Reset body padding-top inside clone
+                if (clone.body) {
+                    clone.body.style.paddingTop = '';
+                    if (clone.body.getAttribute('style') === '') clone.body.removeAttribute('style');
+                }
+                
+                // Purge overlay buttons
+                clone.querySelectorAll('.admin-product-edit-overlay-btn').forEach(btn => btn.remove());
                 
                 // Purge active highlights and contenteditable attributes
                 clone.querySelectorAll('.admin-editable-highlight').forEach(el => {
@@ -1866,24 +1937,10 @@
                     featuredContainer.innerHTML = '\n                    <!-- Products will be injected here -->\n                ';
                 }
                 
-                if (page === 'product.html') {
-                    const pName = clone.querySelector('#product-name');
-                    if (pName) pName.textContent = 'Product Name';
-                    
-                    const pPrice = clone.querySelector('#product-price');
-                    if (pPrice) pPrice.textContent = '₹0';
-                    
-                    const pDesc = clone.querySelector('#product-description');
-                    if (pDesc) pDesc.textContent = 'Product details description will be loaded here.';
-                    
-                    const pBrand = clone.querySelector('#product-brand');
-                    if (pBrand) pBrand.textContent = 'Madamcutie Luxury';
-                    
-                    const pCat = clone.querySelector('#product-category');
-                    if (pCat) pCat.textContent = 'Collections';
-                    
-                    const pImg = clone.querySelector('#main-image');
-                    if (pImg) pImg.src = '';
+                // Clear dynamic product details content to clean comment before saving
+                const detailsContent = clone.querySelector('.product-details-content');
+                if (detailsContent) {
+                    detailsContent.innerHTML = '\n                    <!-- Product details injected here -->\n                ';
                 }
                 
                 const outputHtml = '<!DOCTYPE html>\n' + clone.outerHTML;
