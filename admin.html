@@ -773,9 +773,12 @@
             <p class="login-subtitle">Admin Dashboard</p>
             <div class="login-form">
                 <input type="password" id="password-input" placeholder="Enter Access Password" autocomplete="current-password">
-                <button onclick="checkPassword()" class="btn btn-primary" style="width: 100%;">
+                <button onclick="checkPassword()" class="btn btn-primary" style="width: 100%; margin-bottom: 12px;">
                     <i class="fa-solid fa-lock-open"></i> Authenticate
                 </button>
+                <a href="index.html" class="btn btn-secondary" style="width: 100%;">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Website
+                </a>
             </div>
             <div id="login-error" class="login-error">
                 <i class="fa-solid fa-triangle-exclamation"></i> Access Denied: Incorrect Password
@@ -886,6 +889,7 @@
                             </div>
                             <p style="color: var(--color-text-secondary); font-size: 0.85rem; margin-bottom: 15px;">
                                 Select a page from the dropdown to load an editable preview. Hover and click on any highlighted text element (yellow dashed border) to edit its text directly, then click <strong>Save Page</strong> to publish changes.
+                                <br><strong style="color: var(--color-accent);"><i class="fa-solid fa-circle-info"></i> Note:</strong> Dynamic elements like products in the shop catalog or product details are populated dynamically and cannot be edited here. To modify products, use the <strong>Details Editor / Products Inventory</strong> panel on the right.
                             </p>
                             <div style="border: 1px solid var(--color-border); border-radius: 8px; background: #fff; height: 600px; overflow: hidden; position: relative;">
                                 <iframe id="page-editor-iframe" style="width: 100%; height: 100%; border: none; background: #fff;"></iframe>
@@ -1013,6 +1017,7 @@
 
     <script>
         let products = [];
+        let hasUnsavedChanges = false;
         let editingProductId = null;
         let selectedFileData = null;
         let selectedFileName = null;
@@ -1038,8 +1043,12 @@
         }
 
         function logout() {
+            if (hasUnsavedChanges) {
+                const discard = confirm("You have unsaved changes. Are you sure you want to logout and discard your changes?");
+                if (!discard) return;
+            }
             sessionStorage.removeItem('adminAuth');
-            location.reload();
+            window.location.href = 'index.html';
         }
 
         // On Page Load Authentication
@@ -1219,6 +1228,12 @@
             if (p) {
                 p.featured = checked;
                 showToast(`Product ${id} featured status set to ${checked}`);
+                const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+                if (isLocal) {
+                    saveAndPublish(true);
+                } else {
+                    hasUnsavedChanges = true;
+                }
             }
         }
 
@@ -1232,6 +1247,12 @@
                 }
                 populateCategories();
                 showToast(`Product ${id} deleted locally.`);
+                const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+                if (isLocal) {
+                    saveAndPublish(true);
+                } else {
+                    hasUnsavedChanges = true;
+                }
             }
         }
 
@@ -1439,6 +1460,13 @@
             cancelEdit();
             populateCategories();
             renderProducts();
+            
+            const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+            if (isLocal) {
+                saveAndPublish(true);
+            } else {
+                hasUnsavedChanges = true;
+            }
         }
 
         // Generate auto ID e.g. p1, p2
@@ -1453,8 +1481,8 @@
             return 'p' + (maxNum + 1);
         }
 
-        // Save & Publish to GitHub
-        async function saveAndPublish() {
+        // Save & Publish to GitHub (silent=true for local auto-saving to avoid alerts)
+        async function saveAndPublish(silent = false) {
             const btn = document.getElementById('save-publish-btn');
             const originalText = btn.innerHTML;
             btn.disabled = true;
@@ -1492,9 +1520,14 @@
                 });
 
                 await Promise.all([saveJson, saveJs]);
-                alert('Products updated! Site will refresh in 60 seconds.');
+                hasUnsavedChanges = false;
+                if (!silent) {
+                    alert('Products updated! Local changes are immediate, live site will update in 60 seconds.');
+                } else {
+                    showToast('Changes saved to disk successfully!');
+                }
             } catch (err) {
-                alert('Error: ' + err.message);
+                alert('Error saving changes: ' + err.message);
             } finally {
                 btn.disabled = false;
                 btn.innerHTML = originalText;
@@ -1701,6 +1734,16 @@
                 doc.querySelectorAll(tag).forEach(el => {
                     if (el.id === 'admin-toolbar' || el.closest('#admin-toolbar')) return;
                     
+                    // Skip dynamic containers (products list, featured list, product details)
+                    if (
+                        el.closest('#shop-grid') || 
+                        el.closest('#featured-products-container') || 
+                        el.closest('.product-details-content') ||
+                        el.closest('.product-gallery')
+                    ) {
+                        return;
+                    }
+                    
                     // Verify if node contains direct text
                     let hasText = false;
                     for (let node of el.childNodes) {
@@ -1713,6 +1756,9 @@
                     if (hasText || ['H1', 'H2', 'H3', 'P'].includes(el.tagName)) {
                         el.contentEditable = 'true';
                         el.classList.add('admin-editable-highlight');
+                        el.addEventListener('input', () => {
+                            hasUnsavedChanges = true;
+                        });
                     }
                 });
             });
@@ -1751,6 +1797,16 @@
                     el.classList.remove('admin-editable-highlight');
                     if (el.className === '') el.removeAttribute('class');
                 });
+
+                // Clear dynamically loaded products in saved file to keep templates clean
+                const shopGrid = clone.querySelector('#shop-grid');
+                if (shopGrid) {
+                    shopGrid.innerHTML = '\n                    <!-- Products will be injected here -->\n                ';
+                }
+                const featuredContainer = clone.querySelector('#featured-products-container');
+                if (featuredContainer) {
+                    featuredContainer.innerHTML = '\n                    <!-- Products will be injected here -->\n                ';
+                }
                 
                 const outputHtml = '<!DOCTYPE html>\n' + clone.outerHTML;
                 
@@ -1765,7 +1821,8 @@
                 
                 const data = await response.json();
                 if (data.success === true || data.status === 'success') {
-                    alert('Page saved! Site will update in 60 seconds.');
+                    hasUnsavedChanges = false;
+                    alert('Page saved! Local changes are immediate, live site will update in 60 seconds.');
                 } else {
                     alert('Error: ' + (data.error || 'Unknown error occurred.'));
                 }
