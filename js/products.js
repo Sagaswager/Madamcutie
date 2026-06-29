@@ -31,9 +31,9 @@ const PRODUCTS = [
     },
     {
         "id": "p3",
-        "name": "saurav",
+        "name": "saini",
         "category": "Outerwear",
-        "price": 202,
+        "price": 25000,
         "rating": 4.3,
         "reviews": 26,
         "description": "All-season premium trench coat designed for comfort and style. Water-resistant outer shell with elegant pocket designs.",
