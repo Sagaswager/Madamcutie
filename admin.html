@@ -1889,7 +1889,7 @@
             const btn = document.getElementById('save-page-btn');
             if (btn.disabled) return;
 
-            const page = document.getElementById('page-select-dropdown').value;
+            const page = currentEditingFilePath || document.getElementById('page-select-dropdown').value;
             if (!page) return;
             
             const originalText = btn.innerHTML;
@@ -1908,7 +1908,7 @@
                 if (styleEl) styleEl.remove();
                 
                 // Purge edit mode banner
-                const bannerEl = clone.querySelector('#admin-edit-mode-banner');
+                const bannerEl = clone.querySelector('#admin-edit-banner') || clone.querySelector('#admin-edit-mode-banner');
                 if (bannerEl) bannerEl.remove();
                 
                 // Reset body padding-top inside clone
@@ -1935,12 +1935,6 @@
                 const featuredContainer = clone.querySelector('#featured-products-container');
                 if (featuredContainer) {
                     featuredContainer.innerHTML = '\n                    <!-- Products will be injected here -->\n                ';
-                }
-                
-                // Clear dynamic product details content to clean comment before saving
-                const detailsContent = clone.querySelector('.product-details-content');
-                if (detailsContent) {
-                    detailsContent.innerHTML = '\n                    <!-- Product details injected here -->\n                ';
                 }
                 
                 const outputHtml = '<!DOCTYPE html>\n' + clone.outerHTML;
