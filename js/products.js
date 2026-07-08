@@ -9,7 +9,7 @@ const PRODUCTS = [
         "description": "A stunning elegant floral dress designed for special occasions, featuring premium light breathable fabric, detailed neckline, and a flattering",
         "image": "/assets/images/madam/saini-01.jpg",
         "in_stock": true,
-        "featured": true,
+        "featured": false,
         "sale": true,
         "bestseller": true,
         "original_price": 3000
