@@ -463,5 +463,20 @@ const PRODUCTS = [
         "sale": false,
         "bestseller": false,
         "original_price": null
+    },
+    {
+        "id": "p32",
+        "name": "Emerald Green Diamond Corset Blouse",
+        "category": "Cor-set Blouse",
+        "price": 1499,
+        "rating": 5,
+        "reviews": 0,
+        "description": "Experience maximalist texture and sparkle in this luxurious emerald green corset blouse. Intricately detailed with all-over diamond-patterned lattice embroidery encrusted with green sequins and mirrors, it offers a rich and radiant effect. Featuring defined bust cups, supportive straps, and structured boning, the back is secured by a daring criss-cross lace-up tie-back closure, merging traditional opulence with modern design.",
+        "image": "/assets/images/madam/Emerald Green Diamond Corset.PNG",
+        "in_stock": true,
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     }
 ];
