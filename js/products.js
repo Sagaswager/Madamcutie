@@ -373,5 +373,50 @@ const PRODUCTS = [
         "sale": false,
         "bestseller": false,
         "original_price": null
+    },
+    {
+        "id": "p26",
+        "name": "Black Sequin Backless Blouse",
+        "category": "Designer Blouse",
+        "price": 1599,
+        "rating": 5,
+        "reviews": 0,
+        "description": "Perfect your evening look with this classic and glamorous jet black blouse. Dazzling black sequins provide comprehensive sparkle on a structured, sleeveless silhouette with a simple V-neckline. The back is the highlight, featuring a dramatic, deep V-cutout secured by elegant, slender tie-up straps finished with matching tassels, ensuring you look stunning from every angle.",
+        "image": "/assets/images/madam/Black Sequin Backless Blouse.PNG",
+        "in_stock": true,
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
+    },
+    {
+        "id": "p27",
+        "name": "Silver Sequin Backless Blouse",
+        "category": "Designer Blouse",
+        "price": 1599,
+        "rating": 5,
+        "reviews": 0,
+        "description": "Shine flawlessly in this dazzling silver sequin blouse. Covered entirely in shimmering silver mirror-style sequins, it features a classic sleeveless shape and V-neckline. The striking open back design features a deep V-cutout secured by a delicate, adjustable tie-up strap finished with decorative tassels, making it an ideal companion for metallic-toned sarees or lehengas.",
+        "image": "/assets/images/madam/Silver Sequin Backless Blouse.PNG",
+        "in_stock": true,
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
+    },
+    {
+        "id": "p28",
+        "name": "Gold Diamond Lattice Corset",
+        "category": "Designer Blouse",
+        "price": 1599,
+        "rating": 5,
+        "reviews": 0,
+        "description": "Achieve a high-fashion, structured look with this stunning gold corset blouse. It is defined by intricate, all-over diamond-patterned lattice hand-embroidery featuring small mirror accents. The bustier silhouette includes a sweetheart neckline, slender straps, and is secured by a dramatic criss-cross lace-up back with adjustable ties and tassels, perfect for creating a contoured Indo-Western statement.",
+        "image": "/assets/images/madam/Gold Sequin Backless Blouse.PNG",
+        "in_stock": true,
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     }
 ];
