@@ -448,5 +448,20 @@
         "sale": false,
         "bestseller": false,
         "original_price": null
+    },
+    {
+        "id": "p31",
+        "name": "Hot Pink Sequin Corset",
+        "category": "Cor-set Blouse",
+        "price": 1499,
+        "rating": 5,
+        "reviews": 0,
+        "description": "Turn heads in this electrifying hot pink corset-style blouse. Intricately adorned with all-over hot pink sequin and threadwork, it features complex geometric or floral motifs for maximalist sparkle. This structured piece includes boning, a sweetheart neckline, defined bust cups, and is finished with a distinct scalloped hemline, perfect for adding a pop of couture glam to festive attire.",
+        "image": "/assets/images/madam/Hot Pink Sequin Corset Blouse.PNG",
+        "in_stock": true,
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     }
 ]
