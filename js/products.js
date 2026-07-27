@@ -478,5 +478,50 @@ const PRODUCTS = [
         "sale": false,
         "bestseller": false,
         "original_price": null
+    },
+    {
+        "id": "p33",
+        "name": "Hot Pink Mirror Work Lace-Up Corset Blouse",
+        "category": "Cor-set Blouse",
+        "price": 1499,
+        "rating": 5,
+        "reviews": 0,
+        "description": "Make a vibrant statement with this hot pink corset blouse featuring all-over geometric mirror embellishments. Designed with structured bustier cups, a pointed V-hemline, and an open lace-up back with adjustable dori ties, this top blends modern bridal glamour with traditional artisan work.",
+        "image": "/assets/images/madam/Hot Pink Mirror Work Lace-Up Corset Blouse.PNG",
+        "in_stock": true,
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
+    },
+    {
+        "id": "p34",
+        "name": "Charcoal Grey Mirror Work Corset Blouse",
+        "category": "Cor-set Blouse",
+        "price": 1499,
+        "rating": 5,
+        "reviews": 0,
+        "description": "Sleek and contemporary, this charcoal grey corset blouse features intricate mirror-work arranged in modern chevron and geometric lattice patterns. Its contoured bust, pointed hemline, and backless tie-up closure make it an ideal choice for high-glam evening receptions or fusion festive styling.",
+        "image": "/assets/images/madam/Charcoal Grey Mirror Work Corset Blouse.PNG",
+        "in_stock": true,
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
+    },
+    {
+        "id": "p35",
+        "name": "Sunset Orange Mirror Work Corset Blouse",
+        "category": "Cor-set Blouse",
+        "price": 1499,
+        "rating": 5,
+        "reviews": 0,
+        "description": "Radiate warmth and energy in this bright orange corset blouse adorned with dense mirror embroidery throughout. Highlights include a sweetheart neckline, structured boning, a V-cut hemline, and an adjustable criss-cross lace-up back for a custom contoured fit.",
+        "image": "/assets/images/madam/Sunset Orange Mirror Work Corset Blouse.PNG",
+        "in_stock": true,
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     }
 ];
