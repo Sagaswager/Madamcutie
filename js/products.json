@@ -598,5 +598,20 @@
         "sale": false,
         "bestseller": false,
         "original_price": null
+    },
+    {
+        "id": "p41",
+        "name": "BlueMirror Work Corset Blouse",
+        "category": "Cor-set Blouse",
+        "price": 1499,
+        "rating": 5,
+        "reviews": 0,
+        "description": "Bright and festive, this mustard yellow corset top is highlighted by dense geometric mirror work and supportive boning. Featuring a sweetheart neckline, a contoured V-cut hem, and a delicate lace-up back closure, it is the perfect pick for Haldi, Mehendi, and Sangeet celebrations.",
+        "image": "/assets/images/madam/Blue Mirror Work Corset Blouse.PNG",
+        "in_stock": true,
+        "featured": false,
+        "sale": false,
+        "bestseller": false,
+        "original_price": null
     }
 ]
