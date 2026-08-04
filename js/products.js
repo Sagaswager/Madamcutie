@@ -2,7 +2,7 @@ const PRODUCTS = [
     {
         "id": "p1",
         "name": "Vibrant handcrafted mirror-work ethnic corset blouse",
-        "category": "Cor-set Blouse",
+        "category": "Corset Blouse",
         "price": 1499,
         "rating": 5,
         "reviews": 0,
@@ -17,7 +17,7 @@ const PRODUCTS = [
     {
         "id": "p2",
         "name": "Vibrant handcrafted mirror-work ethnic corset blouse Green",
-        "category": "Cor-set Blouse",
+        "category": "Corset Blouse",
         "price": 1499,
         "rating": 5,
         "reviews": 0,
@@ -32,7 +32,7 @@ const PRODUCTS = [
     {
         "id": "p3",
         "name": "Vibrant handcrafted mirror-work ethnic corset blouse Dark Green",
-        "category": "Cor-set Blouse",
+        "category": "Corset Blouse",
         "price": 1499,
         "rating": 5,
         "reviews": 0,
@@ -47,7 +47,7 @@ const PRODUCTS = [
     {
         "id": "p4",
         "name": "Vibrant handcrafted mirror work ethnic corset blouse",
-        "category": "Cor-set Blouse",
+        "category": "Corset Blouse",
         "price": 1499,
         "rating": 5,
         "reviews": 0,
@@ -332,7 +332,7 @@ const PRODUCTS = [
     {
         "id": "p23",
         "name": "Light Olive Embellished Corset Blouse",
-        "category": "Cor-set Blouse",
+        "category": "Corset Blouse",
         "price": 1999,
         "rating": 5,
         "reviews": 0,
@@ -347,7 +347,7 @@ const PRODUCTS = [
     {
         "id": "p24",
         "name": "Black and Gold Wave-Pattern Bralette",
-        "category": "Cor-set Blouse",
+        "category": "Corset Blouse",
         "price": 1999,
         "rating": 5,
         "reviews": 0,
@@ -362,7 +362,7 @@ const PRODUCTS = [
     {
         "id": "p25",
         "name": "Yellow Lace-Back Corset Blouse",
-        "category": "Cor-set Blouse",
+        "category": "Corset Blouse",
         "price": 1999,
         "rating": 5,
         "reviews": 0,
@@ -437,7 +437,7 @@ const PRODUCTS = [
     {
         "id": "p30",
         "name": "Silver Patterned Corset Top",
-        "category": "Cor-set Blouse",
+        "category": "Corset Blouse",
         "price": 1999,
         "rating": 5,
         "reviews": 0,
@@ -452,7 +452,7 @@ const PRODUCTS = [
     {
         "id": "p31",
         "name": "Hot Pink Sequin Corset",
-        "category": "Cor-set Blouse",
+        "category": "Corset Blouse",
         "price": 1499,
         "rating": 5,
         "reviews": 0,
@@ -467,7 +467,7 @@ const PRODUCTS = [
     {
         "id": "p32",
         "name": "Emerald Green Diamond Corset Blouse",
-        "category": "Cor-set Blouse",
+        "category": "Corset Blouse",
         "price": 1499,
         "rating": 5,
         "reviews": 0,
@@ -482,7 +482,7 @@ const PRODUCTS = [
     {
         "id": "p33",
         "name": "Hot Pink Mirror Work Lace-Up Corset Blouse",
-        "category": "Cor-set Blouse",
+        "category": "Corset Blouse",
         "price": 1499,
         "rating": 5,
         "reviews": 0,
@@ -497,7 +497,7 @@ const PRODUCTS = [
     {
         "id": "p34",
         "name": "Charcoal Grey Mirror Work Corset Blouse",
-        "category": "Cor-set Blouse",
+        "category": "Corset Blouse",
         "price": 1499,
         "rating": 5,
         "reviews": 0,
@@ -512,7 +512,7 @@ const PRODUCTS = [
     {
         "id": "p35",
         "name": "Sunset Orange Mirror Work Corset Blouse",
-        "category": "Cor-set Blouse",
+        "category": "Corset Blouse",
         "price": 1499,
         "rating": 5,
         "reviews": 0,
@@ -527,7 +527,7 @@ const PRODUCTS = [
     {
         "id": "p36",
         "name": "Deep Maroon Mirror Work Corset Blouse",
-        "category": "Cor-set Blouse",
+        "category": "Corset Blouse",
         "price": 1499,
         "rating": 5,
         "reviews": 0,
@@ -542,7 +542,7 @@ const PRODUCTS = [
     {
         "id": "p37",
         "name": "Mint Green Floral Threadwork Blouse",
-        "category": "Cor-set Blouse",
+        "category": "Corset Blouse",
         "price": 1499,
         "rating": 5,
         "reviews": 0,
@@ -557,7 +557,7 @@ const PRODUCTS = [
     {
         "id": "p38",
         "name": "Off-White Pearl Embellished Blouse",
-        "category": "Cor-set Blouse",
+        "category": "Corset Blouse",
         "price": 1799,
         "rating": 5,
         "reviews": 0,
@@ -572,7 +572,7 @@ const PRODUCTS = [
     {
         "id": "p39",
         "name": "Metallic Silver Mirror Work Corset Blouse",
-        "category": "Cor-set Blouse",
+        "category": "Corset Blouse",
         "price": 1499,
         "rating": 5,
         "reviews": 0,
@@ -587,7 +587,7 @@ const PRODUCTS = [
     {
         "id": "p40",
         "name": "Mustard Yellow Mirror Work Corset Blouse",
-        "category": "Cor-set Blouse",
+        "category": "Corset Blouse",
         "price": 1499,
         "rating": 5,
         "reviews": 0,
@@ -602,7 +602,7 @@ const PRODUCTS = [
     {
         "id": "p41",
         "name": "BlueMirror Work Corset Blouse",
-        "category": "Cor-set Blouse",
+        "category": "Corset Blouse",
         "price": 1499,
         "rating": 5,
         "reviews": 0,
