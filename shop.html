@@ -21,7 +21,7 @@
                 <img src="/assets/images/logo.jpg" alt="Madamcutie Logo" class="logo-img">
                 <a href="index.html" class="logo-text" style="background: linear-gradient(45deg, #d4af37, #f3e5ab, #b8860b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0px 2px 4px rgba(0,0,0,0.1); font-weight: 800; font-family: var(--font-heading); font-size: clamp(1.5rem, 4vw, 2.2rem); letter-spacing: 2px;">Madamcutie</a>
             </div>
-            
+
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="shop.html" class="active">Shop</a>
@@ -47,6 +47,7 @@
             </form>
         </div>
     </header>
+<nav class="collection-nav" aria-label="Collections"><a href="shop.html">All collections</a><a href="shop.html?category=Corset%20Blouse">Corset blouses</a><a href="shop.html?category=Designer%20Blouse">Designer blouses</a><a href="about.html">Our story</a><a href="https://wa.me/919911852113" target="_blank" rel="noopener">Wholesale</a></nav>
 
     <!-- Mobile Nav Drawer -->
     <div class="mobile-nav-drawer" id="mobile-nav">
@@ -76,6 +77,21 @@
     <section class="section">
         <div class="container">
             <div class="shop-toolbar">
+<aside class="filter-sidebar">
+                    <div class="filter-sidebar-header">
+                        <h3>Filters</h3>
+                        <button onclick="document.querySelector('.filter-sidebar').classList.remove('open')">✕</button>
+                    </div>
+                    <div class="filter-widget">
+                        <h4 class="filter-title">Categories</h4>
+                        <ul class="filter-list">
+                            <li class="active" onclick="filterByCategory('all', this)">All Items</li>
+                            <li onclick="filterByCategory('Designer Blouse', this)">Designer Blouse</li>
+                            <li onclick="filterByCategory('Corset Blouse', this)">Corset Blouse</li>
+                        </ul>
+                    </div>
+                </aside>
+                <div class="filter-sidebar-overlay" onclick="document.querySelector('.filter-sidebar').classList.remove('open')"></div>
                 <div class="results-count">Showing <span id="product-count">36</span> items</div>
                 <div class="shop-controls-right">
                     <button class="mobile-filter-trigger" onclick="document.querySelector('.filter-sidebar').classList.toggle('open')">
@@ -94,21 +110,7 @@
 
             <div class="shop-layout">
                 <!-- Sidebar -->
-                <aside class="filter-sidebar">
-                    <div class="filter-sidebar-header">
-                        <h3>Filters</h3>
-                        <button onclick="document.querySelector('.filter-sidebar').classList.remove('open')">✕</button>
-                    </div>
-                    <div class="filter-widget">
-                        <h4 class="filter-title">Categories</h4>
-                        <ul class="filter-list">
-                            <li class="active" onclick="filterByCategory('all', this)">All Items</li>
-                            <li onclick="filterByCategory('Designer Blouse', this)">Designer Blouse</li>
-                            <li onclick="filterByCategory('Corset Blouse', this)">Corset Blouse</li>
-                        </ul>
-                    </div>
-                </aside>
-                <div class="filter-sidebar-overlay" onclick="document.querySelector('.filter-sidebar').classList.remove('open')"></div>
+
 
                 <!-- Grid -->
                 <div class="grid grid-responsive-3-2-1" id="shop-grid">
@@ -137,10 +139,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p2', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -163,10 +165,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p3', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -189,10 +191,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p4', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -215,10 +217,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p5', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -241,10 +243,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p6', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -267,7 +269,7 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
                         <span class="product-badge">Best Seller</span>
@@ -293,10 +295,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p8', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -319,10 +321,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p9', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -345,10 +347,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p10', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -371,10 +373,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p11', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -397,10 +399,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p12', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -423,7 +425,7 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
                         <span class="product-badge">Best Seller</span>
@@ -449,10 +451,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p14', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -475,10 +477,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p15', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -501,7 +503,7 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
                         <span class="product-badge">Best Seller</span>
@@ -527,10 +529,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p17', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -553,10 +555,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p18', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -579,7 +581,7 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
                         <span class="product-badge">Best Seller</span>
@@ -605,10 +607,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p20', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -631,10 +633,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p21', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -657,10 +659,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p22', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -683,10 +685,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p23', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -709,10 +711,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p24', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -735,7 +737,7 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
                         <span class="product-badge">Best Seller</span>
@@ -761,10 +763,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p26', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -787,10 +789,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p27', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -813,10 +815,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p28', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -839,10 +841,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p29', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -865,10 +867,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p30', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -891,7 +893,7 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
                         <span class="product-badge">Best Seller</span>
@@ -917,10 +919,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p32', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -943,10 +945,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p33', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -969,10 +971,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p34', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -995,10 +997,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p35', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -1021,10 +1023,10 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        
+
                         <button class="wishlist-btn " onclick="toggleWishlist('p36', event)" title="Add to Wishlist">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                         </button>
@@ -1109,7 +1111,7 @@
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             border: 1px solid transparent;
         }
-        
+
         .product-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 15px 40px rgba(0,0,0,0.08);
@@ -1364,9 +1366,13 @@
         let currentList = null;
 
         document.addEventListener('DOMContentLoaded', () => {
-            currentList = PRODUCTS;
-            renderProducts(PRODUCTS);
-            
+            const params = new URLSearchParams(location.search);
+            const category = params.get('category');
+            const query = (params.get('q') || '').toLowerCase().trim();
+            currentList = PRODUCTS.filter(p => (!category || p.category === category) && (!query || (p.name + ' ' + p.category).toLowerCase().includes(query)));
+            renderProducts(currentList);
+            document.querySelectorAll('.filter-list li').forEach(el => el.classList.toggle('active', category ? el.textContent.trim() === category : el.textContent.trim() === 'All Items'));
+
             const sortSelect = document.getElementById('sort-by-select');
             if (sortSelect) {
                 sortSelect.addEventListener('change', (e) => {
@@ -1385,6 +1391,10 @@
             const grid = document.getElementById('shop-grid');
             const count = document.getElementById('product-count');
             if (!grid) return;
+            const sort = document.getElementById('sort-by-select').value;
+            list = [...list];
+            if (sort === 'price-low') list.sort((a,b) => a.price-b.price);
+            if (sort === 'price-high') list.sort((a,b) => b.price-a.price);
 
             count.textContent = list.length;
             grid.innerHTML = list.map(p => {
@@ -1424,7 +1434,7 @@
                         </button>
                     </div>
                 </div>
-            `;}).join('');
+            `;}).join('') || '<p role="status">No matching products. Try another search or collection.</p>';
         }
 
         function handleAddToCart(id, name, price, img) {
@@ -1447,7 +1457,7 @@
                 currentList = PRODUCTS.filter(p => p.category.includes(cat));
             }
             renderProducts(currentList);
-            
+
             // Update active state in sidebar
             document.querySelectorAll('.filter-list li').forEach(el => el.classList.remove('active'));
             if (element) {
@@ -1455,7 +1465,7 @@
             } else if (window.event) {
                 window.event.target.classList.add('active');
             }
-            
+
             // Close mobile sidebar if open
             const sidebar = document.querySelector('.filter-sidebar');
             if (sidebar) sidebar.classList.remove('open');
@@ -1463,4 +1473,5 @@
     </script>
 
 
+<link rel="stylesheet" href="/css/editorial.css">
 </body></html>
