@@ -86,3 +86,6 @@ body { line-height:1.5; } :focus-visible { outline:2px solid #111; outline-offse
  .product-quick-add { transform:none; padding:10px; background:rgba(17,17,17,.85); }
 }
 @media(prefers-reduced-motion:reduce) { *, *::before, *::after { transition:none!important; animation:none!important; scroll-behavior:auto!important; } }
+.product-info { text-align:left; }
+.filter-list li.active { color:#111!important; }
+@media(min-width:1025px) { .mobile-menu-toggle { display:none!important; } }
